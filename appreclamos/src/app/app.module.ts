@@ -15,6 +15,8 @@ import { TableComponent } from './components/table/table.component';
 import { TableSearchbarComponent } from './components/table-searchbar/table-searchbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ComplainCardComponent } from './components/complain-card/complain-card.component';
+import { LandingUserComponent } from './views/landing-user/landing-user.component';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { ComplainCardComponent } from './components/complain-card/complain-card.
     TableSearchbarComponent,
     FooterComponent,
     ComplainCardComponent
+    LandingUserComponent
   ],
   imports: [
     BrowserModule,
