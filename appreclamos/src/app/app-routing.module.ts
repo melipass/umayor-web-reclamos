@@ -10,16 +10,15 @@ import { LoginUserComponent } from './views/login-user/login-user.component';
 import { RegisterUserComponent } from './views/register-user/register-user.component';
 
 const routes: Routes = [
-  {path:'landing',component:LandingUserComponent},
-  {path:'admin-login',component:LoginAdminComponent},
-  {path:'admin',component:LandingAdminComponent},
-  {path:'list',component:ComplainlistAdminComponent},
-  {path:'report',component:ComplainreportAdminComponent},
-  {path:'user-login',component:LoginUserComponent},
-  {path:'user-register',component:RegisterUserComponent},
-  {path:'user-home',component:HomeUserComponent}
+  {path: 'landing', component: LandingUserComponent},
+  {path: 'admin-login', component: LoginAdminComponent},
+  {path: 'admin', component: LandingAdminComponent},
+  {path: 'list', component: ComplainlistAdminComponent},
+  {path: 'report', component: ComplainreportAdminComponent},
+  {path: 'user-login', component: LoginUserComponent},
+  {path: 'user-register', component: RegisterUserComponent},
+  {path: 'user-home', component: HomeUserComponent}
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
