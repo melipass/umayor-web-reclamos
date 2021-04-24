@@ -11,7 +11,12 @@ import { ComplainreportAdminComponent } from './views/complainreport-admin/compl
 import { LoginUserComponent } from './views/login-user/login-user.component';
 import { RegisterUserComponent } from './views/register-user/register-user.component';
 import { HomeUserComponent } from './views/home-user/home-user.component';
+import { TableComponent } from './components/table/table.component';
+import { TableSearchbarComponent } from './components/table-searchbar/table-searchbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ComplainCardComponent } from './components/complain-card/complain-card.component';
 import { LandingUserComponent } from './views/landing-user/landing-user.component';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +29,10 @@ import { LandingUserComponent } from './views/landing-user/landing-user.componen
     LoginUserComponent,
     RegisterUserComponent,
     HomeUserComponent,
+    TableComponent,
+    TableSearchbarComponent,
+    FooterComponent,
+    ComplainCardComponent
     LandingUserComponent
   ],
   imports: [
