@@ -16,6 +16,10 @@ import { TableSearchbarComponent } from './components/table-searchbar/table-sear
 import { FooterComponent } from './components/footer/footer.component';
 import { ComplainCardComponent } from './components/complain-card/complain-card.component';
 import { LandingUserComponent } from './views/landing-user/landing-user.component';
+import { NavbarAdminComponent } from './components/navbar-admin/navbar-admin.component';
+import { NavbarUserComponent } from './components/navbar-user/navbar-user.component';
+import { ComplainListComponent } from './components/complain-list/complain-list.component';
+import { ComplainNewComponent } from './components/complain-new/complain-new.component';
 
 
 @NgModule({
@@ -32,8 +36,12 @@ import { LandingUserComponent } from './views/landing-user/landing-user.componen
     TableComponent,
     TableSearchbarComponent,
     FooterComponent,
-    ComplainCardComponent
-    LandingUserComponent
+    ComplainCardComponent,
+    LandingUserComponent,
+    NavbarAdminComponent,
+    NavbarUserComponent,
+    ComplainListComponent,
+    ComplainNewComponent
   ],
   imports: [
     BrowserModule,
