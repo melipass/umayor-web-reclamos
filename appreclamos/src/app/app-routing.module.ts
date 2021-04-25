@@ -10,7 +10,7 @@ import { LoginUserComponent } from './views/login-user/login-user.component';
 import { RegisterUserComponent } from './views/register-user/register-user.component';
 
 const routes: Routes = [
-  {path: 'landing', component: LandingUserComponent},
+  {path: '', component: LandingUserComponent},
   {path: 'admin-login', component: LoginAdminComponent},
   {path: 'admin', component: LandingAdminComponent},
   {path: 'list', component: ComplainlistAdminComponent},
