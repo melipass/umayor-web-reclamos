@@ -11,16 +11,15 @@ import { RegisterUserComponent } from './views/register-user/register-user.compo
 
 
 const routes: Routes = [
-  {path:'',component:LandingUserComponent},
-  {path:'admin-login',component:LoginAdminComponent},
-  {path:'admin',component:LandingAdminComponent},
-  {path:'list',component:ComplainlistAdminComponent},
-  {path:'report',component:ComplainreportAdminComponent},
-  {path:'user-login',component:LoginUserComponent},
-  {path:'user-register',component:RegisterUserComponent},
-  {path:'user-home',component:HomeUserComponent}
+  {path: '', component: LandingUserComponent},
+  {path: 'admin-login', component: LoginAdminComponent},
+  {path: 'admin', component: LandingAdminComponent},
+  {path: 'list', component: ComplainlistAdminComponent},
+  {path: 'report', component: ComplainreportAdminComponent},
+  {path: 'user-login', component: LoginUserComponent},
+  {path: 'user-register', component: RegisterUserComponent},
+  {path: 'user-home', component: HomeUserComponent}
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
