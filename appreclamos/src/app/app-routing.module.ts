@@ -9,6 +9,7 @@ import { LoginAdminComponent } from './views/login-admin/login-admin.component';
 import { LoginUserComponent } from './views/login-user/login-user.component';
 import { RegisterUserComponent } from './views/register-user/register-user.component';
 
+
 const routes: Routes = [
   {path: '', component: LandingUserComponent},
   {path: 'admin-login', component: LoginAdminComponent},
