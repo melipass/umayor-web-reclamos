@@ -1,3 +1,22 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
 <app-navbar-admin></app-navbar-admin>
-<h1>Login de admin</h1>
-<button routerLink="/admin">Ir a la página de admin</button>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <form>
+        <h2> Ingreso de Administrador</h2>
+      <input type="text" id="login" class="fadeIn second" name="login">
+      <input type="text" id="password" class="fadeIn third" name="login">
+      <input type="submit" value="Ingresar">
+    </form>
+
+    
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Olvidaste tu contraseña?</a>
+    </div>
+
+  </div>
+</div>
