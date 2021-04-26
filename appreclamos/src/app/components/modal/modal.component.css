@@ -16,7 +16,7 @@ button[id="botoninicio"]
     margin: 25px 20px 40px 20px;
   }
   
-  button[id="botoninicio"]
+  button[id="botoninicio"]:hover
   {
     background-color: #39ace7;
   }
