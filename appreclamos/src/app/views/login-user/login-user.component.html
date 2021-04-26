@@ -2,20 +2,22 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+
 <app-navbar></app-navbar>
+<div class="wrapper">
+  <div id="formContent">
+    <form>
+        <h2> Ingreso de usuario</h2>
+      <input type="text" id="login"placeholder="example@gmail.com" name="login">
+      <input type="password" id="password" placeholder="Contraseña" name="login">
+      <input type="submit" value="Ingresar" routerLink="/user-home">
+    </form>
 
-<div class="wrapper fadeInDown">
-    <div id="formContent">
-        <form>
-            <h2> Ingreso de Usuario</h2>
-            <input type="text" id="login" placeholder="example@gmail.com" name="login">
-            <input type="text" id="password" placeholder="Contraseña" name="login">
-            <input type="submit" value="Ingresar" routerLink="/user-home">
-        </form>
-        <div id="formFooter">
-            <app-modal></app-modal>  
-            <input type="submit" value="Registrarse" routerLink="/user-register">
-        </div>
-
+    
+    <div id="formFooter">
+      <app-modal></app-modal>
+      <input type="submit" value="Registrar" routerLink="/user-register">     
     </div>
+
+  </div>
 </div>
