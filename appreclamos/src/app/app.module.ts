@@ -21,7 +21,11 @@ import { NavbarUserComponent } from './components/navbar-user/navbar-user.compon
 import { ComplainListComponent } from './components/complain-list/complain-list.component';
 import { ComplainNewComponent } from './components/complain-new/complain-new.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+<<<<<<< HEAD
+import { PdfReaderComponent } from './components/pdf-reader/pdf-reader.component';
+=======
 import { ModalComponent } from './components/modal/modal.component';
+>>>>>>> 22617eeaac9524c4356ea7c9e515afce145777e4
 
 
 @NgModule({
@@ -45,7 +49,11 @@ import { ModalComponent } from './components/modal/modal.component';
     ComplainListComponent,
     ComplainNewComponent,
     CarouselComponent,
+<<<<<<< HEAD
+    PdfReaderComponent
+=======
     ModalComponent
+>>>>>>> 22617eeaac9524c4356ea7c9e515afce145777e4
   ],
   imports: [
     BrowserModule,
