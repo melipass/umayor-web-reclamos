@@ -1,4 +1,25 @@
+<html>
 <app-navbar-admin></app-navbar-admin>
-<button routerLink="/list">Lista de reclamos</button>
-<button routerLink="/report">Reporte de reclamos</button>
-<p>landing-admin works! 😂</p>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<body> 
+
+    <h1>Bienvenido Administrador.</h1>
+    <p> Aqui se podra encontrar los link correspondientes a la lista de reclamos activos e inactivos, como tambien a una pagina de reporteria.</p>
+    <div id="divPadre">
+        <div id="divHijo">
+            <h2> Lista de reclamos</h2>
+            <input type="submit" value="Ingresar" routerLink="/list">
+        </div>
+
+        <div id="divHijo">
+            <h2> Reportes</h2>
+            <input type="submit" value="Ingresar" routerLink="/report">
+        </div>
+    </div>
+
+</body>
+</html>
