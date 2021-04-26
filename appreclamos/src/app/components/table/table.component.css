@@ -1,3 +1,17 @@
 .thead-dark{
   background-color: rgb(141, 141, 141);
+
+}
+
+.table{
+  margin-left: 40px;
+  width: 95%;
+
+}
+
+#search-t{
+  width: 95%;
+  margin-left:40px;
+  margin-top:20px;
+  background-color: rgb(247, 247, 247);
 }

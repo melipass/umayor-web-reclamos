@@ -151,7 +151,6 @@ header {
 /*footer*/
 
 .footer {
-    width: 100vw;
     height: auto;
     display: block;
     overflow: hidden;
