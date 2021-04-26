@@ -1,0 +1,28 @@
+#reportcards{
+  margin-top: 40px;
+}
+
+#ejPDF img{
+  border-color: rgb(0, 0, 0);
+  border-width: 2px;
+  border-style: solid;
+  margin-right: 51px;
+  margin-top: 20px;
+  height: 96%;
+}
+
+#graph1{
+  width:80%
+}
+#graph2{
+  width:80%;
+  margin-top:130px;
+  margin-left: 50px;
+}
+
+h2{
+  text-align: center;
+}
+ #title{
+   margin-top: 30px;
+ }
