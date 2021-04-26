@@ -1,6 +1,8 @@
 <app-navbar-admin></app-navbar-admin>
-<p>complainreport-admin works!</p>
-<div class="row">
+
+<h2 id="title">Estados de Reclamos</h2>
+<hr>
+<div class="row" id= "reportcards">
   <div class="col-lg-3">
     <app-complain-card></app-complain-card>
   </div>
@@ -15,7 +17,27 @@
   </div>
 </div>
 
-
 <div class="row">
-  <app-table></app-table>
+  <hr>
+<h2>Resumen de Reclamos</h2>
+
+  <div class="col-lg-6">
+    <img id="graph1"src="https://i.pinimg.com/originals/b1/4b/3b/b14b3bd5bccf59b2e09f0b6196c6242d.png" alt="">
+  </div>
+
+  <div class="col-lg-6">
+    <img id="graph2" src="https://www.clips.edu.au/wp-content/uploads/graph_anatomy.png" alt="">
+  </div>
+
+</div>
+<hr>
+<h2>Tabla de reclamos</h2>
+<div class="row">
+  <div class="col-lg-7">
+    <app-table></app-table>
+  </div>
+  <div class="col-lg-4" id="ejPDF">
+    <img src="https://image.slidesharecdn.com/ejemplodeproyti-140422162423-phpapp01/95/ejemplo-de-proy-tipdf-1-638.jpg?cb=1398183887" alt="">
+  </div>
+
 </div>
