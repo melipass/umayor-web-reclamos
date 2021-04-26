@@ -3,19 +3,19 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
-<app-navbar-admin></app-navbar-admin>
+<app-navbar></app-navbar>
 <div class="wrapper fadeInDown">
   <div id="formContent">
     <form>
         <h2> Ingreso de Administrador</h2>
-      <input type="text" id="login" class="fadeIn second" name="login">
-      <input type="text" id="password" class="fadeIn third" name="login">
+      <input type="text" id="login"placeholder="example@gmail.com" name="login">
+      <input type="password" id="password" placeholder="Contraseña" name="login">
       <input type="submit" value="Ingresar" routerLink="/admin">
     </form>
 
     
     <div id="formFooter">
-      <a class="underlineHover" href="#">Olvidaste tu contraseña?</a>
+      <app-modal></app-modal>      
     </div>
 
   </div>
