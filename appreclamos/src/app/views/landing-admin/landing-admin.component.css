@@ -1,0 +1,64 @@
+html{
+    background-color: #f8f9fa;  
+}
+body{
+    background-color: #f8f9fa;  
+}
+#divPadre {
+    display: flex;
+    align-items: center;
+    flex-direction:row; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+    background-color: #f8f9fa;
+
+}
+#divHijo {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #f8f9fa;
+    padding: 30px;
+    width: 90%;
+    margin:100px;
+    max-width: 600px;
+    position: relative;
+    padding: 0px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+}
+h1{
+    text-align: center;
+    margin: 40px 8px 10px 8px; 
+    font-size: 60px;
+}
+p{
+    text-align: center;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 40px 8px 10px 8px; 
+    color:black;
+}
+input{
+    background-color:#0CA9FB;    
+    border: none;
+    font-size: 30px;
+    color: black;
+    padding: 15px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 25px 20px 40px 20px;
+}
