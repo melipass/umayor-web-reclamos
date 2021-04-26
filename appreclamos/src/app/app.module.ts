@@ -21,6 +21,7 @@ import { NavbarUserComponent } from './components/navbar-user/navbar-user.compon
 import { ComplainListComponent } from './components/complain-list/complain-list.component';
 import { ComplainNewComponent } from './components/complain-new/complain-new.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     NavbarUserComponent,
     ComplainListComponent,
     ComplainNewComponent,
-    CarouselComponent
+    CarouselComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

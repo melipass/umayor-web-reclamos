@@ -1,4 +1,20 @@
-<app-navbar-user></app-navbar-user>
-<h1>Login de usuario</h1>
-<button routerLink="/user-home">Iniciar sesion</button>
-<button routerLink="/user-register">Registrar usuario</button>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<app-navbar></app-navbar>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <form>
+            <h2> Ingreso de Usuario</h2>
+            <input type="text" id="login" placeholder="example@gmail.com" name="login">
+            <input type="text" id="password" placeholder="Contraseña" name="login">
+            <input type="submit" value="Ingresar" routerLink="/user-home">
+        </form>
+        <div id="formFooter">
+            <app-modal></app-modal>  
+            <input type="submit" value="Registrarse" routerLink="/user-register">
+        </div>
+
+    </div>
+</div>
