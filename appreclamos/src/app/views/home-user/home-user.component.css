@@ -1,0 +1,12 @@
+/*verde para finalizado, azul para pendiente, rojo error*/
+#colapsOne{
+  background-color: #d8dfff;
+}
+
+#colapsTwo{
+  background-color: #e1ffdc;
+}
+
+#colapsThree{
+  background-color: #ffdcdc;
+}
