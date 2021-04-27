@@ -4,6 +4,8 @@ html{
 body{
     background-color: #f8f9fa;  
 }
+
+
 #divPadre {
     display: flex;
     align-items: center;
@@ -46,7 +48,7 @@ h2{
     color:black;
 }
 input{
-    background-color:#0CA9FB;    
+    background-color:#FEDA3F;    
     border: none;
     font-size: 30px;
     color: black;
