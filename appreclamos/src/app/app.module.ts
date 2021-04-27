@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -18,8 +17,6 @@ import { ComplainCardComponent } from './components/complain-card/complain-card.
 import { LandingUserComponent } from './views/landing-user/landing-user.component';
 import { NavbarAdminComponent } from './components/navbar-admin/navbar-admin.component';
 import { NavbarUserComponent } from './components/navbar-user/navbar-user.component';
-import { ComplainListComponent } from './components/complain-list/complain-list.component';
-import { ComplainNewComponent } from './components/complain-new/complain-new.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { PdfReaderComponent } from './components/pdf-reader/pdf-reader.component';
 import { ModalComponent } from './components/modal/modal.component';
@@ -43,8 +40,6 @@ import { ModalComponent } from './components/modal/modal.component';
     LandingUserComponent,
     NavbarAdminComponent,
     NavbarUserComponent,
-    ComplainListComponent,
-    ComplainNewComponent,
     CarouselComponent,
     PdfReaderComponent,
     ModalComponent
