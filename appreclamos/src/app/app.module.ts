@@ -20,11 +20,14 @@ import { NavbarUserComponent } from './components/navbar-user/navbar-user.compon
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { PdfReaderComponent } from './components/pdf-reader/pdf-reader.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    HttpClientModule,
     NavbarComponent,
     LoginAdminComponent,
     LandingAdminComponent,

@@ -1,0 +1,14 @@
+{
+  "usuarios":[
+    {"id":1,"nombre": "Test","appelidos":"testingappelido","rut":"1953970802","email":"test@emaimail.com","numero_telefono": 5445616522,"password":123 },
+    {"id":2,"nombre": "Test","appelidos":"testingappelido","rut":"1953970802","email":"test@emaimail.com","numero_telefono": 5445616522,"password":123 },
+    {"id":3,"nombre": "Tes3","appelidos":"testingappelido","rut":"1953970802","email":"test@emaimail.com","numero_telefono": 5445616522,"password":123 }
+
+  ],
+  "administrador":[{"id":1,"nombre": "Admin","appelidos":"testingappelido","rut":"1953970802","email":"test@emaimail.com","numero_telefono": 5445616522,"password":123 }],
+
+  "reclamos":[{"id":1,"rut":"1953970802","nombre": "Test","appelidos":"testingappelido","fecha":"12/45/78","estados":["resuelto","En proceso"],"contendio":"Bla bla bla bla bla bla bla blalb alb la bla bla bla bla "}]
+
+
+
+}
