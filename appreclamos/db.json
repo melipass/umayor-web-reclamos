@@ -1,14 +1,16 @@
 {
-  "usuarios":[
-    {"id":1,"nombre": "Test","appelidos":"testingappelido","rut":"1953970802","email":"test@emaimail.com","numero_telefono": 5445616522,"password":123 },
-    {"id":2,"nombre": "Test","appelidos":"testingappelido","rut":"1953970802","email":"test@emaimail.com","numero_telefono": 5445616522,"password":123 },
-    {"id":3,"nombre": "Tes3","appelidos":"testingappelido","rut":"1953970802","email":"test@emaimail.com","numero_telefono": 5445616522,"password":123 }
+  "usuarios":
+  [
+    {"id":1 ,"nombre":"test1 ","apellido": "testing2","rut":"19581239","email": "test@mail.com", "numTelefono": 123134214},
+    {"id":2 ,"nombre":"test2 ","apellido": "testing2123","rut":"18112239","email": "te23st@mail.com", "numTelefono": 524134214}
 
   ],
-  "administrador":[{"id":1,"nombre": "Admin","appelidos":"testingappelido","rut":"1953970802","email":"test@emaimail.com","numero_telefono": 5445616522,"password":123 }],
 
-  "reclamos":[{"id":1,"rut":"1953970802","nombre": "Test","appelidos":"testingappelido","fecha":"12/45/78","estados":["resuelto","En proceso"],"contendio":"Bla bla bla bla bla bla bla blalb alb la bla bla bla bla "}]
-
-
+  "reclamos":[
+    {"id":1 ,"rut":"19581239","nombre":"test1 ","apellido": "testing2","descripcion": "test1@mail.com", "fecha":"02/08/21", "estado": "en Progreso"},
+    {"id":2 ,"rut":"16581239","nombre":"test2 ","apellido": "dfdfsfd","descripcion": "test2@mail.com", "fecha":"03/08/21", "estado": "en Progreso"},
+    {"id":3 ,"rut":"17781239","nombre":"test3 ","apellido": "hero","descripcion": "test3@mail.com", "fecha":"02/08/21", "estado": "en Progreso"},
+    {"id":4 ,"rut":"21581239","nombre":"test4 ","apellido": "testing23213","descripcion": "test3@mail.com", "fecha":"02/08/21", "estado": "en Progreso"}
+  ]
 
 }
