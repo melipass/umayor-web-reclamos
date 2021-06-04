@@ -15,13 +15,13 @@
   </thead>
 
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>78945545-2</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>02/04/2021</td>
-      <td>Resuelto</td>
+    <tr *ngFor="let reclamo of reclamos">
+      <th scope="row">{{reclamo.id}}</th>
+      <td>{{reclamo.rut}}</td>
+      <td>{{reclamo.nombre}}</td>
+      <td>{{reclamo.descripcion}}</td>
+      <td>{{reclamo.fecha}}</td>
+      <td>{{reclamo.estado}}</td>
       <td>
         <div class="row">
           <div class="col">
@@ -32,155 +32,6 @@
       </td>
     </tr>
 
-    <tr>
-      <th scope="row">2</th>
-      <td>78945545-2</td>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>02/04/2021</td>
-      <td>Standby</td>
-      <td>
-        <div class="row">
-          <div class="col">
-            <button type="button" class="btn btn-outline-secondary btn-sm">Editar</button>
-            <button type="button" class="btn btn-secondary btn-sm">Responder</button>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>78945545-2</td>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>02/04/2021</td>
-      <td>Resuelto</td>
-      <td>
-        <div class="row">
-          <div class="col">
-            <button type="button" class="btn btn-outline-secondary btn-sm" disabled>Editar</button>
-            <button type="button" class="btn btn-secondary btn-sm">Responder</button>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>78945545-2</td>
-      <td>Peter</td>
-      <td>the Bird</td>
-      <td>02/04/2021</td>
-      <td>Error</td>
-      <td>
-        <div class="row">
-          <div class="col">
-            <button type="button" class="btn btn-outline-secondary btn-sm">Editar</button>
-            <button type="button" class="btn btn-secondary btn-sm">Responder</button>
-          </div>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>78945545-2</td>
-      <td>Harry</td>
-      <td>the Bird</td>
-      <td>02/04/2021</td>
-      <td>Resuelto</td>
-      <td>
-        <div class="row">
-          <div class="col">
-            <button type="button" class="btn btn-outline-secondary btn-sm" disabled>Editar</button>
-            <button type="button" class="btn btn-secondary btn-sm">Responder</button>
-          </div>
-        </div>
-      </td>
-    </tr>
 
-    <tr>
-      <th scope="row">6</th>
-      <td>78945545-2</td>
-      <td>Alex</td>
-      <td>the Bird</td>
-      <td>02/04/2021</td>
-      <td>Error</td>
-      <td>
-        <div class="row">
-          <div class="col">
-            <button type="button" class="btn btn-outline-secondary btn-sm">Editar</button>
-            <button type="button" class="btn btn-secondary btn-sm">Responder</button>
-          </div>
-        </div>
-      </td>
-    </tr>
-
-      <tr>
-        <th scope="row">7</th>
-        <td>78945545-2</td>
-        <td>Alex</td>
-        <td>the Bird</td>
-        <td>02/04/2021</td>
-        <td>Error</td>
-        <td>
-          <div class="row">
-            <div class="col">
-            <button type="button" class="btn btn-outline-secondary btn-sm">Editar</button>
-            <button type="button" class="btn btn-secondary btn-sm">Responder</button>
-            </div>
-          </div>
-        </td>
-    </tr>
-
-      <tr>
-        <th scope="row">8</th>
-        <td>78945545-2</td>
-        <td>Alex</td>
-        <td>the Bird</td>
-        <td>02/04/2021</td>
-        <td>Error</td>
-        <td>
-          <div class="row">
-            <div class="col">
-              <button type="button" class="btn btn-outline-secondary btn-sm">Editar</button>
-              <button type="button" class="btn btn-secondary btn-sm">Responder</button>
-            </div>
-          </div>
-      </td>
-    </tr>
-
-      <tr>
-        <th scope="row">9</th>
-        <td>78945545-2</td>
-        <td>Alex</td>
-        <td>the Bird</td>
-        <td>02/04/2021</td>
-        <td>Error</td>
-        <td>
-          <div class="row">
-            <div class="col">
-              <button type="button" class="btn btn-outline-secondary btn-sm">Editar</button>
-              <button type="button" class="btn btn-secondary btn-sm">Responder</button>
-          </div>
-        </div>
-      </td>
-    </tr>
-
-      <tr>
-        <th scope="row">10</th>
-        <td>78945545-2</td>
-        <td>Alex</td>
-        <td>the Bird</td>
-        <td>02/04/2021</td>
-        <td>Error</td>
-        <td>
-          <div class="row">
-            <div class="col">
-              <button type="button" class="btn btn-outline-secondary btn-sm">Editar</button>
-              <button type="button" class="btn btn-secondary btn-sm">Responder</button>
-          </div>
-        </div>
-      </td>
-    </tr>
   </tbody>
 </table>
- 
