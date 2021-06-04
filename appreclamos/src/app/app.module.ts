@@ -20,6 +20,7 @@ import { NavbarUserComponent } from './components/navbar-user/navbar-user.compon
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { PdfReaderComponent } from './components/pdf-reader/pdf-reader.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { ModalComponent } from './components/modal/modal.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
