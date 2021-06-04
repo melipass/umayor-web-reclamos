@@ -1,7 +1,7 @@
 export interface Usuarios {
   id: number;
   nombre: string;
-  appelidos: string;
+  apellidos: string;
   rut: string;
   email: string;
   numero_telefono: number;

@@ -7,15 +7,29 @@ import { Usuarios } from '../clases/usuarios';
 })
 export class UsuariosService {
 
-  constructor(private http: HttpClient)
-  {
-    this.cargarDatosUsuarios(1);
+  constructor(private http: HttpClient) { }
+
+
+  obtenerUsuarios() {
+    return this.http.get<Usuarios[]>("http://localhost:3000/usuarios");
   }
 
-cargarDatosUsuarios = (id: number): any =>
-{
-  return this.http.get<Usuarios>('http://localhost:3000/usuario' + id);
-}
+  obtenerUsuario(id: number) {
+    return this.http.get<Usuarios>("http://localhost:3000/usuarios/" + id);
+  }
+
+  crearUsuario(usuario: Usuarios) {
+    return this.http.post("http://localhost:3000/usuarios", usuario);
+  }
+
+  editarUsuario(usuario: Usuarios) {
+    return this.http.put("http://localhost:3000/usuarios/" + usuario.id, usuario);
+  }
+
+  eliminarUsuario(usuario: Usuarios) {
+    return this.http.delete("http://localhost:3000/usuarios/" + usuario.id);
+  }
+
 }
 
 

@@ -8,23 +8,23 @@
                     <hr>
                     <div class="mb-3">
                         <label class="form-label">Nombres</label>
-                        <input class="form-control" readonly value="Nombre">
+                        <input class="form-control" readonly value={{usuario.nombre}}>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Apellidos</label>
-                        <input class="form-control" readonly value="Nataša Veres">
+                        <input class="form-control" readonly value={{usuario.apellidos}}>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Rut</label>
-                        <input class="form-control" readonly value="98.765.432-1">
+                        <input class="form-control" readonly value={{usuario.rut}}>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">e-mail</label>
-                        <input class="form-control" readonly value="mailfalso@fake.com">
+                        <input class="form-control" readonly value={{usuario.email}}>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Número de teléfono</label>
-                        <input class="form-control" readonly value="+56998765432">
+                        <input class="form-control" readonly value={{usuario.numero_telefono}}>
                     </div>
                     <hr>
                     <button type="submit" class="btn btn-primary">Editar Datos</button>
