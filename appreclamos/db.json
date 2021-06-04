@@ -1,0 +1,60 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "test1 ",
+      "apellidos": "testing2",
+      "rut": "19581239",
+      "email": "test@mail.com",
+      "numero_telefono": 123134214,
+      "password": ""
+    },
+    {
+      "id": 2,
+      "nombre": "test2 ",
+      "apellidos": "testing2123",
+      "rut": "18112239",
+      "email": "te23st@mail.com",
+      "numero_telefono": 524134214,
+      "password": ""
+    }
+  ],
+  "reclamos": [
+    {
+      "id": 1,
+      "rut": "19581239",
+      "nombre": "test1 ",
+      "apellido": "testing2",
+      "descripcion": "test1@mail.com",
+      "fecha": "02/08/21",
+      "estado": "en Progreso"
+    },
+    {
+      "id": 2,
+      "rut": "16581239",
+      "nombre": "test2 ",
+      "apellido": "dfdfsfd",
+      "descripcion": "test2@mail.com",
+      "fecha": "03/08/21",
+      "estado": "en Progreso"
+    },
+    {
+      "id": 3,
+      "rut": "17781239",
+      "nombre": "test3 ",
+      "apellido": "hero",
+      "descripcion": "test3@mail.com",
+      "fecha": "02/08/21",
+      "estado": "en Progreso"
+    },
+    {
+      "id": 4,
+      "rut": "21581239",
+      "nombre": "test4 ",
+      "apellido": "testing23213",
+      "descripcion": "test3@mail.com",
+      "fecha": "02/08/21",
+      "estado": "en Progreso"
+    }
+  ]
+}
