@@ -21,6 +21,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { PdfReaderComponent } from './components/pdf-reader/pdf-reader.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { HttpClientModule } from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
