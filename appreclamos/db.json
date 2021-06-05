@@ -17,6 +17,15 @@
       "email": "te23st@mail.com",
       "numero_telefono": 524134214,
       "password": ""
+    },
+    {
+      "nombre": "Prueba",
+      "apellidos": "Test",
+      "rut": "987654321-41",
+      "email": "hola@quepasa.com",
+      "numero_telefono": "555545",
+      "password": "123",
+      "id": 3
     }
   ],
   "reclamos": [
