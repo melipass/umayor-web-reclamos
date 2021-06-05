@@ -82,6 +82,15 @@
       "descripcion": "testtest@mail.com",
       "fecha": "02/12/21",
       "estado": "en Progreso"
+    },
+    {
+      "id": 6,
+      "rut": "19581239",
+      "nombre": "Nicolas ",
+      "apellido": "testing2",
+      "descripcion": "test1@mail.com",
+      "fecha": "02/08/21",
+      "estado": "en Progreso"
     }
   ]
 }

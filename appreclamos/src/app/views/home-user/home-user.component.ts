@@ -37,7 +37,7 @@ export class HomeUserComponent implements OnInit {
         this.cargarUsuario(id);
     });
 
-    this.cargarReclamos('19581239');
+    // this.cargarReclamos('19581239');
   }
 
   // tslint:disable-next-line:typedef
@@ -51,16 +51,20 @@ export class HomeUserComponent implements OnInit {
   cargarUsuario(id: number) {
     this.servicio.obtenerUsuario(id).subscribe(UsuariosServidor => {
       this.usuario = UsuariosServidor;
+      console.log(this.usuario.rut);
+      const rutBuscado = this.usuario.rut;
+      this.cargarReclamos(rutBuscado);
+      // console.log(this.cargarReclamos(rutBuscado));
     });
   }
 
   // tslint:disable-next-line:typedef
   cargarReclamos(rut: string){
+    console.log(rut);
     this.servicio2.cargarReclamosDeUnUsuario(rut).subscribe(ReclamosServidor => {
       this.reclamos = ReclamosServidor;
-      console.log(ReclamosServidor);
+      console.log(this.reclamos);
     });
-
   }
 
 

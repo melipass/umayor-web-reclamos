@@ -8,31 +8,36 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
   styleUrls: ['./register-user.component.css']
 })
 export class RegisterUserComponent implements OnInit {
-
-  nombre: string = "";
-  apellidos: string = "";
-  rut: string = "";
-  email: string = "";
+ // tslint:disable-next-line:no-inferrable-types
+  nombre: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  apellidos: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  rut: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  email: string = '';
+   // tslint:disable-next-line:no-inferrable-types
   numero_telefono: number = 0;
-  password: string = "";
+   // tslint:disable-next-line:no-inferrable-types
+  password: string = '';
 
   constructor(private servicio: UsuariosService) { }
 
   ngOnInit(): void {
   }
-
+  // tslint:disable-next-line:typedef
   crearUsuario() {
-    let usuario: Usuarios = {
+    const usuario: Usuarios = {
       nombre: this.nombre,
       apellidos: this.apellidos,
       rut: this.rut,
       email: this.email,
       numero_telefono: this.numero_telefono,
       password: this.password
-    }
+    };
 
     this.servicio.crearUsuario(usuario).subscribe(usuarioServidor => {
-      alert("Usuario creado con el id " + usuarioServidor.id);
+      alert('Usuario creado con el id' + usuarioServidor.id);
     });
   }
 }
