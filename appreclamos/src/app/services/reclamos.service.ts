@@ -15,4 +15,10 @@ export class ReclamosService {
     return this.http.get<Reclamos[]>('http://localhost:3000/reclamos');
     console.log('get1 works');
   }
+
+  // tslint:disable-next-line:typedef
+  cargarReclamosDeUnUsuario(rut: string)
+  {
+    return this.http.get<Reclamos[]>('http://localhost:3000/reclamos?rut=' + rut);
+  }
 }

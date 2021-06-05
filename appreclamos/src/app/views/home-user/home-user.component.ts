@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Reclamos } from 'src/app/clases/reclamos';
 import { Usuarios } from 'src/app/clases/usuarios';
+import { ReclamosService } from 'src/app/services/reclamos.service';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
 @Component({
@@ -11,6 +13,7 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
 export class HomeUserComponent implements OnInit {
 
   usuarios: Usuarios[] = [];
+  reclamos: Reclamos[] = [];
   usuario: Usuarios = {
     id: 1,
     nombre: '',
@@ -22,6 +25,7 @@ export class HomeUserComponent implements OnInit {
   };
   constructor(
     private servicio: UsuariosService,
+    private servicio2: ReclamosService,
     private activatedRoute: ActivatedRoute
     ) {
   }
@@ -32,6 +36,8 @@ export class HomeUserComponent implements OnInit {
         id = params.id;
         this.cargarUsuario(id);
     });
+
+    this.cargarReclamos('19581239');
   }
 
   // tslint:disable-next-line:typedef
@@ -46,6 +52,15 @@ export class HomeUserComponent implements OnInit {
     this.servicio.obtenerUsuario(id).subscribe(UsuariosServidor => {
       this.usuario = UsuariosServidor;
     });
+  }
+
+  // tslint:disable-next-line:typedef
+  cargarReclamos(rut: string){
+    this.servicio2.cargarReclamosDeUnUsuario(rut).subscribe(ReclamosServidor => {
+      this.reclamos = ReclamosServidor;
+      console.log(ReclamosServidor);
+    });
+
   }
 
 
