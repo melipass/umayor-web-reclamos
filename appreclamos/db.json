@@ -23,7 +23,7 @@
     {
       "id": 1,
       "rut": "19581239",
-      "nombre": "test1 ",
+      "nombre": "Nicolas ",
       "apellido": "testing2",
       "descripcion": "test1@mail.com",
       "fecha": "02/08/21",
@@ -54,6 +54,15 @@
       "apellido": "testing23213",
       "descripcion": "test3@mail.com",
       "fecha": "02/08/21",
+      "estado": "en Progreso"
+    },
+    {
+      "id": 5,
+      "rut": "19991239",
+      "nombre": "nuevo reclamos tres ",
+      "apellido": "bla bla bla ",
+      "descripcion": "testtest@mail.com",
+      "fecha": "02/12/21",
       "estado": "en Progreso"
     }
   ]

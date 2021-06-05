@@ -12,37 +12,40 @@ export class HomeUserComponent implements OnInit {
 
   usuarios: Usuarios[] = [];
   usuario: Usuarios = {
-    "id": 1,
-    "nombre": "",
-    "apellidos": "",
-    "rut": "",
-    "email": "",
-    "numero_telefono": 123134214,
-    "password": ""
+    id: 1,
+    nombre: '',
+    apellidos: '',
+    rut: '',
+    email: '',
+    numero_telefono: 123134214,
+    password: ''
   };
   constructor(
     private servicio: UsuariosService,
-    private activatedRoute:ActivatedRoute
+    private activatedRoute: ActivatedRoute
     ) {
   }
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe( params=>{
-      let id = params["id"];
-      this.cargarUsuario(id);
+    this.activatedRoute.params.subscribe( params => {
+        let id;
+        id = params.id;
+        this.cargarUsuario(id);
     });
   }
 
+  // tslint:disable-next-line:typedef
   cargarUsuarios() {
     this.servicio.obtenerUsuarios().subscribe(UsuariosServidor => {
       this.usuarios = UsuariosServidor;
     });
   }
 
-  cargarUsuario(id:number) {
+  // tslint:disable-next-line:typedef
+  cargarUsuario(id: number) {
     this.servicio.obtenerUsuario(id).subscribe(UsuariosServidor => {
       this.usuario = UsuariosServidor;
-    })
+    });
   }
 
 
