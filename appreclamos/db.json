@@ -26,13 +26,22 @@
       "numero_telefono": "555545",
       "password": "123",
       "id": 3
+    },
+    {
+      "nombre": "werner",
+      "apellidos": "faust ",
+      "rut": "1298391239312",
+      "email": "123@email.com",
+      "numero_telefono": "554546466",
+      "password": "derdiedas",
+      "id": 4
     }
   ],
   "reclamos": [
     {
       "id": 1,
       "rut": "19581239",
-      "nombre": "test1 ",
+      "nombre": "Nicolas ",
       "apellido": "testing2",
       "descripcion": "test1@mail.com",
       "fecha": "02/08/21",
@@ -63,6 +72,15 @@
       "apellido": "testing23213",
       "descripcion": "test3@mail.com",
       "fecha": "02/08/21",
+      "estado": "en Progreso"
+    },
+    {
+      "id": 5,
+      "rut": "19991239",
+      "nombre": "nuevo reclamos tres ",
+      "apellido": "bla bla bla ",
+      "descripcion": "testtest@mail.com",
+      "fecha": "02/12/21",
       "estado": "en Progreso"
     }
   ]
