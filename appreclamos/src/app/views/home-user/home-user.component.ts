@@ -14,6 +14,8 @@ import { DatePipe } from '@angular/common';
 })
 export class HomeUserComponent implements OnInit {
 
+  isReadOnly = true;
+
   usuarios: Usuarios[] = [];
   reclamos: Reclamos[] = [];
   usuario: Usuarios = {
@@ -117,6 +119,27 @@ export class HomeUserComponent implements OnInit {
       this.reclamos = ReclamosServidor;
       console.log(this.reclamos);
     });
+  }
+
+  editarDatos() {
+    var nombres = document.getElementById('input-nombres') as HTMLInputElement;
+    var apellidos = document.getElementById('input-apellidos') as HTMLInputElement;
+    var rut = document.getElementById('input-rut') as HTMLInputElement;
+    var telefono = document.getElementById('input-telefono') as HTMLInputElement;
+    var email = document.getElementById('input-email') as HTMLInputElement;
+    nombres.disabled = false;
+    apellidos.disabled = false;
+    rut.disabled = false;
+    telefono.disabled = false;
+    email.disabled = false;
+    var botonEnviar = document.getElementById('enviar') as HTMLButtonElement;
+    botonEnviar.style.display = "inline";
+    var botonEditar = document.getElementById('editar') as HTMLButtonElement;
+    botonEditar.style.display = "none";
+  }
+
+  enviarDatos() {
+
   }
 
 
