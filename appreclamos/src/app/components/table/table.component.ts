@@ -17,7 +17,7 @@ export class TableComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarReclamos();
-    //this.downloadPDF();
+    // this.downloadPDF();
   }
 
   // tslint:disable-next-line:typedef
@@ -32,7 +32,4 @@ export class TableComponent implements OnInit {
   {
     this.reclamos = await this.services.cargarReclamos().toPromise();
   }
-
-
-    
 }

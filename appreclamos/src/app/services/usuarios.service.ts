@@ -10,24 +10,29 @@ export class UsuariosService {
   constructor(private http: HttpClient) { }
 
 
+  // tslint:disable-next-line:typedef
   obtenerUsuarios() {
-    return this.http.get<Usuarios[]>("http://localhost:3000/usuarios");
+    return this.http.get<Usuarios[]>('http://localhost:3000/usuarios');
   }
 
+  // tslint:disable-next-line:typedef
   obtenerUsuario(id: number) {
-    return this.http.get<Usuarios>("http://localhost:3000/usuarios/" + id);
+    return this.http.get<Usuarios>('http://localhost:3000/usuarios/' + id);
   }
 
+  // tslint:disable-next-line:typedef
   crearUsuario(usuario: Usuarios) {
-    return this.http.post<Usuarios>("http://localhost:3000/usuarios", usuario);
+    return this.http.post<Usuarios>('http://localhost:3000/usuarios', usuario);
   }
 
+  // tslint:disable-next-line:typedef
   editarUsuario(usuario: Usuarios) {
-    return this.http.put("http://localhost:3000/usuarios/" + usuario.id, usuario);
+    return this.http.put('http://localhost:3000/usuarios/' + usuario.id, usuario);
   }
 
+  // tslint:disable-next-line:typedef
   eliminarUsuario(usuario: Usuarios) {
-    return this.http.delete("http://localhost:3000/usuarios/" + usuario.id);
+    return this.http.delete('http://localhost:3000/usuarios/' + usuario.id);
   }
 
 }
