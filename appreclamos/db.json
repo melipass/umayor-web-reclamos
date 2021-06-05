@@ -35,6 +35,24 @@
       "numero_telefono": "554546466",
       "password": "derdiedas",
       "id": 4
+    },
+    {
+      "nombre": "Prueba Final",
+      "apellidos": "Funciona Gente",
+      "rut": "12345678-9",
+      "email": "CreoQue@Funciona.com",
+      "numero_telefono": "123456789",
+      "password": "123",
+      "id": 5
+    },
+    {
+      "nombre": "Volver Al",
+      "apellidos": "Login Funciona",
+      "rut": "12345678-9",
+      "email": "NoMeLo@Creo.com",
+      "numero_telefono": "13456789",
+      "password": "123",
+      "id": 6
     }
   ],
   "reclamos": [
