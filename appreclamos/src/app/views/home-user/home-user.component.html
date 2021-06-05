@@ -39,15 +39,14 @@
                     <hr>
                     <div class="mb-3">
                         <label class="form-label">Asunto:</label>
-                        <input class="form-control">
+                        <input class="form-control" [(ngModel)]="asuntoReclamo">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Mensaje</label>
-                        <textarea class="form-control" rows="12" cols="50"></textarea>
+                        <textarea [(ngModel)]="textoReclamo" class="form-control" rows="12" cols="50"></textarea>
                     </div>
                     <hr>
-                    <button type="submit" class="btn btn-primary">Ingresar Reclamo</button>
-                </div>
+                    <button type="submit" class="btn btn-primary" (click)="agregarReclamo()">Ingresar Reclamo</button>
             </div>
         </div>
     </div>

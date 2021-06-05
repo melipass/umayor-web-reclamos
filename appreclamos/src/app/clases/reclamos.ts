@@ -3,7 +3,8 @@ export interface Reclamos {
   rut: string;
   nombre: string;
   apellido: string;
-  descripcion: string;
+  asunto: string;
+  textoReclamo: string;
   fecha: string;
   estado: string;
 }
