@@ -1,6 +1,29 @@
 <div class="row" id="search-t">
-  <app-table-searchbar></app-table-searchbar>
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand">Ver reclamos </a>
+    <form class="form-inline">
+      <div class="row">
+        <div class="col-4">
+          <div class="dropdown">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Filtros</option>
+              <option value="1">Id-Reclamo</option>
+              <option value="2">Rut</option>
+              <option value="3">Estado</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-4">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+        </div>
+        <div class="col-4">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </div>
+      </div>
+    </form>
+  </nav>
 </div>
+
 <table class="table table-bordered table-striped table-responsive-xl">
   <thead class="thead-dark">
     <tr>

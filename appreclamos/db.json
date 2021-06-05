@@ -26,6 +26,15 @@
       "numero_telefono": "555545",
       "password": "123",
       "id": 3
+    },
+    {
+      "nombre": "werner",
+      "apellidos": "faust ",
+      "rut": "1298391239312",
+      "email": "123@email.com",
+      "numero_telefono": "554546466",
+      "password": "derdiedas",
+      "id": 4
     }
   ],
   "reclamos": [
