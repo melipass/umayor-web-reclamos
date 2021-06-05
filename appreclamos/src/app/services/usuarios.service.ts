@@ -19,7 +19,7 @@ export class UsuariosService {
   }
 
   crearUsuario(usuario: Usuarios) {
-    return this.http.post("http://localhost:3000/usuarios", usuario);
+    return this.http.post<Usuarios>("http://localhost:3000/usuarios", usuario);
   }
 
   editarUsuario(usuario: Usuarios) {

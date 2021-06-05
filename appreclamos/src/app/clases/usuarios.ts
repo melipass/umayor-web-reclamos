@@ -1,5 +1,5 @@
 export interface Usuarios {
-  id: number;
+  id?: number;
   nombre: string;
   apellidos: string;
   rut: string;
