@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Usuarios } from 'src/app/clases/usuarios';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
@@ -16,7 +17,8 @@ export class RegisterUserComponent implements OnInit {
   numero_telefono: number = 0;
   password: string = "";
 
-  constructor(private servicio: UsuariosService) { }
+  constructor(private servicio: UsuariosService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -34,5 +36,20 @@ export class RegisterUserComponent implements OnInit {
     this.servicio.crearUsuario(usuario).subscribe(usuarioServidor => {
       alert("Usuario creado con el id " + usuarioServidor.id);
     });
+    this.router.navigateByUrl("/user-login");
+  }
+
+  validarCampos() {
+    var inputs = document.getElementsByTagName("input");
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].hasAttribute("required")) {
+        if (inputs[i].value == "") {
+          alert("Llene todos los campos");
+          return false;
+        }
+      }
+    }
+    this.crearUsuario();
+    return true;
   }
 }
