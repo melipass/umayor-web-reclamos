@@ -25,6 +25,6 @@ export class ReclamosService {
   // tslint:disable-next-line:typedef
   agregarReclamoDeUsuario(reclamo: Reclamos)
   {
-    return this.http.put<Reclamos>('http://localhost:3000/reclamos', reclamo);
+    return this.http.post<Reclamos>('http://localhost:3000/reclamos', reclamo);
   }
 }

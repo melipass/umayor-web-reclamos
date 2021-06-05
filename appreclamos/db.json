@@ -2,7 +2,7 @@
   "usuarios": [
     {
       "id": 1,
-      "nombre": "test1 ",
+      "nombre": "Nicolas ",
       "apellidos": "testing2",
       "rut": "19581239",
       "email": "test@mail.com",
@@ -43,7 +43,8 @@
       "rut": "19581239",
       "nombre": "Nicolas ",
       "apellido": "testing2",
-      "descripcion": "test1@mail.com",
+      "asunto": "test1@mail.com",
+      "textoReclamo": "reclamo de un profesor que no hace clase",
       "fecha": "02/08/21",
       "estado": "en Progreso"
     },
@@ -52,7 +53,8 @@
       "rut": "16581239",
       "nombre": "test2 ",
       "apellido": "dfdfsfd",
-      "descripcion": "test2@mail.com",
+      "asunto": "test2@mail.com",
+      "textoReclamo": "reclamo de un profesor que no hace clase",
       "fecha": "03/08/21",
       "estado": "en Progreso"
     },
@@ -61,7 +63,8 @@
       "rut": "17781239",
       "nombre": "test3 ",
       "apellido": "hero",
-      "descripcion": "test3@mail.com",
+      "asunto": "test3@mail.com",
+      "textoReclamo": "reclamo de un profesor que no hace clase",
       "fecha": "02/08/21",
       "estado": "en Progreso"
     },
@@ -70,7 +73,8 @@
       "rut": "21581239",
       "nombre": "test4 ",
       "apellido": "testing23213",
-      "descripcion": "test3@mail.com",
+      "asunto": "test3@mail.com",
+      "textoReclamo": "reclamo de un profesor que no hace clase",
       "fecha": "02/08/21",
       "estado": "en Progreso"
     },
@@ -79,7 +83,7 @@
       "rut": "19991239",
       "nombre": "nuevo reclamos tres ",
       "apellido": "bla bla bla ",
-      "descripcion": "testtest@mail.com",
+      "asunto": "testtest@mail.com",
       "fecha": "02/12/21",
       "estado": "en Progreso"
     },
@@ -88,9 +92,29 @@
       "rut": "19581239",
       "nombre": "Nicolas ",
       "apellido": "testing2",
-      "descripcion": "test1@mail.com",
+      "asunto": "test1@mail.com",
       "fecha": "02/08/21",
       "estado": "en Progreso"
+    },
+    {
+      "id": 89,
+      "rut": "",
+      "nombre": "",
+      "apellido": "",
+      "asunto": "reclamo ingresado test1 ",
+      "textoReclamo": "testeo de put ",
+      "fecha": "02/10/21",
+      "estado": "Enviado"
+    },
+    {
+      "id": 17,
+      "rut": "8129839123",
+      "nombre": "werner",
+      "apellido": "adsadadasd",
+      "asunto": "sauduasdhsd",
+      "textoReclamo": "jbvfggrhihdihfdihf",
+      "fecha": "02/10/21",
+      "estado": "Enviado"
     }
   ]
 }

@@ -8,26 +8,27 @@
                     <hr>
                     <div class="mb-3">
                         <label class="form-label">Nombres</label>
-                        <input id="inputNombre" class="form-control" value={{usuario.nombre}} disabled>
+                        <input id="inputNombre"  [(ngModel)]="nombreUsuarioReclamo" class="form-control" value={{usuario.nombre}} disabled>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Apellidos</label>
-                        <input class="form-control" readonly value={{usuario.apellidos}}>
+                        <input class="form-control" [(ngModel)]="apellidoUsuarioReclamo" value={{usuario.apellidos}}>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Rut</label>
-                        <input class="form-control" readonly value={{usuario.rut}}>
+                        <input class="form-control" [(ngModel)]="rutUsuarioReclamo"  value={{usuario.rut}}>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">e-mail</label>
-                        <input class="form-control" readonly value={{usuario.email}}>
+                        <input class="form-control"  value={{usuario.email}}>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Número de teléfono</label>
-                        <input class="form-control" readonly value={{usuario.numero_telefono}}>
+                        <input class="form-control" value={{usuario.numero_telefono}}>
                     </div>
                     <hr>
                     <button type="submit" class="btn btn-primary">Editar Datos</button>
+                    <button type="submit" class="btn btn-primary" (click)= "agregarReclamo()" >Test</button>
                 </div>
             </div>
         </div>
@@ -38,15 +39,14 @@
                     <hr>
                     <div class="mb-3">
                         <label class="form-label">Asunto:</label>
-                        <input class="form-control">
+                        <input class="form-control" [(ngModel)]="asuntoReclamo">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Mensaje</label>
-                        <textarea class="form-control" rows="12" cols="50"></textarea>
+                        <textarea [(ngModel)]="textoReclamo" class="form-control" rows="12" cols="50"></textarea>
                     </div>
                     <hr>
-                    <button type="submit" class="btn btn-primary">Ingresar Reclamo</button>
-
+                    <button type="submit" class="btn btn-primary" (click)="agregarReclamo()">Ingresar Reclamo</button>
             </div>
         </div>
     </div>
