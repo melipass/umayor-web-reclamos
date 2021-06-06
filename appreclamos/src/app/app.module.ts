@@ -52,7 +52,7 @@ import { CallbackPipe } from './clases/callback.pipe';
     GraficoComponent,
     ComplainCard2Component,
     ComplainCard3Component,
-    ComplainCard4Component
+    ComplainCard4Component,
     PdfReaderComponent,
     ModalComponent,
     ComplainAccordionComponent,
