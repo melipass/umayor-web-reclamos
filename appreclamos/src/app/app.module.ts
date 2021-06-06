@@ -22,6 +22,11 @@ import { PdfReaderComponent } from './components/pdf-reader/pdf-reader.component
 import { ModalComponent } from './components/modal/modal.component';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
+import { GraficoComponent } from './components/grafico/grafico.component';
+import { ComplainCard2Component } from './components/complain-card2/complain-card2.component';
+import { ComplainCard3Component } from './components/complain-card3/complain-card3.component';
+import { ComplainCard4Component } from './components/complain-card4/complain-card4.component';
 
 
 @NgModule({
@@ -43,14 +48,19 @@ import {FormsModule} from '@angular/forms';
     NavbarAdminComponent,
     NavbarUserComponent,
     CarouselComponent,
-    PdfReaderComponent,
-    ModalComponent
+    PdfReaderComponent,    
+    ModalComponent,
+    GraficoComponent,
+    ComplainCard2Component,
+    ComplainCard3Component,
+    ComplainCard4Component
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

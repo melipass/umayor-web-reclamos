@@ -72,7 +72,7 @@
       "apellido": "testing23213",
       "descripcion": "test3@mail.com",
       "fecha": "02/08/21",
-      "estado": "en Progreso"
+      "estado": "Finalizado"
     },
     {
       "id": 5,
@@ -81,7 +81,7 @@
       "apellido": "bla bla bla ",
       "descripcion": "testtest@mail.com",
       "fecha": "02/12/21",
-      "estado": "en Progreso"
+      "estado": "Finalizado"
     }
   ]
 }
