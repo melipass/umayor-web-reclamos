@@ -53,6 +53,15 @@
       "numero_telefono": "13456789",
       "password": "123",
       "id": 6
+    },
+    {
+      "nombre": "Tomas",
+      "apellidos": "Primer Ministro",
+      "rut": "3333333334",
+      "email": "primer@ministro.4r",
+      "numero_telefono": "+04 11111112",
+      "password": "4reich",
+      "id": 7
     }
   ],
   "reclamos": [
@@ -115,7 +124,7 @@
       "estado": "en Progreso"
     },
     {
-      "id": 89,
+      "id": 7,
       "rut": "",
       "nombre": "",
       "apellido": "",
@@ -125,12 +134,32 @@
       "estado": "Enviado"
     },
     {
-      "id": 17,
+      "id": 8,
       "rut": "8129839123",
       "nombre": "werner",
       "apellido": "adsadadasd",
       "asunto": "sauduasdhsd",
       "textoReclamo": "jbvfggrhihdihfdihf",
+      "fecha": "02/10/21",
+      "estado": "Enviado"
+    },
+    {
+      "id": 9,
+      "rut": "3333333334",
+      "nombre": "Tomas",
+      "apellido": "Primer Ministro",
+      "asunto": "hshshshsh",
+      "textoReclamo": "kkksksksksksksksksksksksksksk",
+      "fecha": "02/10/21",
+      "estado": "Enviado"
+    },
+    {
+      "id": 17,
+      "rut": "3333333334",
+      "nombre": "Tomas",
+      "apellido": "Primer Ministro",
+      "asunto": "der di das",
+      "textoReclamo": " jndfgugbuwgrqiugrwrqj\nasendifijhsfdidf kjdjkfdkd\n",
       "fecha": "02/10/21",
       "estado": "Enviado"
     }

@@ -5,6 +5,7 @@ import { Usuarios } from 'src/app/clases/usuarios';
 import { ReclamosService } from 'src/app/services/reclamos.service';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 import { DatePipe } from '@angular/common';
+// import { threadId } from 'node:worker_threads';
 
 @Component({
   selector: 'app-home-user',
@@ -18,6 +19,7 @@ export class HomeUserComponent implements OnInit {
 
   usuarios: Usuarios[] = [];
   reclamos: Reclamos[] = [];
+
   usuario: Usuarios = {
     id: 0,
     nombre: '',
@@ -61,7 +63,7 @@ export class HomeUserComponent implements OnInit {
     this.activatedRoute.params.subscribe( params => {
         let id;
         id = params.id;
-        this.cargarUsuario(id);
+        this.cargarUsuario(7);
     });
 
     // this.cargarReclamos('19581239');
@@ -71,10 +73,10 @@ export class HomeUserComponent implements OnInit {
   agregarReclamo()
   {
 
-    const nombreTest  = document.getElementById('inputNombre');
-    console.log('testing', nombreTest);
+    // const nombreTest  = document.getElementById('inputNombre');
+    console.log('testing');
     const newReclamo: Reclamos = {
-      id: 7,
+      id: 17,
       rut: this.rutUsuarioReclamo,
       nombre: this.nombreUsuarioReclamo,
       apellido: this.apellidoUsuarioReclamo,
@@ -86,11 +88,18 @@ export class HomeUserComponent implements OnInit {
     };
     console.log(newReclamo);
 
-    /*this.servicio2.agregarReclamoDeUsuario(newReclamo).subscribe(
+    this.servicio2.agregarReclamoDeUsuario(newReclamo).subscribe(
       reclamoService => {
-        alert('Reclamo se envio');
+        alert('Reclamo se envio' + reclamoService);
       }
-    );*/
+    );
+    this.clearFields();
+  }
+// tslint:disable-next-line:typedef
+  clearFields()
+  {
+    this.asuntoReclamo = '';
+    this.textoReclamo = '';
   }
 
 
@@ -107,6 +116,9 @@ export class HomeUserComponent implements OnInit {
       this.usuario = UsuariosServidor;
       console.log(this.usuario.rut);
       const rutBuscado = this.usuario.rut;
+      this.rutUsuarioReclamo = this.usuario.rut;
+      this.nombreUsuarioReclamo = this.usuario.nombre;
+      this.apellidoUsuarioReclamo = this.usuario.apellidos;
       this.cargarReclamos(rutBuscado);
       // console.log(this.cargarReclamos(rutBuscado));
     });
@@ -120,7 +132,7 @@ export class HomeUserComponent implements OnInit {
       console.log(this.reclamos);
     });
   }
-
+// tslint:disable-next-line:typedef
   editarDatos() {
     var nombres = document.getElementById('input-nombres') as HTMLInputElement;
     var apellidos = document.getElementById('input-apellidos') as HTMLInputElement;
