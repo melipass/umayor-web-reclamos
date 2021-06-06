@@ -22,7 +22,8 @@ import { PdfReaderComponent } from './components/pdf-reader/pdf-reader.component
 import { ModalComponent } from './components/modal/modal.component';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
-
+import { ComplainAccordionComponent } from './components/complain-accordion/complain-accordion.component';
+import { CallbackPipe } from './clases/callback.pipe';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,9 @@ import {FormsModule} from '@angular/forms';
     NavbarUserComponent,
     CarouselComponent,
     PdfReaderComponent,
-    ModalComponent
+    ModalComponent,
+    ComplainAccordionComponent,
+    CallbackPipe
   ],
   imports: [
     BrowserModule,

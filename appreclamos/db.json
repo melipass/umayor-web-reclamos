@@ -73,7 +73,7 @@
       "asunto": "test1@mail.com",
       "textoReclamo": "reclamo de un profesor que no hace clase",
       "fecha": "02/08/21",
-      "estado": "en Progreso"
+      "estado": "En Progreso"
     },
     {
       "id": 2,
@@ -83,7 +83,7 @@
       "asunto": "test2@mail.com",
       "textoReclamo": "reclamo de un profesor que no hace clase",
       "fecha": "03/08/21",
-      "estado": "en Progreso"
+      "estado": "En Progreso"
     },
     {
       "id": 3,
@@ -93,7 +93,7 @@
       "asunto": "test3@mail.com",
       "textoReclamo": "reclamo de un profesor que no hace clase",
       "fecha": "02/08/21",
-      "estado": "en Progreso"
+      "estado": "En Progreso"
     },
     {
       "id": 4,
@@ -103,7 +103,7 @@
       "asunto": "test3@mail.com",
       "textoReclamo": "reclamo de un profesor que no hace clase",
       "fecha": "02/08/21",
-      "estado": "en Progreso"
+      "estado": "En Progreso"
     },
     {
       "id": 5,
@@ -112,7 +112,7 @@
       "apellido": "bla bla bla ",
       "asunto": "testtest@mail.com",
       "fecha": "02/12/21",
-      "estado": "en Progreso"
+      "estado": "En Progreso"
     },
     {
       "id": 6,
@@ -120,8 +120,9 @@
       "nombre": "Nicolas ",
       "apellido": "testing2",
       "asunto": "test1@mail.com",
+      "textoReclamo": "Este es el segundo reclamo del rut 19581239",
       "fecha": "02/08/21",
-      "estado": "en Progreso"
+      "estado": "En Progreso"
     },
     {
       "id": 7,
