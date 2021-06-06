@@ -1,10 +1,11 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Reclamos } from 'src/app/clases/reclamos';
 import { Usuarios } from 'src/app/clases/usuarios';
 import { ReclamosService } from 'src/app/services/reclamos.service';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 import { DatePipe } from '@angular/common';
+
 // import { threadId } from 'node:worker_threads';
 
 @Component({
@@ -16,7 +17,6 @@ import { DatePipe } from '@angular/common';
 export class HomeUserComponent implements OnInit {
 
   isReadOnly = true;
-
   usuarios: Usuarios[] = [];
   reclamos: Reclamos[] = [];
 
@@ -47,7 +47,8 @@ export class HomeUserComponent implements OnInit {
     // tslint:disable-next-line:no-inferrable-types
     estadoUsuarioReclamo: string ;
 
-    myDate = new Date().getTime;
+    myDate: Date = new Date();
+    stringDate: string;
 
   constructor(
     private servicio: UsuariosService,
@@ -55,6 +56,7 @@ export class HomeUserComponent implements OnInit {
     private datePipe: DatePipe,
     private activatedRoute: ActivatedRoute
     ) {
+      this.stringDate = this.myDate.getFullYear() + '/' + (this.myDate.getMonth() + 1) + '/' + this.myDate.getDay();
       // this.myDate = this.datePipe.transform(this.myDate, 'dd-MM-yyyy');
   }
 
@@ -72,25 +74,22 @@ export class HomeUserComponent implements OnInit {
   // tslint:disable-next-line:typedef
   agregarReclamo()
   {
-
     // const nombreTest  = document.getElementById('inputNombre');
     console.log('testing');
     const newReclamo: Reclamos = {
-      id: 17,
       rut: this.rutUsuarioReclamo,
       nombre: this.nombreUsuarioReclamo,
       apellido: this.apellidoUsuarioReclamo,
       asunto: this.asuntoReclamo,
       textoReclamo: this.textoReclamo,
-      fecha: '02/10/21',
+      fecha: this.stringDate,
       estado: 'Enviado'
 
     };
-    console.log(newReclamo);
-
     this.servicio2.agregarReclamoDeUsuario(newReclamo).subscribe(
       reclamoService => {
-        alert('Reclamo se envio' + reclamoService);
+        alert('Reclamo se envio');
+        this.cargarReclamos(this.rutUsuarioReclamo);
       }
     );
     this.clearFields();
@@ -134,22 +133,23 @@ export class HomeUserComponent implements OnInit {
   }
 // tslint:disable-next-line:typedef
   editarDatos() {
-    var nombres = document.getElementById('input-nombres') as HTMLInputElement;
-    var apellidos = document.getElementById('input-apellidos') as HTMLInputElement;
-    var rut = document.getElementById('input-rut') as HTMLInputElement;
-    var telefono = document.getElementById('input-telefono') as HTMLInputElement;
-    var email = document.getElementById('input-email') as HTMLInputElement;
+    const nombres = document.getElementById('input-nombres') as HTMLInputElement;
+    const apellidos = document.getElementById('input-apellidos') as HTMLInputElement;
+    const rut = document.getElementById('input-rut') as HTMLInputElement;
+    const telefono = document.getElementById('input-telefono') as HTMLInputElement;
+    const email = document.getElementById('input-email') as HTMLInputElement;
     nombres.disabled = false;
     apellidos.disabled = false;
     rut.disabled = false;
     telefono.disabled = false;
     email.disabled = false;
-    var botonEnviar = document.getElementById('enviar') as HTMLButtonElement;
-    botonEnviar.style.display = "inline";
-    var botonEditar = document.getElementById('editar') as HTMLButtonElement;
-    botonEditar.style.display = "none";
+    const botonEnviar = document.getElementById('enviar') as HTMLButtonElement;
+    botonEnviar.style.display = 'inline';
+    const botonEditar = document.getElementById('editar') as HTMLButtonElement;
+    botonEditar.style.display = 'none';
   }
 
+  // tslint:disable-next-line:typedef
   enviarDatos() {
 
   }
