@@ -51,8 +51,8 @@
       <td>
         <div class="row">
           <div class="col">
-            <button type="button" class="btn btn-outline-secondary btn-sm" disabled>Editar</button>
-            <button type="button" class="btn btn-secondary btn-sm">Responder</button>
+            <button class="btn col col-lg-4 btn-danger" (click)="downLoadPdf(reclamo)">Download PDF</button>
+            <button type="button" class="btn btn-secondary btn-sm" (click)="mostrarPDF(reclamo)">Visualizar</button>
           </div>
         </div>
       </td>
@@ -63,6 +63,5 @@
 </table>
 </div>
 <div style="text-align: center;">
-  <button class="btn col col-lg-4 btn-danger btn-block ml-4">Download PDF</button>
   <!--<button class="btn col col-lg-4 btn-danger btn-block ml-4" (click)="downloadPDF()">Download PDF</button>-->
 </div>

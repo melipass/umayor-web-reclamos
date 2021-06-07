@@ -154,7 +154,7 @@
       "estado": "Enviado"
     },
     {
-      "id": 17,
+      "id": 10,
       "rut": "3333333334",
       "nombre": "Tomas",
       "apellido": "Primer Ministro",
@@ -162,6 +162,56 @@
       "textoReclamo": " jndfgugbuwgrqiugrwrqj\nasendifijhsfdidf kjdjkfdkd\n",
       "fecha": "02/10/21",
       "estado": "Enviado"
+    },
+    {
+      "id": 11,
+      "rut": "19581239",
+      "nombre": "Nicolas ",
+      "apellido": "testing2",
+      "asunto": "Der ",
+      "textoReclamo": "hnfgwrghwrghwerghwegrhgrhwehgrhurgurgurghrguurhgr",
+      "fecha": "2021/6/0",
+      "estado": "Enviado"
+    },
+    {
+      "id": 13,
+      "rut": "19581239",
+      "nombre": "Nicolas ",
+      "apellido": "testing2",
+      "asunto": "1dfuwyefgw",
+      "textoReclamo": "asdfasdhasudihasduidhdsaidhiusa",
+      "fecha": "2021/6/0",
+      "estado": "Enviado"
+    },
+    {
+      "id": 14,
+      "rut": "19581239",
+      "nombre": "Nicolas ",
+      "apellido": "testing2",
+      "asunto": "der die das ",
+      "textoReclamo": "sfdgsdfjdfsjfjsd sdlfldsflsdflsd s\ndfsdfksfdskdfkdfksdf\n",
+      "fecha": "2021/6/0",
+      "estado": "Enviado"
+    },
+    {
+      "rut": "19581239",
+      "nombre": "Nicolas ",
+      "apellido": "testing2",
+      "asunto": "hdhdhdhd",
+      "textoReclamo": "asdasdsdaadads",
+      "fecha": "2021/6/0",
+      "estado": "Enviado",
+      "id": 15
+    },
+    {
+      "rut": "19581239",
+      "nombre": "Nicolas ",
+      "apellido": "testing2",
+      "asunto": "2",
+      "textoReclamo": "s",
+      "fecha": "2021/6/0",
+      "estado": "Enviado",
+      "id": 16
     }
   ]
 }
