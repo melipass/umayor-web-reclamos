@@ -8,27 +8,31 @@
                     <hr>
                     <div class="mb-3">
                         <label class="form-label">Nombres</label>
-                        <input id="input-nombres"  class="form-control" value={{usuario.nombre}} disabled="true">
+                        <input id="input-nombres"  class="form-control" value={{usuario.nombre}} disabled="true" [(ngModel)]="nombre" requierd>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Apellidos</label>
-                        <input id="input-apellidos" class="form-control" value={{usuario.apellidos}} disabled="true">
+                        <input id="input-apellidos" class="form-control" value={{usuario.apellidos}} disabled="true" [(ngModel)]="apellidos" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Rut</label>
-                        <input id="input-rut" class="form-control" disabled="true" value={{usuario.rut}}>
+                        <input id="input-rut" class="form-control" disabled="true" value={{usuario.rut}} [(ngModel)]="rut" requierd>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">e-mail</label>
-                        <input id="input-email" class="form-control" disabled="true" value={{usuario.email}}>
+                        <input id="input-email" class="form-control" disabled="true" value={{usuario.email}} [(ngModel)]="email" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Número de teléfono</label>
-                        <input id="input-telefono" class="form-control" disabled="true" value={{usuario.numero_telefono}}>
+                        <input id="input-telefono" class="form-control" disabled="true" value={{usuario.numero_telefono}} [(ngModel)]="numero_telefono" requierd>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" id="input-passwordt" style="display: none;">Contraseña</label>
+                        <input id="input-password" class="form-control" value={{usuario.numero_telefono}} [(ngModel)]="password" requierd style="display: none;">
                     </div>
                     <hr>
                     <button type="submit" style="display:inline;" id="editar" class="btn btn-primary" (click)="editarDatos()">Editar Datos</button>
-                    <button type="submit" style="display:none;" id="enviar" class="btn btn-primary" (click)="enviarDatos()">Enviar Datos</button>
+                    <button type="submit" style="display:none;" id="enviar" class="btn btn-primary" (click)="validarCampos()">Enviar Datos</button>
                 </div>
             </div>
         </div>
