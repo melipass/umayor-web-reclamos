@@ -177,12 +177,12 @@ export class HomeUserComponent implements OnInit {
   enviarDatos() {
     const usuario: Usuarios = {
       id: this.usuario.id,
-      nombre:this.nombre,
+      nombre: this.nombre,
       apellidos: this.apellidos,
       rut: this.rut,
       email: this.email,
       numero_telefono: this.numero_telefono,
-      password:this.password
+      password: this.password
     };
 
     this.servicio.editarUsuario(usuario).subscribe(usuarioServidor => {

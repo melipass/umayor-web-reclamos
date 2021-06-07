@@ -43,7 +43,7 @@ export class GraficoComponent implements OnInit {
         if (this.dato=="Error"){
           this.numeroError++;
         }
-        if (this.dato=="en Progreso"){
+        if (this.dato=="En Progreso"){
           this.numeroenProgreso++;
         }
         if (this.dato=="Finalizado"){
