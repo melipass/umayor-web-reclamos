@@ -67,7 +67,7 @@ export class HomeUserComponent implements OnInit {
     private servicio2: ReclamosService,
     private datePipe: DatePipe,
     private activatedRoute: ActivatedRoute,
-    private router:Router
+    private router: Router
     ) {
       // this.myDate = this.datePipe.transform(this.myDate, 'dd-MM-yyyy');
   }
@@ -115,8 +115,6 @@ export class HomeUserComponent implements OnInit {
     this.asuntoReclamo = '';
     this.textoReclamo = '';
   }
-
-
   // tslint:disable-next-line:typedef
   cargarUsuarios() {
     this.servicio.obtenerUsuarios().subscribe(UsuariosServidor => {
