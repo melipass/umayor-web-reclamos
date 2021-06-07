@@ -1,11 +1,10 @@
-import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Reclamos } from 'src/app/clases/reclamos';
 import { Usuarios } from 'src/app/clases/usuarios';
 import { ReclamosService } from 'src/app/services/reclamos.service';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 import { DatePipe } from '@angular/common';
-
 // import { threadId } from 'node:worker_threads';
 
 @Component({
@@ -16,7 +15,21 @@ import { DatePipe } from '@angular/common';
 })
 export class HomeUserComponent implements OnInit {
 
+   // tslint:disable-next-line:no-inferrable-types
+  nombre: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  apellidos: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  rut: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  email: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  numero_telefono: number = 0;
+   // tslint:disable-next-line:no-inferrable-types
+  password: string = '';
+
   isReadOnly = true;
+
   usuarios: Usuarios[] = [];
   reclamos: Reclamos[] = [];
 
@@ -47,16 +60,15 @@ export class HomeUserComponent implements OnInit {
     // tslint:disable-next-line:no-inferrable-types
     estadoUsuarioReclamo: string ;
 
-    myDate: Date = new Date();
-    stringDate: string;
+    myDate = new Date().getTime;
 
   constructor(
     private servicio: UsuariosService,
     private servicio2: ReclamosService,
     private datePipe: DatePipe,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router:Router
     ) {
-      this.stringDate = this.myDate.getFullYear() + '/' + (this.myDate.getMonth() + 1) + '/' + this.myDate.getDay();
       // this.myDate = this.datePipe.transform(this.myDate, 'dd-MM-yyyy');
   }
 
@@ -65,7 +77,7 @@ export class HomeUserComponent implements OnInit {
     this.activatedRoute.params.subscribe( params => {
         let id;
         id = params.id;
-        this.cargarUsuario(1);
+        this.cargarUsuario(id);
     });
 
     // this.cargarReclamos('19581239');
@@ -74,22 +86,25 @@ export class HomeUserComponent implements OnInit {
   // tslint:disable-next-line:typedef
   agregarReclamo()
   {
+
     // const nombreTest  = document.getElementById('inputNombre');
     console.log('testing');
     const newReclamo: Reclamos = {
+      id: 17,
       rut: this.rutUsuarioReclamo,
       nombre: this.nombreUsuarioReclamo,
       apellido: this.apellidoUsuarioReclamo,
       asunto: this.asuntoReclamo,
       textoReclamo: this.textoReclamo,
-      fecha: this.stringDate,
+      fecha: '02/10/21',
       estado: 'Enviado'
 
     };
+    console.log(newReclamo);
+
     this.servicio2.agregarReclamoDeUsuario(newReclamo).subscribe(
       reclamoService => {
-        alert('Reclamo se envio');
-        this.cargarReclamos(this.rutUsuarioReclamo);
+        alert('Reclamo se envio' + reclamoService);
       }
     );
     this.clearFields();
@@ -133,26 +148,60 @@ export class HomeUserComponent implements OnInit {
   }
 // tslint:disable-next-line:typedef
   editarDatos() {
-    const nombres = document.getElementById('input-nombres') as HTMLInputElement;
-    const apellidos = document.getElementById('input-apellidos') as HTMLInputElement;
-    const rut = document.getElementById('input-rut') as HTMLInputElement;
-    const telefono = document.getElementById('input-telefono') as HTMLInputElement;
-    const email = document.getElementById('input-email') as HTMLInputElement;
+    var nombres = document.getElementById('input-nombres') as HTMLInputElement;
+    var apellidos = document.getElementById('input-apellidos') as HTMLInputElement;
+    var rut = document.getElementById('input-rut') as HTMLInputElement;
+    var telefono = document.getElementById('input-telefono') as HTMLInputElement;
+    var email = document.getElementById('input-email') as HTMLInputElement;
     nombres.disabled = false;
     apellidos.disabled = false;
     rut.disabled = false;
     telefono.disabled = false;
     email.disabled = false;
-    const botonEnviar = document.getElementById('enviar') as HTMLButtonElement;
-    botonEnviar.style.display = 'inline';
-    const botonEditar = document.getElementById('editar') as HTMLButtonElement;
-    botonEditar.style.display = 'none';
+    nombres.value="";
+    apellidos.value="";
+    rut.value="";
+    telefono.value="";
+    email.value="";
+    var botonEnviar = document.getElementById('enviar') as HTMLButtonElement;
+    botonEnviar.style.display = "inline";
+    var contraseñat = document.getElementById('input-passwordt') as HTMLInputElement;
+    contraseñat.style.display="inline";
+    var contraseña = document.getElementById('input-password') as HTMLInputElement;
+    contraseña.style.display="inline";
+    contraseña.value="";
+    var botonEditar = document.getElementById('editar') as HTMLButtonElement;
+    botonEditar.style.display = "none";
   }
 
-  // tslint:disable-next-line:typedef
   enviarDatos() {
+    const usuario: Usuarios = {
+      id: this.usuario.id,
+      nombre:this.nombre,
+      apellidos: this.apellidos,
+      rut: this.rut,
+      email: this.email,
+      numero_telefono: this.numero_telefono,
+      password:this.password
+    };
 
+    this.servicio.editarUsuario(usuario).subscribe(usuarioServidor => {
+      alert("Usuario Editado");
+      document.defaultView.location.reload();
+    });
   }
 
-
+  validarCampos() {
+    var inputs = document.getElementsByTagName("input");
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].hasAttribute("required")) {
+        if (inputs[i].value=="") {
+          alert("Llene todos los campos");
+          return false;
+        }
+      }
+    }
+    this.enviarDatos();
+    return true;
+  }
 }
