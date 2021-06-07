@@ -1,5 +1,5 @@
 export interface Reclamos {
-  id: number;
+  id?: number;
   rut: string;
   nombre: string;
   apellido: string;

@@ -163,6 +163,16 @@
       "textoReclamo": " jndfgugbuwgrqiugrwrqj\nasendifijhsfdidf kjdjkfdkd\n",
       "fecha": "02/10/21",
       "estado": "Enviado"
+    },
+    {
+      "rut": "19581239",
+      "nombre": "Nicolas ",
+      "apellido": "testing2",
+      "asunto": "clases ",
+      "textoReclamo": "profe no hizo clases el martes ",
+      "fecha": "02/10/21",
+      "estado": "Enviado",
+      "id": 18
     }
   ]
 }

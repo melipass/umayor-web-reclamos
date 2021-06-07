@@ -63,7 +63,7 @@ export class HomeUserComponent implements OnInit {
     this.activatedRoute.params.subscribe( params => {
         let id;
         id = params.id;
-        this.cargarUsuario(7);
+        this.cargarUsuario(1);
     });
 
     // this.cargarReclamos('19581239');
@@ -76,7 +76,6 @@ export class HomeUserComponent implements OnInit {
     // const nombreTest  = document.getElementById('inputNombre');
     console.log('testing');
     const newReclamo: Reclamos = {
-      id: 17,
       rut: this.rutUsuarioReclamo,
       nombre: this.nombreUsuarioReclamo,
       apellido: this.apellidoUsuarioReclamo,
