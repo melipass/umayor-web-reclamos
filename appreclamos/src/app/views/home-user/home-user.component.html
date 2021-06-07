@@ -8,7 +8,7 @@
                     <hr>
                     <div class="mb-3">
                         <label class="form-label">Nombres</label>
-                        <input id="input-nombres"  class="form-control" value={{usuario.nombre}} disabled="true" [(ngModel)]="nombre" requierd>
+                        <input id="input-nombres"  class="form-control" value={{usuario.nombre}} disabled="true" [(ngModel)]="nombre" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Apellidos</label>
@@ -16,7 +16,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Rut</label>
-                        <input id="input-rut" class="form-control" disabled="true" value={{usuario.rut}} [(ngModel)]="rut" requierd>
+                        <input id="input-rut" class="form-control" disabled="true" value={{usuario.rut}} [(ngModel)]="rut" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">e-mail</label>
@@ -24,11 +24,11 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Número de teléfono</label>
-                        <input id="input-telefono" class="form-control" disabled="true" value={{usuario.numero_telefono}} [(ngModel)]="numero_telefono" requierd>
+                        <input id="input-telefono" class="form-control" disabled="true" value={{usuario.numero_telefono}} [(ngModel)]="numero_telefono" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label" id="input-passwordt" style="display: none;">Contraseña</label>
-                        <input id="input-password" class="form-control" value={{usuario.numero_telefono}} [(ngModel)]="password" requierd style="display: none;">
+                        <input id="input-password" class="form-control" value={{usuario.numero_telefono}} [(ngModel)]="password" required style="display: none;">
                     </div>
                     <hr>
                     <button type="submit" style="display:inline;" id="editar" class="btn btn-primary" (click)="editarDatos()">Editar Datos</button>
