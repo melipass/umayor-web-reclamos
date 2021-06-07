@@ -10,9 +10,8 @@ import { ReclamosService } from 'src/app/services/reclamos.service';
 export class ComplainCard2Component implements OnInit {
 
   reclamos: Reclamos[] = [];
+  reclamosE: Reclamos[]=[];
   private dato: string;
-  public n:number;
-  public number:number;
   
   constructor(private services: ReclamosService) { }
 
@@ -24,11 +23,11 @@ export class ComplainCard2Component implements OnInit {
     this.services.cargarReclamos().subscribe(ReclamosServices => {
       this.reclamos = ReclamosServices;
       for(const a of this.reclamos){
+
         this.dato = a.estado;
         if (this.dato=="en Progreso"){
-          this.number++;
-        }
-        
+          this.reclamosE.push(a)
+          }        
       }
     });
   }
