@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Reclamos } from '../clases/reclamos';
+import {BehaviorSubject, Observable} from 'rxjs';
 
 
 @Injectable({
@@ -8,12 +9,24 @@ import { Reclamos } from '../clases/reclamos';
 })
 export class ReclamosService {
 
+  private reclamosAc: BehaviorSubject<Reclamos[]> = new BehaviorSubject<Reclamos[]>([]);
   constructor(private http: HttpClient) { }
 
+// tslint:disable-next-line:typedef
+getReclamos(): Observable<Reclamos[]>
+{
+  return this.reclamosAc.asObservable();
+}
+
+// tslint:disable-next-line:typedef
+setReclamos(reclamos: Reclamos[]): void
+{
+  this.reclamosAc.next(reclamos);
+}
+
   // tslint:disable-next-line:typedef
-  cargarReclamos(){
+cargarReclamos(){
     return this.http.get<Reclamos[]>('http://localhost:3000/reclamos');
-    console.log('get1 works');
   }
 
   // tslint:disable-next-line:typedef

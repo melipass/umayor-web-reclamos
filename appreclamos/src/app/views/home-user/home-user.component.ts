@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Reclamos } from 'src/app/clases/reclamos';
 import { Usuarios } from 'src/app/clases/usuarios';
 import { ReclamosService } from 'src/app/services/reclamos.service';
@@ -14,6 +14,19 @@ import { DatePipe } from '@angular/common';
   providers: [DatePipe]
 })
 export class HomeUserComponent implements OnInit {
+
+   // tslint:disable-next-line:no-inferrable-types
+  nombre: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  apellidos: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  rut: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  email: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  numero_telefono: number = 0;
+   // tslint:disable-next-line:no-inferrable-types
+  password: string = '';
 
   isReadOnly = true;
 
@@ -53,7 +66,8 @@ export class HomeUserComponent implements OnInit {
     private servicio: UsuariosService,
     private servicio2: ReclamosService,
     private datePipe: DatePipe,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router:Router
     ) {
       // this.myDate = this.datePipe.transform(this.myDate, 'dd-MM-yyyy');
   }
@@ -63,7 +77,7 @@ export class HomeUserComponent implements OnInit {
     this.activatedRoute.params.subscribe( params => {
         let id;
         id = params.id;
-        this.cargarUsuario(1);
+        this.cargarUsuario(id);
     });
 
     // this.cargarReclamos('19581239');
@@ -76,6 +90,7 @@ export class HomeUserComponent implements OnInit {
     // const nombreTest  = document.getElementById('inputNombre');
     console.log('testing');
     const newReclamo: Reclamos = {
+      id: 17,
       rut: this.rutUsuarioReclamo,
       nombre: this.nombreUsuarioReclamo,
       apellido: this.apellidoUsuarioReclamo,
@@ -143,15 +158,50 @@ export class HomeUserComponent implements OnInit {
     rut.disabled = false;
     telefono.disabled = false;
     email.disabled = false;
+    nombres.value="";
+    apellidos.value="";
+    rut.value="";
+    telefono.value="";
+    email.value="";
     var botonEnviar = document.getElementById('enviar') as HTMLButtonElement;
     botonEnviar.style.display = "inline";
+    var contraseñat = document.getElementById('input-passwordt') as HTMLInputElement;
+    contraseñat.style.display="inline";
+    var contraseña = document.getElementById('input-password') as HTMLInputElement;
+    contraseña.style.display="inline";
+    contraseña.value="";
     var botonEditar = document.getElementById('editar') as HTMLButtonElement;
     botonEditar.style.display = "none";
   }
 
   enviarDatos() {
+    const usuario: Usuarios = {
+      id: this.usuario.id,
+      nombre:this.nombre,
+      apellidos: this.apellidos,
+      rut: this.rut,
+      email: this.email,
+      numero_telefono: this.numero_telefono,
+      password:this.password
+    };
 
+    this.servicio.editarUsuario(usuario).subscribe(usuarioServidor => {
+      alert("Usuario Editado");
+      document.defaultView.location.reload();
+    });
   }
 
-
+  validarCampos() {
+    var inputs = document.getElementsByTagName("input");
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].hasAttribute("required")) {
+        if (inputs[i].value=="") {
+          alert("Llene todos los campos");
+          return false;
+        }
+      }
+    }
+    this.enviarDatos();
+    return true;
+  }
 }
