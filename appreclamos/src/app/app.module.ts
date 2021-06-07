@@ -27,7 +27,8 @@ import { GraficoComponent } from './components/grafico/grafico.component';
 import { ComplainCard2Component } from './components/complain-card2/complain-card2.component';
 import { ComplainCard3Component } from './components/complain-card3/complain-card3.component';
 import { ComplainCard4Component } from './components/complain-card4/complain-card4.component';
-
+import { ComplainAccordionComponent } from './components/complain-accordion/complain-accordion.component';
+import { CallbackPipe } from './clases/callback.pipe';
 
 @NgModule({
   declarations: [
@@ -48,12 +49,14 @@ import { ComplainCard4Component } from './components/complain-card4/complain-car
     NavbarAdminComponent,
     NavbarUserComponent,
     CarouselComponent,
-    PdfReaderComponent,    
-    ModalComponent,
     GraficoComponent,
     ComplainCard2Component,
     ComplainCard3Component,
     ComplainCard4Component
+    PdfReaderComponent,
+    ModalComponent,
+    ComplainAccordionComponent,
+    CallbackPipe
   ],
   imports: [
     BrowserModule,

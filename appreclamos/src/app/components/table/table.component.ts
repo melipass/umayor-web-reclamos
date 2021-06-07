@@ -28,7 +28,7 @@ export class TableComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  async cargarReclamosasc()
+  async cargarReclamosAsc()
   {
     this.reclamos = await this.services.cargarReclamos().toPromise();
   }
