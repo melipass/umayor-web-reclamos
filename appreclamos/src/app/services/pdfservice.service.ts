@@ -12,6 +12,7 @@ export class PdfserviceService {
 testgenearPDf(reclamo: Reclamos): void
 {
   const doc = new jsPDF();
+  doc.rect(10, 10, 100, 100, 'F');
   doc.text(20, 20, 'Reclamo ID:' + reclamo.id);
   doc.text(20, 30, 'Reclamo Rut:' + reclamo.rut);
   doc.text(20, 40, 'Reclamo Nombre Usuario:' + reclamo.nombre + ' ' + reclamo.apellido );

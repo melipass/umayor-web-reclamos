@@ -15,7 +15,8 @@ export class PdfReaderComponent implements OnInit {
   /*reclamos: Reclamos[] = [];*/
 
   constructor(/*private services: ReclamosService */) {
-    //this.pdf = this.sanitizer.sanitize(SecurityContext.RESOURCE_URL, this.sanitizer.bypassSecurityTrustResourceUrl(this.createPDF())) as string;
+    // tslint:disable-next-line:max-line-length
+    // this.pdf = this.sanitizer.sanitize(SecurityContext.RESOURCE_URL, this.sanitizer.bypassSecurityTrustResourceUrl(this.createPDF())) as string;
   }
 
   /*public downloadPDF(): void {
