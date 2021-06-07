@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Reclamos } from 'src/app/clases/reclamos';
+import { PdfserviceService } from 'src/app/services/pdfservice.service';
 import { ReclamosService } from 'src/app/services/reclamos.service';
 
 @Component({
@@ -12,7 +13,10 @@ export class TableComponent implements OnInit {
 
 
   reclamos: Reclamos[] = [];
-  constructor(private services: ReclamosService ) {
+  constructor(
+    private services: ReclamosService,
+    private pdfservices: PdfserviceService
+    ) {
   }
 
   ngOnInit(): void {
@@ -26,7 +30,16 @@ export class TableComponent implements OnInit {
       this.reclamos = ReclamosServices;
     });
   }
-
+  // tslint:disable-next-line:typedef
+  downLoadPdf(reclamoIn: Reclamos)
+  {
+    this.pdfservices.testgenearPDf(reclamoIn);
+  }
+  // tslint:disable-next-line:typedef
+  mostrarPDF(reclamoIn: Reclamos)
+  {
+    this.pdfservices.mostrarPDF(reclamoIn);
+  }
   // tslint:disable-next-line:typedef
   async cargarReclamosAsc()
   {

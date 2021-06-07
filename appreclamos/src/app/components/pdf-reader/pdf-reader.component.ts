@@ -29,9 +29,9 @@ export class PdfReaderComponent implements OnInit {
 	  iframe.setAttribute('style','position:inherit;right:0; top:0; bottom:0; height:600px; width:650px; padding:20px;');
   	document.body.appendChild(iframe);
     //console.log(doc.output('datauristring'))
-	  iframe.src = doc.output('datauristring');   
+	  iframe.src = doc.output('datauristring');
   }
-  
+
   public downloadPDF2(): void{
     const DATA = document.getElementById('htmlData');
     const doc = new jsPDF('p','pt','a4');
@@ -51,13 +51,12 @@ export class PdfReaderComponent implements OnInit {
     }).then((docResult) => {
       docResult.save(`${new Date().toISOString()}_tutorial.pdf`);
     });
-    
   }
 
 */
   ngOnInit(): void {
-    //this.cargarReclamos();
-    //this.downloadPDF();
+    // this.cargarReclamos();
+    // this.downloadPDF();
   }
 /*
   cargarReclamos(){
@@ -81,7 +80,7 @@ export class PdfReaderComponent implements OnInit {
     html2canvas(DATA, options).then((canvas: HTMLCanvasElement) => {
 
       const img = canvas.toDataURL('image/PNG');
-      
+
       // Add image Canvas to PDF
       const bufferX = 15;
       const bufferY = 15;
