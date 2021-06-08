@@ -33,7 +33,7 @@ export class TableComponent implements OnInit {
   // tslint:disable-next-line:typedef
   downLoadPdf(reclamoIn: Reclamos)
   {
-    this.pdfservices.testgenearPDf(reclamoIn);
+    this.pdfservices.downloadPDf(reclamoIn);
   }
   // tslint:disable-next-line:typedef
   mostrarPDF(reclamoIn: Reclamos)

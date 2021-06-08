@@ -69,7 +69,7 @@ export class HomeUserComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router: Router
     ) {
-      this.stringDate = this.myDate.getFullYear() + '/' + (this.myDate.getMonth() + 1) + '/' + this.myDate.getDay();
+      this.stringDate = this.myDate.getDay()   + '/' + (this.myDate.getMonth() + 1) + '/' + this.myDate.getFullYear();
   }
 
   ngOnInit(): void {
@@ -145,43 +145,43 @@ export class HomeUserComponent implements OnInit {
   editarDatos() {
     const nombres = document.getElementById('input-nombres') as HTMLInputElement;
     const apellidos = document.getElementById('input-apellidos') as HTMLInputElement;
-    //const rut = document.getElementById('input-rut') as HTMLInputElement;
+    // const rut = document.getElementById('input-rut') as HTMLInputElement;
     const telefono = document.getElementById('input-telefono') as HTMLInputElement;
     const email = document.getElementById('input-email') as HTMLInputElement;
     nombres.disabled = false;
     apellidos.disabled = false;
-    //rut.disabled = false;
+    // rut.disabled = false;
     telefono.disabled = false;
     email.disabled = false;
     const botonEnviar = document.getElementById('enviar') as HTMLButtonElement;
-    botonEnviar.style.display = "inline";
+    botonEnviar.style.display = 'inline';
     const contraseñat = document.getElementById('input-passwordt') as HTMLInputElement;
-    contraseñat.style.display="inline";
+    contraseñat.style.display = 'inline';
     const contraseña = document.getElementById('input-password') as HTMLInputElement;
-    contraseña.style.display="inline";
+    contraseña.style.display = 'inline';
     const botonEditar = document.getElementById('editar') as HTMLButtonElement;
-    botonEditar.style.display = "none";
+    botonEditar.style.display = 'none';
     const botonCancelar = document.getElementById('cancelar') as HTMLButtonElement;
-    botonCancelar.style.display = "inline";
+    botonCancelar.style.display = 'inline';
   }
-
+// tslint:disable-next-line:typedef
   enviarDatos() {
     const usuario: Usuarios = {
       id: this.usuario.id,
       nombre: this.nombre,
       apellidos: this.apellidos,
-      rut: this.rutUsuarioReclamo, //this.rut,
+      rut: this.rutUsuarioReclamo, // this.rut,
       email: this.email,
       numero_telefono: this.numero_telefono,
       password: this.password
     };
 
     this.servicio.editarUsuario(usuario).subscribe(usuarioServidor => {
-      alert("Usuario Editado");
+      alert('Usuario Editado');
       document.defaultView.location.reload();
     });
   }
-
+// tslint:disable-next-line:typedef
   cancelarEdicion(){
     const nombres = document.getElementById('input-nombres') as HTMLInputElement;
     const apellidos = document.getElementById('input-apellidos') as HTMLInputElement;
@@ -192,23 +192,23 @@ export class HomeUserComponent implements OnInit {
     telefono.disabled = true;
     email.disabled = true;
     const botonEditar = document.getElementById('editar') as HTMLButtonElement;
-    botonEditar.style.display = "inline";
+    botonEditar.style.display = 'inline';
     const botonEnviar = document.getElementById('enviar') as HTMLButtonElement;
-    botonEnviar.style.display = "none";
+    botonEnviar.style.display = 'none';
     const botonCancelar = document.getElementById('cancelar') as HTMLButtonElement;
-    botonCancelar.style.display = "none";
+    botonCancelar.style.display = 'none';
     const contraseñat = document.getElementById('input-passwordt') as HTMLInputElement;
-    contraseñat.style.display="none";
+    contraseñat.style.display = 'none';
     const contraseña = document.getElementById('input-password') as HTMLInputElement;
-    contraseña.style.display="none";
+    contraseña.style.display = 'none';
   }
-
+// tslint:disable-next-line:typedef
   validarCampos() {
-    var inputs = document.getElementsByTagName("input");
+    var inputs = document.getElementsByTagName('input');
     for (var i = 0; i < inputs.length; i++) {
-      if (inputs[i].hasAttribute("required")) {
-        if (inputs[i].value=="") {
-          alert("Llene todos los campos");
+      if (inputs[i].hasAttribute('required')) {
+        if (inputs[i].value == '') {
+          alert('Llene todos los campos');
           return false;
         }
       }

@@ -171,7 +171,7 @@
       "apellido": "testing2",
       "asunto": "Der ",
       "textoReclamo": "hnfgwrghwrghwerghwegrhgrhwehgrhurgurgurghrguurhgr",
-      "fecha": "2021/6/0",
+      "fecha": "2021/6/1",
       "estado": "Enviado"
     },
     {
@@ -181,7 +181,7 @@
       "apellido": "testing2",
       "asunto": "1dfuwyefgw",
       "textoReclamo": "asdfasdhasudihasduidhdsaidhiusa",
-      "fecha": "2021/6/0",
+      "fecha": "2021/6/1",
       "estado": "Enviado"
     },
     {
@@ -200,7 +200,7 @@
       "apellido": "testing2",
       "asunto": "hdhdhdhd",
       "textoReclamo": "asdasdsdaadads",
-      "fecha": "2021/6/0",
+      "fecha": "2021/2/1",
       "estado": "Finalizado",
       "id": 15
     },
@@ -210,7 +210,7 @@
       "apellido": "testing2",
       "asunto": "2",
       "textoReclamo": "s",
-      "fecha": "2021/6/0",
+      "fecha": "2021/3/4",
       "estado": "Error",
       "id": 16
     },
@@ -243,6 +243,16 @@
       "fecha": "2021/6/1",
       "estado": "Enviado",
       "id": 19
+    },
+    {
+      "rut": "1298391239312",
+      "nombre": "werner",
+      "apellido": "faust ",
+      "asunto": "testing the reclamos",
+      "textoReclamo": "Cuando Susanoo quiso enfrentarse a su hermana Amaterasu, para evitar heridas innecesarias, decidió hacer con ella un concurso de poder creador: consistía en crear cuanto más divinidades menores mejor. En la primera tanda, Amaterasu cogió la espada de su hermano y, tras romperla en tres fragmentos y masticarla, aparecieron tres hermosas diosas.",
+      "fecha": "2021/6/1",
+      "estado": "Enviado",
+      "id": 20
     }
   ]
 }
