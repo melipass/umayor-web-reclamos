@@ -5,10 +5,13 @@
 h2{
   text-align: center;
 }
+h3{
+  text-align: center;
+}
 #title{
   margin-top: 30px;
 }
 
 #grafico{ 
-width: 1000px;
- }
+  margin-top:50px;
+   }

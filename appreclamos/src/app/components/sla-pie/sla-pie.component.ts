@@ -5,25 +5,25 @@ import { Reclamos } from 'src/app/clases/reclamos';
 import { ReclamosService } from 'src/app/services/reclamos.service';
 
 @Component({
-  selector: 'app-grafico',
-  templateUrl: './grafico.component.html',
-  styleUrls: ['./grafico.component.css']
+  selector: 'app-sla-pie',
+  templateUrl: './sla-pie.component.html',
+  styleUrls: ['./sla-pie.component.css']
 })
-export class GraficoComponent implements OnInit {
+export class SlaPieComponent implements OnInit {
 
   reclamos: Reclamos[] = [];
   private datos = [];
   private dato: string;
   public numeroError: number=0;
-  public numeroenProgreso: number=0;
-  public numeroFinalizado: number=0;
-
-  public pieChartLabels: Label[] = ['Error', 'En Progreso', 'Finalizado'];
+  public numeroOK: number=0;
+  
+  public pieChartLabels: Label[] = ['Atrasado', 'OK'];
   public pieChartType: ChartType = 'pie';
   public pieChartLegend = true;
   public pieChartPlugins = [];
-  public pieChartData: SingleDataSet = [1,1,1];
-  public pieCharColors;
+  public pieChartData: SingleDataSet = [1,1];
+  public charColors;
+  private colores = [];
 
 
   constructor(private services: ReclamosService) { }
@@ -42,13 +42,10 @@ export class GraficoComponent implements OnInit {
         if (this.dato=="Error"){
           this.numeroError++;
         }
-        if (this.dato=="En Progreso"){
-          this.numeroenProgreso++;
-        }
-        if (this.dato=="Finalizado"){
-          this.numeroFinalizado++;
+        if (this.dato!="Error"){
+          this.numeroOK++;
         }        
-        this.pieChartData = [this.numeroError, this.numeroenProgreso, this.numeroFinalizado];
+        this.pieChartData = [this.numeroError, this.numeroOK];
       }
     });
   }

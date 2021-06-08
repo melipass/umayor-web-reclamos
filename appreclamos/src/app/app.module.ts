@@ -29,6 +29,7 @@ import { ComplainCard3Component } from './components/complain-card3/complain-car
 import { ComplainCard4Component } from './components/complain-card4/complain-card4.component';
 import { ComplainAccordionComponent } from './components/complain-accordion/complain-accordion.component';
 import { CallbackPipe } from './clases/callback.pipe';
+import { SlaPieComponent } from './components/sla-pie/sla-pie.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { CallbackPipe } from './clases/callback.pipe';
     PdfReaderComponent,
     ModalComponent,
     ComplainAccordionComponent,
-    CallbackPipe
+    CallbackPipe,
+    SlaPieComponent
   ],
   imports: [
     BrowserModule,

@@ -132,7 +132,7 @@
       "asunto": "reclamo ingresado test1 ",
       "textoReclamo": "testeo de put ",
       "fecha": "02/10/21",
-      "estado": "Enviado"
+      "estado": "Finalizado"
     },
     {
       "id": 8,
@@ -142,7 +142,7 @@
       "asunto": "sauduasdhsd",
       "textoReclamo": "jbvfggrhihdihfdihf",
       "fecha": "02/10/21",
-      "estado": "Enviado"
+      "estado": "Finalizado"
     },
     {
       "id": 9,
@@ -152,7 +152,7 @@
       "asunto": "hshshshsh",
       "textoReclamo": "kkksksksksksksksksksksksksksk",
       "fecha": "02/10/21",
-      "estado": "Enviado"
+      "estado": "Finalizado"
     },
     {
       "id": 10,
@@ -162,7 +162,7 @@
       "asunto": "der di das",
       "textoReclamo": " jndfgugbuwgrqiugrwrqj\nasendifijhsfdidf kjdjkfdkd\n",
       "fecha": "02/10/21",
-      "estado": "Enviado"
+      "estado": "Finalizado"
     },
     {
       "id": 11,
@@ -171,8 +171,8 @@
       "apellido": "testing2",
       "asunto": "Der ",
       "textoReclamo": "hnfgwrghwrghwerghwegrhgrhwehgrhurgurgurghrguurhgr",
-      "fecha": "2021/6/0",
-      "estado": "Enviado"
+      "fecha": "02/12/21",
+      "estado": "Finalizado"
     },
     {
       "id": 13,
@@ -181,8 +181,8 @@
       "apellido": "testing2",
       "asunto": "1dfuwyefgw",
       "textoReclamo": "asdfasdhasudihasduidhdsaidhiusa",
-      "fecha": "2021/6/0",
-      "estado": "Enviado"
+      "fecha": "02/12/21",
+      "estado": "Finalizado"
     },
     {
       "id": 14,
@@ -191,7 +191,7 @@
       "apellido": "testing2",
       "asunto": "der die das ",
       "textoReclamo": "sfdgsdfjdfsjfjsd sdlfldsflsdflsd s\ndfsdfksfdskdfkdfksdf\n",
-      "fecha": "2021/6/0",
+      "fecha": "02/12/21",
       "estado": "Finalizado"
     },
     {
@@ -200,7 +200,7 @@
       "apellido": "testing2",
       "asunto": "hdhdhdhd",
       "textoReclamo": "asdasdsdaadads",
-      "fecha": "2021/6/0",
+      "fecha": "02/12/21",
       "estado": "Finalizado",
       "id": 15
     },
@@ -211,8 +211,8 @@
       "apellido": "testing2",
       "asunto": "2",
       "textoReclamo": "s",
-      "fecha": "2021/6/0",
-      "estado": "Error"
+      "fecha": "02/12/21",
+      "estado": "Error",
     },
     {
       "id": 17,
@@ -221,8 +221,8 @@
       "apellido": "Contraseña",
       "asunto": "La pizza del casino estaba muy fria",
       "textoReclamo": "También tenía hongos",
-      "fecha": "02/10/21",
-      "estado": "Enviado"
+      "fecha": "02/12/21",
+      "estado": "Finalizado"
     },
     {
       "rut": "123456879",
@@ -230,8 +230,8 @@
       "apellido": "Contraseña",
       "asunto": "Testing pizza 2",
       "textoReclamo": "Muy mala pizza",
-      "fecha": "02/10/21",
-      "estado": "Enviado",
+      "fecha": "02/12/21",
+      "estado": "Finalizado",
       "id": 18
     },
     {
@@ -240,8 +240,8 @@
       "apellido": "Apellido2",
       "asunto": "Reclamo 101001101010",
       "textoReclamo": "10101010101010 ",
-      "fecha": "2021/6/1",
-      "estado": "Enviado",
+      "fecha": "02/12/21",
+      "estado": "Finalizado",
       "id": 19
     }
   ]

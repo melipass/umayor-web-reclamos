@@ -25,7 +25,7 @@ export class ComplainCard2Component implements OnInit {
       for(const a of this.reclamos){
 
         this.dato = a.estado;
-        if (this.dato=="en Progreso"){
+        if (this.dato=="En Progreso"){
           this.reclamosE.push(a)
           }        
       }
