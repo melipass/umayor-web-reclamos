@@ -13,8 +13,8 @@ export class TableComponent implements OnInit {
 
 
   id: number = 0;
-  rut: string = "";
-  nombre: string = "";
+  rut: string = '';
+  nombre: string = '';
   apellido: string = "";
   asunto: string = "";
   textoReclamo: string = "";
@@ -41,7 +41,7 @@ export class TableComponent implements OnInit {
   }
   // tslint:disable-next-line:typedef
   downLoadPdf(reclamoIn: Reclamos) {
-    this.pdfservices.testgenearPDf(reclamoIn);
+    this.pdfservices.downloadPDf(reclamoIn);
   }
   // tslint:disable-next-line:typedef
   mostrarPDF(reclamoIn: Reclamos) {
