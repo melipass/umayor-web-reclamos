@@ -205,6 +205,7 @@
       "id": 15
     },
     {
+      "id": 16,
       "rut": "19581239",
       "nombre": "Nicolas ",
       "apellido": "testing2",
@@ -212,7 +213,6 @@
       "textoReclamo": "s",
       "fecha": "02/12/21",
       "estado": "Error",
-      "id": 16
     },
     {
       "id": 17,

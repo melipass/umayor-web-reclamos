@@ -12,11 +12,20 @@ import { ReclamosService } from 'src/app/services/reclamos.service';
 export class TableComponent implements OnInit {
 
 
+  id: number = 0;
+  rut: string = "";
+  nombre: string = "";
+  apellido: string = "";
+  asunto: string = "";
+  textoReclamo: string = "";
+  fecha: string = "";
+  estado: string = "";
+
   reclamos: Reclamos[] = [];
   constructor(
     private services: ReclamosService,
     private pdfservices: PdfserviceService
-    ) {
+  ) {
   }
 
   ngOnInit(): void {
@@ -25,24 +34,53 @@ export class TableComponent implements OnInit {
   }
 
   // tslint:disable-next-line:typedef
-  cargarReclamos(){
+  cargarReclamos() {
     this.services.cargarReclamos().subscribe(ReclamosServices => {
       this.reclamos = ReclamosServices;
     });
   }
   // tslint:disable-next-line:typedef
-  downLoadPdf(reclamoIn: Reclamos)
-  {
+  downLoadPdf(reclamoIn: Reclamos) {
     this.pdfservices.testgenearPDf(reclamoIn);
   }
   // tslint:disable-next-line:typedef
-  mostrarPDF(reclamoIn: Reclamos)
-  {
+  mostrarPDF(reclamoIn: Reclamos) {
     this.pdfservices.mostrarPDF(reclamoIn);
   }
   // tslint:disable-next-line:typedef
-  async cargarReclamosAsc()
-  {
+  async cargarReclamosAsc() {
     this.reclamos = await this.services.cargarReclamos().toPromise();
+  }
+
+  enviarEstado(reclamoIn: Reclamos) {
+    var inputs = document.getElementsByTagName("input");
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].hasAttribute("required")) {
+        if (inputs[i].value == "") {
+          alert("Indique nuevo estado: (En Progreso, Enviado, Error, Finalizado)");
+          return false;
+        }
+        if (inputs[i].value == "En Progreso", "Enviado", "Error", "Finalizado") {
+          const reclamoE: Reclamos = {
+            id: reclamoIn.id,
+            rut: reclamoIn.rut,
+            nombre: reclamoIn.nombre,
+            apellido: reclamoIn.apellido,
+            asunto: reclamoIn.asunto,
+            textoReclamo: reclamoIn.textoReclamo,
+            fecha: reclamoIn.fecha,
+            estado: this.estado
+          }
+          this.services.editarReclamo(reclamoE).subscribe(ReclamoServidor => {
+            alert("Reclamo Editado");
+            document.defaultView.location.reload();
+          });
+          return true;
+        }
+      }
+    }
+    alert("Indique nuevo estado valido: (En Progreso, Enviado, Error, Finalizado)");
+    return false;
+
   }
 }
