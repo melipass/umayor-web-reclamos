@@ -23,8 +23,7 @@ export class GraficoComponent implements OnInit {
   public pieChartLegend = true;
   public pieChartPlugins = [];
   public pieChartData: SingleDataSet = [1,1,1];
-  public charColors;
-  private colores = [];
+  public pieCharColors;
 
 
   constructor(private services: ReclamosService) { }
