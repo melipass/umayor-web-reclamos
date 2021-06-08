@@ -11,20 +11,21 @@
     },
     {
       "id": 2,
-      "nombre": "Editar Con",
-      "apellidos": "Contraseña",
-      "rut": "123456879",
-      "email": "EstoyCansado@Ugh.com",
-      "numero_telefono": "987654321",
-      "password": "Contraseña?"
+      "nombre": "",
+      "apellidos": "",
+      "rut": "",
+      "email": "",
+      "numero_telefono": "987654323",
+      "password": "987654322"
     },
     {
       "id": 3,
-      "nombre": "Prueba Final Edit",
-      "apellidos": "Creo Que Funca",
-      "rut": "123456789",
-      "email": "MadreDe@Dios.com",
-      "numero_telefono": "987654321"
+      "nombre": "Nombre1233456",
+      "apellidos": "Apellido223456",
+      "rut": "2839189238913",
+      "email": "jaksjdkas@sajdksa.cjkksa23456",
+      "numero_telefono": "32423423423456",
+      "password": "fsdfdsfdsf"
     },
     {
       "nombre": "werner",
@@ -191,7 +192,7 @@
       "asunto": "der die das ",
       "textoReclamo": "sfdgsdfjdfsjfjsd sdlfldsflsdflsd s\ndfsdfksfdskdfkdfksdf\n",
       "fecha": "2021/6/0",
-      "estado": "Enviado"
+      "estado": "Finalizado"
     },
     {
       "rut": "19581239",
@@ -200,7 +201,7 @@
       "asunto": "hdhdhdhd",
       "textoReclamo": "asdasdsdaadads",
       "fecha": "2021/6/0",
-      "estado": "Enviado",
+      "estado": "Finalizado",
       "id": 15
     },
     {
@@ -210,8 +211,38 @@
       "asunto": "2",
       "textoReclamo": "s",
       "fecha": "2021/6/0",
-      "estado": "Enviado",
+      "estado": "Error",
       "id": 16
+    },
+    {
+      "id": 17,
+      "rut": "123456879",
+      "nombre": "Editar Con",
+      "apellido": "Contraseña",
+      "asunto": "La pizza del casino estaba muy fria",
+      "textoReclamo": "También tenía hongos",
+      "fecha": "02/10/21",
+      "estado": "Enviado"
+    },
+    {
+      "rut": "123456879",
+      "nombre": "Editar Con",
+      "apellido": "Contraseña",
+      "asunto": "Testing pizza 2",
+      "textoReclamo": "Muy mala pizza",
+      "fecha": "02/10/21",
+      "estado": "Enviado",
+      "id": 18
+    },
+    {
+      "rut": "2839189238913",
+      "nombre": "Nombre1",
+      "apellido": "Apellido2",
+      "asunto": "Reclamo 101001101010",
+      "textoReclamo": "10101010101010 ",
+      "fecha": "2021/6/1",
+      "estado": "Enviado",
+      "id": 19
     }
   ]
 }
