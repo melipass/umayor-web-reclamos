@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Reclamos } from 'src/app/clases/reclamos';
 import { Usuarios } from 'src/app/clases/usuarios';
@@ -29,7 +29,6 @@ export class HomeUserComponent implements OnInit {
   password: string = '';
 
   isReadOnly = true;
-
   usuarios: Usuarios[] = [];
   reclamos: Reclamos[] = [];
 
@@ -60,7 +59,8 @@ export class HomeUserComponent implements OnInit {
     // tslint:disable-next-line:no-inferrable-types
     estadoUsuarioReclamo: string ;
 
-    myDate = new Date().getTime;
+    myDate: Date = new Date();
+    stringDate: string;
 
   constructor(
     private servicio: UsuariosService,
@@ -69,7 +69,7 @@ export class HomeUserComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router: Router
     ) {
-      // this.myDate = this.datePipe.transform(this.myDate, 'dd-MM-yyyy');
+      this.stringDate = this.myDate.getFullYear() + '/' + (this.myDate.getMonth() + 1) + '/' + this.myDate.getDay();
   }
 
   ngOnInit(): void {
@@ -86,16 +86,13 @@ export class HomeUserComponent implements OnInit {
   // tslint:disable-next-line:typedef
   agregarReclamo()
   {
-
-    // const nombreTest  = document.getElementById('inputNombre');
-    console.log('testing');
     const newReclamo: Reclamos = {
       rut: this.rutUsuarioReclamo,
       nombre: this.nombreUsuarioReclamo,
       apellido: this.apellidoUsuarioReclamo,
       asunto: this.asuntoReclamo,
       textoReclamo: this.textoReclamo,
-      fecha: '02/10/21',
+      fecha: this.stringDate,
       estado: 'Enviado'
 
     };
@@ -103,7 +100,8 @@ export class HomeUserComponent implements OnInit {
 
     this.servicio2.agregarReclamoDeUsuario(newReclamo).subscribe(
       reclamoService => {
-        alert('Reclamo se envio' + reclamoService);
+        alert('El reclamo ha sido enviado.');
+        this.cargarReclamos(this.rutUsuarioReclamo);
       }
     );
     this.clearFields();
@@ -145,30 +143,26 @@ export class HomeUserComponent implements OnInit {
   }
 // tslint:disable-next-line:typedef
   editarDatos() {
-    var nombres = document.getElementById('input-nombres') as HTMLInputElement;
-    var apellidos = document.getElementById('input-apellidos') as HTMLInputElement;
-    var rut = document.getElementById('input-rut') as HTMLInputElement;
-    var telefono = document.getElementById('input-telefono') as HTMLInputElement;
-    var email = document.getElementById('input-email') as HTMLInputElement;
+    const nombres = document.getElementById('input-nombres') as HTMLInputElement;
+    const apellidos = document.getElementById('input-apellidos') as HTMLInputElement;
+    //const rut = document.getElementById('input-rut') as HTMLInputElement;
+    const telefono = document.getElementById('input-telefono') as HTMLInputElement;
+    const email = document.getElementById('input-email') as HTMLInputElement;
     nombres.disabled = false;
     apellidos.disabled = false;
-    rut.disabled = false;
+    //rut.disabled = false;
     telefono.disabled = false;
     email.disabled = false;
-    nombres.value="";
-    apellidos.value="";
-    rut.value="";
-    telefono.value="";
-    email.value="";
-    var botonEnviar = document.getElementById('enviar') as HTMLButtonElement;
+    const botonEnviar = document.getElementById('enviar') as HTMLButtonElement;
     botonEnviar.style.display = "inline";
-    var contraseñat = document.getElementById('input-passwordt') as HTMLInputElement;
+    const contraseñat = document.getElementById('input-passwordt') as HTMLInputElement;
     contraseñat.style.display="inline";
-    var contraseña = document.getElementById('input-password') as HTMLInputElement;
+    const contraseña = document.getElementById('input-password') as HTMLInputElement;
     contraseña.style.display="inline";
-    contraseña.value="";
-    var botonEditar = document.getElementById('editar') as HTMLButtonElement;
+    const botonEditar = document.getElementById('editar') as HTMLButtonElement;
     botonEditar.style.display = "none";
+    const botonCancelar = document.getElementById('cancelar') as HTMLButtonElement;
+    botonCancelar.style.display = "inline";
   }
 
   enviarDatos() {
@@ -176,7 +170,7 @@ export class HomeUserComponent implements OnInit {
       id: this.usuario.id,
       nombre: this.nombre,
       apellidos: this.apellidos,
-      rut: this.rut,
+      rut: this.rutUsuarioReclamo, //this.rut,
       email: this.email,
       numero_telefono: this.numero_telefono,
       password: this.password
@@ -186,6 +180,27 @@ export class HomeUserComponent implements OnInit {
       alert("Usuario Editado");
       document.defaultView.location.reload();
     });
+  }
+
+  cancelarEdicion(){
+    const nombres = document.getElementById('input-nombres') as HTMLInputElement;
+    const apellidos = document.getElementById('input-apellidos') as HTMLInputElement;
+    const telefono = document.getElementById('input-telefono') as HTMLInputElement;
+    const email = document.getElementById('input-email') as HTMLInputElement;
+    nombres.disabled = true;
+    apellidos.disabled = true;
+    telefono.disabled = true;
+    email.disabled = true;
+    const botonEditar = document.getElementById('editar') as HTMLButtonElement;
+    botonEditar.style.display = "inline";
+    const botonEnviar = document.getElementById('enviar') as HTMLButtonElement;
+    botonEnviar.style.display = "none";
+    const botonCancelar = document.getElementById('cancelar') as HTMLButtonElement;
+    botonCancelar.style.display = "none";
+    const contraseñat = document.getElementById('input-passwordt') as HTMLInputElement;
+    contraseñat.style.display="none";
+    const contraseña = document.getElementById('input-password') as HTMLInputElement;
+    contraseña.style.display="none";
   }
 
   validarCampos() {

@@ -19,11 +19,6 @@ export class ComplainAccordionComponent implements OnInit {
   constructor(private services: ReclamosService) { }
 
   // tslint:disable-next-line:typedef
-  filterUser(reclamos: any){
-    return reclamos.rut === "19581239";
-  }
-
-  // tslint:disable-next-line:typedef
   filterStatusEnProgreso(reclamos: any){
     return reclamos.estado == "En Progreso";
   }
@@ -62,5 +57,3 @@ export class ComplainAccordionComponent implements OnInit {
       this.reclamos = await this.services.cargarReclamos().toPromise();
     }
 }
-
-

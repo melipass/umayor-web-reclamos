@@ -28,11 +28,12 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label" id="input-passwordt" style="display: none;">Contraseña</label>
-                        <input id="input-password" class="form-control" value={{usuario.numero_telefono}} [(ngModel)]="password" required style="display: none;">
+                        <input id="input-password" class="form-control" value={{usuario.password}} [(ngModel)]="password" required style="display: none;" type="password">
                     </div>
                     <hr>
                     <button type="submit" style="display:inline;" id="editar" class="btn btn-primary" (click)="editarDatos()">Editar Datos</button>
                     <button type="submit" style="display:none;" id="enviar" class="btn btn-primary" (click)="validarCampos()">Enviar Datos</button>
+                    <button type="submit" style="display:none;margin-left:5px;" id="cancelar" class="btn btn-warning" (click)="cancelarEdicion()">Cancelar</button>
                 </div>
             </div>
         </div>

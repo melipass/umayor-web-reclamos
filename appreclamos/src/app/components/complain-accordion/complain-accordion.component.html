@@ -3,52 +3,52 @@
         <h5 class="card-title">Tus reclamos</h5>
         <hr>
         <div class="accordion" id="accordionExample">
-            <div class="accordion-item" *ngFor="let reclamo of reclamos | callback: filterUser | callback: filterStatusEnProgreso"> <!--| filterbyrut:19581239"> -->
-              <h2 class="accordion-header"> <!--id="headingOne">-->
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" aria-expanded="true" id = "colapsOne" data-bs-target="#collapseOne" aria-controls="collapseOne">  <!--id = "colapsOne" data-bs-target="#collapseOne" aria-controls="collapseOne"-->
-                  <b>{{reclamo.asunto}} - Estado: {{reclamo.estado}}</b>
+            <div class="accordion-item" *ngFor="let reclamo of reclamos | callback: filterStatusEnProgreso"> <!--| filterbyrut:19581239"> -->
+              <h2 class="accordion-header"> 
+                <button class="accordion-button" style="background-color:#cbe1ff;color:black;" type="button" data-bs-toggle="collapse" aria-expanded="true" id="{{'colapsOne'+reclamo.id}}" attr.data-bs-target="{{'#collapseOne'+reclamo.id}}" attr.aria-controls="{{'collapseOne'+reclamo.id}}">
+                  <b>Asunto: {{reclamo.asunto}} - Estado: {{reclamo.estado}}</b>
                 </button>
               </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div id="{{'collapseOne'+reclamo.id}}" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>{{reclamo.textoReclamo}}</strong>
+                  {{reclamo.textoReclamo}}
                 </div>
               </div>
             </div>
-            <div class="accordion-item" *ngFor="let reclamo of reclamos | callback: filterUser | callback: filterStatusEnviado">
+            <div class="accordion-item" *ngFor="let reclamo of reclamos | callback: filterStatusEnviado">
               <h2 class="accordion-header" id="headingTwo">
-                <button id = "colapsTwo" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <b>{{reclamo.asunto}} - Estado: {{reclamo.estado}}</b>
+                <button class="accordion-button collapsed" style="background-color:rgb(218, 218, 255);color:black;" type="button" data-bs-toggle="collapse" aria-expanded="false" id="{{'colapsTwo'+reclamo.id}}" attr.data-bs-target="{{'#collapseTwo'+reclamo.id}}" attr.aria-controls="{{'collapseTwo'+reclamo.id}}">
+                    <b>Asunto: {{reclamo.asunto}} - Estado: {{reclamo.estado}}</b>
                 </button>
               </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div id="{{'collapseTwo'+reclamo.id}}" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>{{reclamo.textoReclamo}}</strong>
+                  {{reclamo.textoReclamo}}
                 </div>
               </div>
             </div>
-            <div class="accordion-item" *ngFor="let reclamo of reclamos | callback: filterUser | callback: filterStatusFinalizado">
+            <div class="accordion-item" *ngFor="let reclamo of reclamos | callback: filterStatusFinalizado">
               <h2 class="accordion-header" id="headingThree">
-                <button id = "colapsThree" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <b>{{reclamo.asunto}} - Estado: {{reclamo.estado}}</b>
+                <button class="accordion-button collapsed" style="background-color:#d4fff1;color:black;" type="button" data-bs-toggle="collapse" aria-expanded="false" id="{{'colapsThree'+reclamo.id}}" attr.data-bs-target="{{'#collapseThree'+reclamo.id}}" attr.aria-controls="{{'collapseThree'+reclamo.id}}">
+                    <b>Asunto: {{reclamo.asunto}} - Estado: {{reclamo.estado}}</b>
                 </button>
               </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div id="{{'collapseThree'+reclamo.id}}" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>{{reclamo.textoReclamo}}</strong>
+                  {{reclamo.textoReclamo}}
                 </div>
               </div>
             </div>
 
-            <div class="accordion-item" *ngFor="let reclamo of reclamos | callback: filterUser | callback: filterStatusError">
+            <div class="accordion-item" *ngFor="let reclamo of reclamos | callback: filterStatusError">
                 <h2 class="accordion-header" id="headingFour">
-                  <button id = "colapsFour" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                      <b>{{reclamo.asunto}} - Estado: {{reclamo.estado}}</b>
+                  <button class="accordion-button collapsed" style="background-color:#ffe1eb;color:black;" type="button" data-bs-toggle="collapse" aria-expanded="false" id="{{'colapsFour'+reclamo.id}}" attr.data-bs-target="{{'#collapseFour'+reclamo.id}}" attr.aria-controls="{{'collapseFour'+reclamo.id}}">
+                      <b>Asunto: {{reclamo.asunto}} - Estado: {{reclamo.estado}}</b>
                   </button>
                 </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div id="{{'collapseFour'+reclamo.id}}" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <strong>{{reclamo.textoReclamo}}</strong>
+                    {{reclamo.textoReclamo}}
                   </div>
                 </div>
               </div>

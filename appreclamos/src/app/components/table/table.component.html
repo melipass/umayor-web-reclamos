@@ -31,11 +31,11 @@
         <th class= "col-lg-1" scope="col-lg-1">Reclamo ID</th>
         <th class= "col-lg-1" scope="col-lg-1">Rut</th>
         <th class ="col-lg-2" scope="col-lg-3">Nombre Usuario</th>
-        <th class ="col-lg-3" scope="col-lg-1">Asunto</th>
+        <th class ="col-lg-2" scope="col-lg-1">Asunto</th>
         <th class ="col-lg-3" scope="col-lg-2">Contenido</th>
         <th class ="col-lg-1" scope="col-lg-3">Fecha</th>
         <th class ="col-lg-1" scope="col-lg-1">Estado</th>
-        <th class= "col-lg-1" scope="col-lg-2">Optiones</th>
+        <th class= "col-lg-2" scope="col-lg-2">Optiones</th>
     </tr>
   </thead>
 
@@ -51,7 +51,7 @@
       <td>
         <div class="row">
           <div class="col">
-            <button class="btn col col-lg-4 btn-danger" (click)="downLoadPdf(reclamo)">Download PDF</button>
+            <button class="btn btn-danger btn-sm" (click)="downLoadPdf(reclamo)">Descargar PDF</button>
             <button type="button" class="btn btn-secondary btn-sm" (click)="mostrarPDF(reclamo)">Visualizar</button>
           </div>
         </div>

@@ -10,3 +10,8 @@
   .navbar-brand{
     color: #3C3C3B;
   }
+  #logout-button{
+    height:30px;
+    margin-right:45px;
+  }
+  
