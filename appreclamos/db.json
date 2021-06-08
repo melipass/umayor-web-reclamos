@@ -235,14 +235,14 @@
       "id": 18
     },
     {
+      "id": 19,
       "rut": "2839189238913",
       "nombre": "Nombre1",
       "apellido": "Apellido2",
       "asunto": "Reclamo 101001101010",
       "textoReclamo": "10101010101010 ",
       "fecha": "02/12/21",
-      "estado": "Finalizado",
-      "id": 19
+      "estado": "En Progreso"
     }
   ]
 }

@@ -63,30 +63,28 @@ export class TableComponent implements OnInit {
   }
 
   enviarEstado(reclamoIn: Reclamos) {
-    var inputs = document.getElementsByTagName("input");
+    var inputs = document.getElementsByTagName("select");
     for (var i = 0; i < inputs.length; i++) {
-      if (inputs[i].hasAttribute("required")) {
-        if (inputs[i].value == "") {
-          alert("Indique nuevo estado: (En Progreso, Enviado, Error, Finalizado)");
-          return false;
+      if (inputs[i].value == "") {
+        alert("Indique nuevo estado: (En Progreso, Enviado, Error, Finalizado)");
+        return false;
+      }
+      if (inputs[i].value == "En Progreso", "Enviado", "Error", "Finalizado") {
+        const reclamoE: Reclamos = {
+          id: reclamoIn.id,
+          rut: reclamoIn.rut,
+          nombre: reclamoIn.nombre,
+          apellido: reclamoIn.apellido,
+          asunto: reclamoIn.asunto,
+          textoReclamo: reclamoIn.textoReclamo,
+          fecha: reclamoIn.fecha,
+          estado: this.estado
         }
-        if (inputs[i].value == "En Progreso", "Enviado", "Error", "Finalizado") {
-          const reclamoE: Reclamos = {
-            id: reclamoIn.id,
-            rut: reclamoIn.rut,
-            nombre: reclamoIn.nombre,
-            apellido: reclamoIn.apellido,
-            asunto: reclamoIn.asunto,
-            textoReclamo: reclamoIn.textoReclamo,
-            fecha: reclamoIn.fecha,
-            estado: this.estado
-          }
-          this.services.editarReclamo(reclamoE).subscribe(ReclamoServidor => {
-            alert("Reclamo Editado");
-            document.defaultView.location.reload();
-          });
-          return true;
-        }
+        this.services.editarReclamo(reclamoE).subscribe(ReclamoServidor => {
+          alert("Reclamo Editado");
+          document.defaultView.location.reload();
+        });
+        return true;
       }
     }
     alert("Indique nuevo estado valido: (En Progreso, Enviado, Error, Finalizado)");
