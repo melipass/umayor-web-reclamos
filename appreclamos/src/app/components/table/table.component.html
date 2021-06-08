@@ -25,42 +25,50 @@
 </div>
 
 <div id='htmlData'>
-<table class="table table-bordered table-striped table-responsive-xl">
-  <thead class="thead-dark">
-    <tr>
-        <th class= "col-lg-1" scope="col-lg-1">Reclamo ID</th>
-        <th class= "col-lg-1" scope="col-lg-1">Rut</th>
-        <th class ="col-lg-2" scope="col-lg-3">Nombre Usuario</th>
-        <th class ="col-lg-2" scope="col-lg-1">Asunto</th>
-        <th class ="col-lg-3" scope="col-lg-2">Contenido</th>
-        <th class ="col-lg-1" scope="col-lg-3">Fecha</th>
-        <th class ="col-lg-1" scope="col-lg-1">Estado</th>
-        <th class= "col-lg-2" scope="col-lg-2">Optiones</th>
-    </tr>
-  </thead>
+  <table class="table table-bordered table-striped table-responsive-xl">
+    <thead class="thead-dark">
+      <tr>
+        <th class="col-lg-1" scope="col-lg-1">Reclamo ID</th>
+        <th class="col-lg-1" scope="col-lg-1">Rut</th>
+        <th class="col-lg-2" scope="col-lg-3">Nombre Usuario</th>
+        <th class="col-lg-2" scope="col-lg-1">Asunto</th>
+        <th class="col-lg-3" scope="col-lg-2">Contenido</th>
+        <th class="col-lg-1" scope="col-lg-3">Fecha</th>
+        <th class="col-lg-1" scope="col-lg-1">Estado</th>
+        <th class="col-lg-2" scope="col-lg-2">Opciones</th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <tr *ngFor="let reclamo of reclamos">
-      <th scope="row">{{reclamo.id}}</th>
-      <td>{{reclamo.rut}}</td>
-      <td>{{reclamo.nombre}}</td>
-      <td>{{reclamo.asunto}}</td>
-      <td>{{reclamo.textoReclamo}}</td>
-      <td>{{reclamo.fecha}}</td>
-      <td>{{reclamo.estado}}</td>
-      <td>
-        <div class="row">
-          <div class="col">
-            <button class="btn btn-danger btn-sm" (click)="downLoadPdf(reclamo)">Descargar PDF</button>
-            <button type="button" class="btn btn-secondary btn-sm" (click)="mostrarPDF(reclamo)">Visualizar</button>
+    <tbody>
+      <tr *ngFor="let reclamo of reclamos">
+        <th scope="row">{{reclamo.id}}</th>
+        <td>{{reclamo.rut}}</td>
+        <td>{{reclamo.nombre}}</td>
+        <td>{{reclamo.asunto}}</td>
+        <td>{{reclamo.textoReclamo}}</td>
+        <td>{{reclamo.fecha}}</td>
+        <td>
+          {{reclamo.estado}}
+          <select name="Estado" class="form-control" [(ngModel)]="estado" id="texto_{{reclamo.id}}" style="display: none;">
+            <option value="En Progreso">En Progreso</option>
+            <option value="Finalizado">Finalizado</option>
+            <option value="Error">Error</option>
+          </select>
+          <!-- class="form-control" [(ngModel)]="estado" required style="display: none;">-->
+          <button id="mostrar_{{reclamo.id}}" type="button" class="btn btn-secondary btn-sm" (click)="mostrarEdicion(reclamo)" style="display: inline;">Cambiar Estado</button>
+          <button id="cambiar_{{reclamo.id}}" type="button" class="btn btn-secondary btn-sm" (click)="enviarEstado(reclamo)" style="display: none;">Guardar Estado</button>
+        </td>
+        <td>
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-danger btn-sm" (click)="downLoadPdf(reclamo)">Descargar PDF</button>
+              <button type="button" class="btn btn-secondary btn-sm" (click)="mostrarPDF(reclamo)">Visualizar</button>
+            </div>
           </div>
-        </div>
-      </td>
-    </tr>
-
-
-  </tbody>
-</table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 <div style="text-align: center;">
   <!--<button class="btn col col-lg-4 btn-danger btn-block ml-4" (click)="downloadPDF()">Download PDF</button>-->
