@@ -90,7 +90,6 @@ export class HomeUserComponent implements OnInit {
     // const nombreTest  = document.getElementById('inputNombre');
     console.log('testing');
     const newReclamo: Reclamos = {
-      id: 17,
       rut: this.rutUsuarioReclamo,
       nombre: this.nombreUsuarioReclamo,
       apellido: this.apellidoUsuarioReclamo,
