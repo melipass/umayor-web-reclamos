@@ -40,8 +40,8 @@ export class TableComponent implements OnInit {
     });
   }
   // tslint:disable-next-line:typedef
-  downLoadPdf(reclamoIn: Reclamos) {
-    this.pdfservices.downloadPDf(reclamoIn);
+  downloadPDF(reclamoIn: Reclamos) {
+    this.pdfservices.downloadPDF(reclamoIn);
   }
   // tslint:disable-next-line:typedef
   mostrarPDF(reclamoIn: Reclamos) {
@@ -51,17 +51,17 @@ export class TableComponent implements OnInit {
   async cargarReclamosAsc() {
     this.reclamos = await this.services.cargarReclamos().toPromise();
   }
-
-  mostrarEdicion(reclamoM:Reclamos){
-    const texto =document.getElementById("texto_"+reclamoM.id)as HTMLElement;
-    const mostrar =document.getElementById("mostrar_"+reclamoM.id)as HTMLElement;
-    const cambiar =document.getElementById("cambiar_"+reclamoM.id)as HTMLElement;
+// tslint:disable-next-line:typedef
+  mostrarEdicion(reclamoM: Reclamos){
+    const texto = document.getElementById("texto_" + reclamoM.id)as HTMLElement;
+    const mostrar = document.getElementById("mostrar_" + reclamoM.id)as HTMLElement;
+    const cambiar = document.getElementById("cambiar_" + reclamoM.id)as HTMLElement;
 
     texto.style.display="inline";
     mostrar.style.display="none";
     cambiar.style.display="inline";
   }
-
+// tslint:disable-next-line:typedef
   enviarEstado(reclamoIn: Reclamos) {
     var inputs = document.getElementsByTagName("select");
     for (var i = 0; i < inputs.length; i++) {

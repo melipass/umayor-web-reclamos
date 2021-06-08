@@ -9,7 +9,7 @@ export class PdfserviceService {
 
   constructor() { }
 
-downloadPDf(reclamo: Reclamos): void
+downloadPDF(reclamo: Reclamos): void
 {
   const doc = new jsPDF();
   const img = new Image();
