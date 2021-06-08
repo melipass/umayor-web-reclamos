@@ -52,6 +52,16 @@ export class TableComponent implements OnInit {
     this.reclamos = await this.services.cargarReclamos().toPromise();
   }
 
+  mostrarEdicion(reclamoM:Reclamos){
+    const texto =document.getElementById("texto_"+reclamoM.id)as HTMLElement;
+    const mostrar =document.getElementById("mostrar_"+reclamoM.id)as HTMLElement;
+    const cambiar =document.getElementById("cambiar_"+reclamoM.id)as HTMLElement;
+
+    texto.style.display="inline";
+    mostrar.style.display="none";
+    cambiar.style.display="inline";
+  }
+
   enviarEstado(reclamoIn: Reclamos) {
     var inputs = document.getElementsByTagName("input");
     for (var i = 0; i < inputs.length; i++) {
