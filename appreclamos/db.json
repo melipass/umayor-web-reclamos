@@ -5,9 +5,9 @@
       "nombre": "Nicolas ",
       "apellidos": "testing2",
       "rut": "19581239",
-      "email": "test@mail.com",
+      "email": "a@a.a",
       "numero_telefono": 123134214,
-      "password": ""
+      "password": "123"
     },
     {
       "id": 2,
