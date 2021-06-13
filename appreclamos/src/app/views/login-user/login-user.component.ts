@@ -14,7 +14,7 @@ export class LoginUserComponent implements OnInit {
   password:string = '';
 
   constructor(
-    private servicio:UsuariosService,
+    private servicioUsuario:UsuariosService,
     private router: Router
   ) {  }
 
@@ -22,11 +22,13 @@ export class LoginUserComponent implements OnInit {
   }
 
   login(){
-    this.servicio.login( this.email, this.password ).subscribe( response =>{
+    this.servicioUsuario.login( this.email, this.password ).subscribe( response =>{
       if (response){
         this.error = false;
         let token = response['token'];
         localStorage.setItem('token',token);
+        let id = response['id'];
+        localStorage.setItem('id',id);
         this.router.navigate(['/user-home'])
       }
       else{
