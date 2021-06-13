@@ -12,12 +12,12 @@ export class AuthService {
   public isAuthenticated(): boolean {
     const helper = new JwtHelperService();
     const token = localStorage.getItem('token');
-    if ( token )
+    if ( token ) {
       return !helper.isTokenExpired(token);
-    else
+    }
+    else {
       return false;
-
-    return false;
+    }
   }
 
 }

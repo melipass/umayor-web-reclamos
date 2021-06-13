@@ -36,7 +36,7 @@ export class UsuariosService {
   }
 
   login( email: string, password: string ){
-    return this.http.get<any>("http://localhost:3000/usuarios/?email=" + email + "&password=" + password);
+    return this.http.post<any>("http://localhost:3001/login", { email:email, password:password});
   }
 
 

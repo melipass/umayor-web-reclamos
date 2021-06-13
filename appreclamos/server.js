@@ -1,5 +1,5 @@
 const dbFile = 'db.json'
-const keyJWT = "hola"
+const keyJWT = "BX]e_,r)g8$w'nMn"
 const jsonServer = require('json-server')
 const jwt = require('jsonwebtoken')
 const server = jsonServer.create()
@@ -9,7 +9,7 @@ const middlewares = jsonServer.defaults()
 server.use(middlewares)
 server.use(jsonServer.bodyParser)
 
-server.get('/usuarios', (req, res) => {
+server.post('/login', (req, res) => {
   let email = req.body.email;
   let password = req.body.password;  
   let usuarios = router.db.get('usuarios').value();
@@ -18,9 +18,7 @@ server.get('/usuarios', (req, res) => {
   usuarios.forEach( usuario =>{
     if( email == usuario.email && password == usuario.password ){
       findUser = true;
-      const token = jwt.sign(usuario, keyJWT , {
-        expiresIn: 1000000
-      });
+      const token = jwt.sign(usuario, keyJWT , {expiresIn: 1000000});
       res.jsonp({token:token})
     }
   });
@@ -40,6 +38,6 @@ server.use((req, res, next) => {
 })
 
 server.use(router)
-server.listen(3000, () => {
+server.listen(3001, () => {
   console.log('JSON Server is running')
 })

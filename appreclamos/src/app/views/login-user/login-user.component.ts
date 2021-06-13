@@ -22,16 +22,12 @@ export class LoginUserComponent implements OnInit {
   }
 
   login(){
-    //var inputs = document.getElementsByTagName("input");
-    //this.email = inputs.namedItem('email');
     this.servicio.login( this.email, this.password ).subscribe( response =>{
-      console.log(response);
       if (response){
         this.error = false;
         let token = response['token'];
         localStorage.setItem('token',token);
         this.router.navigate(['/user-home'])
-        /*this.router.navigate(['/app-home-user'])*/
       }
       else{
         this.error = true;
