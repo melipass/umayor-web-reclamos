@@ -9,34 +9,25 @@ import { Router } from '@angular/router';
 })
 export class LoginUserComponent implements OnInit {
 
-  // tslint:disable-next-line:no-inferrable-types
-  error: boolean = false;
-    // tslint:disable-next-line:no-inferrable-types
-  email: string = '';
-    // tslint:disable-next-line:no-inferrable-types
-  password: string = '';
+  error:boolean = false;
+  email:string = '';
+  password:string = '';
 
   constructor(
-    private servicio: UsuariosService,
+    private servicio:UsuariosService,
     private router: Router
   ) {  }
 
   ngOnInit(): void {
   }
 
-  // tslint:disable-next-line:typedef
   login(){
-    // var inputs = document.getElementsByTagName("input");
-    // this.email = inputs.namedItem('email');
-    this.servicio.login( this.email, this.password ).subscribe( response => {
-      console.log(response);
+    this.servicio.login( this.email, this.password ).subscribe( response =>{
       if (response){
         this.error = false;
-        // tslint:disable-next-line:prefer-const
-        let token = response.token;
-        localStorage.setItem('token', token);
-        this.router.navigate(['/user-home']);
-        /*this.router.navigate(['/app-home-user'])*/
+        let token = response['token'];
+        localStorage.setItem('token',token);
+        this.router.navigate(['/user-home'])
       }
       else{
         this.error = true;
