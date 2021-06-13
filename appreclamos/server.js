@@ -5,13 +5,16 @@ const jwt = require('jsonwebtoken')
 const server = jsonServer.create()
 const router = jsonServer.router(dbFile)
 const middlewares = jsonServer.defaults()
+const cors = require("cors");
+
+app.use(cors(cors));
 
 server.use(middlewares)
 server.use(jsonServer.bodyParser)
 
-server.get('/usuarios', (req, res) => {
+server.post('/usuarios', (req, res) => {
   let email = req.body.email;
-  let password = req.body.password;  
+  let password = req.body.password;
   let usuarios = router.db.get('usuarios').value();
   let findUser = false;
 
@@ -22,13 +25,14 @@ server.get('/usuarios', (req, res) => {
         expiresIn: 1000000
       });
       res.jsonp({token:token})
+      console.log('testing token'+token);
     }
   });
 
   if(!findUser){
     res.sendStatus(401);
   }
-  
+
 })
 
 server.use(jsonServer.bodyParser)
@@ -40,6 +44,6 @@ server.use((req, res, next) => {
 })
 
 server.use(router)
-server.listen(3000, () => {
+server.listen(3001, () => {
   console.log('JSON Server is running')
 })

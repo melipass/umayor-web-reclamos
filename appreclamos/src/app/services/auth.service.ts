@@ -1,5 +1,6 @@
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Injectable } from '@angular/core';
+import { tokenGetter } from '../app-routing.module';
 
 @Injectable({
   providedIn: 'root'
@@ -7,17 +8,20 @@ import { Injectable } from '@angular/core';
 
 export class AuthService {
 
-  constructor( public jwtHelper : JwtHelperService ) { }
+  constructor( public jwtHelper: JwtHelperService ) { }
 
   public isAuthenticated(): boolean {
-    const helper = new JwtHelperService();
+    // const helper = new JwtHelperService();
     const token = localStorage.getItem('token');
     if ( token )
-      return !helper.isTokenExpired(token);
-    else
+    {
+      return !this.jwtHelper.isTokenExpired(token);
+    }
+    else{
       return false;
+    }
 
-    return false;
+   // return false;
   }
 
 }

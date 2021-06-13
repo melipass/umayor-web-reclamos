@@ -34,9 +34,9 @@ export class UsuariosService {
   eliminarUsuario(usuario: Usuarios) {
     return this.http.delete('http://localhost:3000/usuarios/' + usuario.id);
   }
-
+// tslint:disable-next-line:typedef
   login( email: string, password: string ){
-    return this.http.get<any>("http://localhost:3000/usuarios/?email=" + email + "&password=" + password);
+    return this.http.post<any>('http://localhost:3001/login', {email, password} );
   }
 
 
