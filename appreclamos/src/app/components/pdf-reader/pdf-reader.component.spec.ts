@@ -9,9 +9,9 @@ describe('PdfReaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PdfReaderComponent ]
+      declarations: [PdfReaderComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

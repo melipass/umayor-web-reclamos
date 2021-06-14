@@ -21,7 +21,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { PdfReaderComponent } from './components/pdf-reader/pdf-reader.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { HttpClientModule } from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { ChartsModule } from 'ng2-charts';
 import { GraficoComponent } from './components/grafico/grafico.component';
 import { ComplainCard2Component } from './components/complain-card2/complain-card2.component';

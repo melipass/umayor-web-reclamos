@@ -8,9 +8,9 @@ describe('TableSearchbarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TableSearchbarComponent ]
+      declarations: [TableSearchbarComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

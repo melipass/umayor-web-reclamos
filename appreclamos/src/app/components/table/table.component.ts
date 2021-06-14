@@ -38,7 +38,6 @@ export class TableComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarReclamos();
-    // this.downloadPDF();
   }
 
   // tslint:disable-next-line:typedef
@@ -64,7 +63,6 @@ export class TableComponent implements OnInit {
     const texto = document.getElementById('texto_' + reclamoM.id)as HTMLElement;
     const mostrar = document.getElementById('mostrar_' + reclamoM.id)as HTMLElement;
     const cambiar = document.getElementById('cambiar_' + reclamoM.id)as HTMLElement;
-
     texto.style.display = 'inline';
     mostrar.style.display = 'none';
     cambiar.style.display = 'inline';

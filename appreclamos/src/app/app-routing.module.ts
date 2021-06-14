@@ -15,14 +15,14 @@ import { HttpClientModule } from "@angular/common/http";
 
 
 const routes: Routes = [
-  {path: '', component: LandingUserComponent},
-  {path: 'admin-login', component: LoginAdminComponent},
-  {path: 'admin', component: LandingAdminComponent, canActivate:[AdminAuthGuard]},
-  {path: 'list', component: ComplainlistAdminComponent, canActivate:[AdminAuthGuard]},
-  {path: 'report', component: ComplainreportAdminComponent, canActivate:[AdminAuthGuard]},
-  {path: 'user-login', component: LoginUserComponent},
-  {path: 'user-register', component: RegisterUserComponent},//  {path: 'user-home/:id', component: HomeUserComponent, canActivate:[AuthenticatorGuard]}
-  {path: 'user-home', component: HomeUserComponent, canActivate:[AuthenticatorGuard]}
+  { path: '', component: LandingUserComponent },
+  { path: 'admin-login', component: LoginAdminComponent },
+  { path: 'admin', component: LandingAdminComponent, canActivate: [AdminAuthGuard] },
+  { path: 'list', component: ComplainlistAdminComponent, canActivate: [AdminAuthGuard] },
+  { path: 'report', component: ComplainreportAdminComponent, canActivate: [AdminAuthGuard] },
+  { path: 'user-login', component: LoginUserComponent },
+  { path: 'user-register', component: RegisterUserComponent },
+  { path: 'user-home', component: HomeUserComponent, canActivate: [AuthenticatorGuard] }
 ];
 
 export function tokenGetter() {
@@ -31,13 +31,12 @@ export function tokenGetter() {
 
 const JWT_Module_Options: JwtModuleOptions = {
   config: {
-      tokenGetter: tokenGetter
-      //whitelistedDomains: yourWhitelistedDomains
+    tokenGetter: tokenGetter
   }
 };
 @NgModule({
   imports: [RouterModule.forRoot(routes),
-    JwtModule.forRoot(JWT_Module_Options),
+  JwtModule.forRoot(JWT_Module_Options),
     HttpClientModule],
   exports: [RouterModule]
 })

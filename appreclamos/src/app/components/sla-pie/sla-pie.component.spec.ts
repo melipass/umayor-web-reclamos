@@ -8,9 +8,9 @@ describe('SlaPieComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SlaPieComponent ]
+      declarations: [SlaPieComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

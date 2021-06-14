@@ -8,17 +8,16 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class AdminAuthGuard implements CanActivate {
 
-  constructor ( private router:Router, private service:AuthService ){}
+  constructor(private router: Router, private service: AuthService) { }
 
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      if (this.service.isAuthenticated()) {
-        return true;
-      } else {
-        this.router.navigate ( ['/', 'admin-login']);
-        return false;
-      }
+    if (this.service.isAuthenticated()) {
+      return true;
+    } else {
+      this.router.navigate(['/', 'admin-login']);
+      return false;
     }
-  
+  }
 }

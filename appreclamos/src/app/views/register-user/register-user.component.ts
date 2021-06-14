@@ -9,17 +9,17 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
   styleUrls: ['./register-user.component.css']
 })
 export class RegisterUserComponent implements OnInit {
- // tslint:disable-next-line:no-inferrable-types
+  // tslint:disable-next-line:no-inferrable-types
   nombre: string = '';
-   // tslint:disable-next-line:no-inferrable-types
+  // tslint:disable-next-line:no-inferrable-types
   apellidos: string = '';
-   // tslint:disable-next-line:no-inferrable-types
+  // tslint:disable-next-line:no-inferrable-types
   rut: string = '';
-   // tslint:disable-next-line:no-inferrable-types
+  // tslint:disable-next-line:no-inferrable-types
   email: string = '';
-   // tslint:disable-next-line:no-inferrable-types
+  // tslint:disable-next-line:no-inferrable-types
   numero_telefono: number = 0;
-   // tslint:disable-next-line:no-inferrable-types
+  // tslint:disable-next-line:no-inferrable-types
   password: string = '';
 
   constructor(private servicio: UsuariosService,

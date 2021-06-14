@@ -8,9 +8,9 @@ describe('ComplainAccordionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ComplainAccordionComponent ]
+      declarations: [ComplainAccordionComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

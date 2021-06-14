@@ -1,48 +1,53 @@
 <div class="card h-100">
-    <div class="card-body">
-        <h4 class="card-title">Tus reclamos</h4>
-        <hr>
-        <div class="accordion" id="accordion-reclamos">
-            <div class="accordion-item" *ngFor="let reclamo of reclamos | callback: filterStatusEnProgreso">
-              <h5 class="accordion-header"> 
-                <button class="accordion-button en-progreso" type="button" data-bs-toggle="collapse" aria-expanded="true"
-                id="{{'colapsOne'+reclamo.id}}" attr.data-bs-target="{{'#collapseOne'+reclamo.id}}" attr.aria-controls="{{'collapseOne'+reclamo.id}}">
-                  <b>Asunto: {{reclamo.asunto}} - Estado: En progreso <span class="material-icons">pending_actions</span></b>
-                </button>
-              </h5>
-              <div class="accordion-collapse collapse show" id="{{'collapseOne'+reclamo.id}}"  aria-labelledby="headingOne" data-bs-parent="#accordion-reclamos">
-                <div class="accordion-body">
-                  <p><b>Descripción del reclamo:</b> {{reclamo.textoReclamo}}</p>
-                  <p><b>Respuesta:</b> [Respuesta]</p>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item" *ngFor="let reclamo of reclamos | callback: filterStatusFinalizado">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button finalizado collapsed"  type="button" data-bs-toggle="collapse" aria-expanded="false"
-                id="{{'colapsTwo'+reclamo.id}}" attr.data-bs-target="{{'#collapseTwo'+reclamo.id}}" attr.aria-controls="{{'collapseTwo'+reclamo.id}}">
-                    <b>Asunto: {{reclamo.asunto}} - Estado: Finalizado <span class="material-icons">done</span></b>
-                </button>
-              </h2>
-              <div id="{{'collapseTwo'+reclamo.id}}" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion-reclamos">
-                <div class="accordion-body">
-                  {{reclamo.textoReclamo}}
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item" *ngFor="let reclamo of reclamos | callback: filterStatusError">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button con-error collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false"
-                  id="{{'colapsThree'+reclamo.id}}" attr.data-bs-target="{{'#collapseThree'+reclamo.id}}" attr.aria-controls="{{'collapseThree'+reclamo.id}}">
-                      <b>Asunto: {{reclamo.asunto}} - Estado: Atrasada <span class="material-icons">report_gmailerrorred</span></b>
-                  </button>
-                </h2>
-                <div id="{{'collapseThree'+reclamo.id}}" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion-reclamos">
-                  <div class="accordion-body">
-                    {{reclamo.textoReclamo}}
-                  </div>
-                </div>
-              </div>
+  <div class="card-body">
+    <h4 class="card-title">Tus reclamos</h4>
+    <hr>
+    <div class="accordion" id="accordion-reclamos">
+      <div class="accordion-item" *ngFor="let reclamo of reclamos | callback: filterStatusEnProgreso">
+        <h5 class="accordion-header">
+          <button class="accordion-button en-progreso" type="button" data-bs-toggle="collapse" aria-expanded="true"
+            id="{{'colapsOne'+reclamo.id}}" attr.data-bs-target="{{'#collapseOne'+reclamo.id}}"
+            attr.aria-controls="{{'collapseOne'+reclamo.id}}">
+            <b>Asunto: {{reclamo.asunto}} - Estado: En progreso <span class="material-icons">pending_actions</span></b>
+          </button>
+        </h5>
+        <div class="accordion-collapse collapse show" id="{{'collapseOne'+reclamo.id}}" aria-labelledby="headingOne"
+          data-bs-parent="#accordion-reclamos">
+          <div class="accordion-body">
+            {{reclamo.textoReclamo}}
           </div>
+        </div>
+      </div>
+      <div class="accordion-item" *ngFor="let reclamo of reclamos | callback: filterStatusFinalizado">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button finalizado collapsed" type="button" data-bs-toggle="collapse"
+            aria-expanded="false" id="{{'colapsTwo'+reclamo.id}}" attr.data-bs-target="{{'#collapseTwo'+reclamo.id}}"
+            attr.aria-controls="{{'collapseTwo'+reclamo.id}}">
+            <b>Asunto: {{reclamo.asunto}} - Estado: Finalizado <span class="material-icons">done</span></b>
+          </button>
+        </h2>
+        <div id="{{'collapseTwo'+reclamo.id}}" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+          data-bs-parent="#accordion-reclamos">
+          <div class="accordion-body">
+            {{reclamo.textoReclamo}}
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item" *ngFor="let reclamo of reclamos | callback: filterStatusError">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button con-error collapsed" type="button" data-bs-toggle="collapse"
+            aria-expanded="false" id="{{'colapsThree'+reclamo.id}}"
+            attr.data-bs-target="{{'#collapseThree'+reclamo.id}}" attr.aria-controls="{{'collapseThree'+reclamo.id}}">
+            <b>Asunto: {{reclamo.asunto}} - Estado: Atrasada</b>
+          </button>
+        </h2>
+        <div id="{{'collapseThree'+reclamo.id}}" class="accordion-collapse collapse" aria-labelledby="headingThree"
+          data-bs-parent="#accordion-reclamos">
+          <div class="accordion-body">
+            {{reclamo.textoReclamo}}
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

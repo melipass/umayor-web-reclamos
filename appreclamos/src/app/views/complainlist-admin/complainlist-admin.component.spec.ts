@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ComplainlistAdminComponent } from './complainlist-admin.component';
 
 describe('ComplainlistAdminComponent', () => {
@@ -8,9 +7,9 @@ describe('ComplainlistAdminComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ComplainlistAdminComponent ]
+      declarations: [ComplainlistAdminComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

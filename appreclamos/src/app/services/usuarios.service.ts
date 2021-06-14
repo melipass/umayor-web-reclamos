@@ -8,8 +8,6 @@ import { Usuarios } from '../clases/usuarios';
 export class UsuariosService {
 
   constructor(private http: HttpClient) { }
-
-
   // tslint:disable-next-line:typedef
   obtenerUsuarios() {
     return this.http.get<Usuarios[]>('http://localhost:3000/usuarios');
@@ -37,11 +35,6 @@ export class UsuariosService {
 
   // tslint:disable-next-line:typedef
   login( email: string, password: string ){
-    return this.http.post<any>('http://localhost:3001/login', { email:email, password });
+    return this.http.post<any>('http://localhost:3001/login', { email:email, password: password });
   }
-
-
-
 }
-
-

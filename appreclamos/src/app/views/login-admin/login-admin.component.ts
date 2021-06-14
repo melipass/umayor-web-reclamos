@@ -9,30 +9,29 @@ import { Router } from '@angular/router';
 })
 export class LoginAdminComponent implements OnInit {
 
-  error:boolean = false;
-  email:string = '';
-  password:string = '';
+  error: boolean = false;
+  email: string = '';
+  password: string = '';
 
   constructor(
-    private servicioAdministrador:AdminService,
+    private servicioAdministrador: AdminService,
     private router: Router
   ) { }
 
-  ngOnInit(): void { 
+  ngOnInit(): void {
   }
 
-  login(){
-    this.servicioAdministrador.login( this.email, this.password ).subscribe( response =>{
-      if (response){
+  login() {
+    this.servicioAdministrador.login(this.email, this.password).subscribe(response => {
+      if (response) {
         this.error = false;
         let token = response['token'];
-        localStorage.setItem('token',token);
+        localStorage.setItem('token', token);
         this.router.navigate(['/admin'])
       }
-      else{
+      else {
         this.error = true;
       }
     });
   }
-
 }
