@@ -1,16 +1,18 @@
 {
   "admins": [
-    {"email":"admin@admin.com", "password":"admin"}
+    {
+      "email": "admin@admin.com",
+      "password": "admin"
+    }
   ],
-
   "usuarios": [
     {
       "id": 1,
-      "nombre": "Nicolas ",
-      "apellidos": "testing2",
+      "nombre": "Nicolássss",
+      "apellidos": "testing234",
       "rut": "19581239",
       "email": "a@a.a",
-      "numero_telefono": 123134214,
+      "numero_telefono": "56912345678",
       "password": "123"
     },
     {
@@ -176,7 +178,7 @@
       "asunto": "Der ",
       "textoReclamo": "hnfgwrghwrghwerghwegrhgrhwehgrhurgurgurghrguurhgr",
       "fecha": "02/12/21",
-      "estado": "Finalizado"
+      "estado": "Error"
     },
     {
       "id": 13,

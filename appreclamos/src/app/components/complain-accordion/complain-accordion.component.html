@@ -12,7 +12,8 @@
               </h5>
               <div class="accordion-collapse collapse show" id="{{'collapseOne'+reclamo.id}}"  aria-labelledby="headingOne" data-bs-parent="#accordion-reclamos">
                 <div class="accordion-body">
-                  {{reclamo.textoReclamo}}
+                  <p><b>Descripción del reclamo:</b> {{reclamo.textoReclamo}}</p>
+                  <p><b>Respuesta:</b> [Respuesta]</p>
                 </div>
               </div>
             </div>
@@ -33,7 +34,7 @@
                 <h2 class="accordion-header" id="headingThree">
                   <button class="accordion-button con-error collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false"
                   id="{{'colapsThree'+reclamo.id}}" attr.data-bs-target="{{'#collapseThree'+reclamo.id}}" attr.aria-controls="{{'collapseThree'+reclamo.id}}">
-                      <b>Asunto: {{reclamo.asunto}} - Estado: Atrasada</b>
+                      <b>Asunto: {{reclamo.asunto}} - Estado: Atrasada <span class="material-icons">report_gmailerrorred</span></b>
                   </button>
                 </h2>
                 <div id="{{'collapseThree'+reclamo.id}}" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion-reclamos">
