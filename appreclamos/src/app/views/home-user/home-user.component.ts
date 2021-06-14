@@ -5,7 +5,6 @@ import { Usuarios } from 'src/app/clases/usuarios';
 import { ReclamosService } from 'src/app/services/reclamos.service';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 import { DatePipe } from '@angular/common';
-// import { threadId } from 'node:worker_threads';
 
 @Component({
   selector: 'app-home-user',
@@ -73,15 +72,11 @@ export class HomeUserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //console.log('rut de test', this.rutUsuarioReclamo);
     this.activatedRoute.params.subscribe( params => {
         let id;
-        //id = params.id;
         id = localStorage.getItem('id');
         this.cargarUsuario(id);
     });
-
-    // this.cargarReclamos('19581239');
   }
 
   // tslint:disable-next-line:typedef
@@ -97,7 +92,6 @@ export class HomeUserComponent implements OnInit {
       estado: 'Enviado'
 
     };
-    console.log(newReclamo);
 
     this.servicio2.agregarReclamoDeUsuario(newReclamo).subscribe(
       reclamoService => {
@@ -126,34 +120,28 @@ export class HomeUserComponent implements OnInit {
   cargarUsuario(id: number) {
     this.servicio.obtenerUsuario(id).subscribe(UsuariosServidor => {
       this.usuario = UsuariosServidor;
-      console.log(this.usuario.rut);
       const rutBuscado = this.usuario.rut;
       this.rutUsuarioReclamo = this.usuario.rut;
       this.nombreUsuarioReclamo = this.usuario.nombre;
       this.apellidoUsuarioReclamo = this.usuario.apellidos;
       this.cargarReclamos(rutBuscado);
-      // console.log(this.cargarReclamos(rutBuscado));
     });
   }
 
   // tslint:disable-next-line:typedef
   cargarReclamos(rut: string){
-    console.log(rut);
     this.servicio2.cargarReclamosDeUnUsuario(rut).subscribe(ReclamosServidor => {
       this.reclamos = ReclamosServidor;
-      console.log(this.reclamos);
     });
   }
 // tslint:disable-next-line:typedef
   editarDatos() {
     const nombres = document.getElementById('input-nombres') as HTMLInputElement;
     const apellidos = document.getElementById('input-apellidos') as HTMLInputElement;
-    //const rut = document.getElementById('input-rut') as HTMLInputElement;
     const telefono = document.getElementById('input-telefono') as HTMLInputElement;
     const email = document.getElementById('input-email') as HTMLInputElement;
     nombres.disabled = false;
     apellidos.disabled = false;
-    //rut.disabled = false;
     telefono.disabled = false;
     email.disabled = false;
     const botonEnviar = document.getElementById('enviar') as HTMLButtonElement;
@@ -173,7 +161,7 @@ export class HomeUserComponent implements OnInit {
       id: this.usuario.id,
       nombre: this.nombre,
       apellidos: this.apellidos,
-      rut: this.rutUsuarioReclamo, //this.rut,
+      rut: this.rutUsuarioReclamo,
       email: this.email,
       numero_telefono: this.numero_telefono,
       password: this.password

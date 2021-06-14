@@ -12,14 +12,22 @@ import { ReclamosService } from 'src/app/services/reclamos.service';
 export class TableComponent implements OnInit {
 
 
+  // tslint:disable-next-line:no-inferrable-types
   id: number = 0;
-  rut: string = "";
-  nombre: string = "";
-  apellido: string = "";
-  asunto: string = "";
-  textoReclamo: string = "";
-  fecha: string = "";
-  estado: string = "";
+   // tslint:disable-next-line:no-inferrable-types
+  rut: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  nombre: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  apellido: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  asunto: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  textoReclamo: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  fecha: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  estado: string = '';
 
   reclamos: Reclamos[] = [];
   constructor(
@@ -39,8 +47,8 @@ export class TableComponent implements OnInit {
     });
   }
   // tslint:disable-next-line:typedef
-  downLoadPdf(reclamoIn: Reclamos) {
-    this.pdfservices.testgenearPDf(reclamoIn);
+  downloadPDF(reclamoIn: Reclamos) {
+    this.pdfservices.downloadPDF(reclamoIn);
   }
   // tslint:disable-next-line:typedef
   mostrarPDF(reclamoIn: Reclamos) {
@@ -50,24 +58,28 @@ export class TableComponent implements OnInit {
   async cargarReclamosAsc() {
     this.reclamos = await this.services.cargarReclamos().toPromise();
   }
-
-  mostrarEdicion(reclamoM: Reclamos) {
-    const texto = document.getElementById("texto_" + reclamoM.id) as HTMLElement;
-    const mostrar = document.getElementById("mostrar_" + reclamoM.id) as HTMLElement;
-    const cambiar = document.getElementById("cambiar_" + reclamoM.id) as HTMLElement;
-    texto.style.display = "inline";
-    mostrar.style.display = "none";
-    cambiar.style.display = "inline";
+// tslint:disable-next-line:typedef
+  mostrarEdicion(reclamoM: Reclamos){
+    const texto = document.getElementById('texto_' + reclamoM.id)as HTMLElement;
+    const mostrar = document.getElementById('mostrar_' + reclamoM.id)as HTMLElement;
+    const cambiar = document.getElementById('cambiar_' + reclamoM.id)as HTMLElement;
+    texto.style.display = 'inline';
+    mostrar.style.display = 'none';
+    cambiar.style.display = 'inline';
   }
-
+// tslint:disable-next-line:typedef
   enviarEstado(reclamoIn: Reclamos) {
-    var inputs = document.getElementsByTagName("select");
-    for (var i = 0; i < inputs.length; i++) {
-      if (inputs[i].value == "") {
-        alert("Indique nuevo estado: (En Progreso, Enviado, Error, Finalizado)");
+    // tslint:disable-next-line:no-var-keyword
+    var inputs = document.getElementsByTagName('select');
+    // tslint:disable-next-line:prefer-for-of
+    for (let i = 0; i < inputs.length; i++) {
+      // tslint:disable-next-line:triple-equals
+      if (inputs[i].value == '') {
+        alert('Indique nuevo estado: (En Progreso, Enviado, Error, Finalizado) ');
         return false;
       }
-      if (inputs[i].value == "En Progreso", "Enviado", "Error", "Finalizado") {
+      // tslint:disable-next-line:triple-equals
+      if (inputs[i].value == 'En Progreso", "Enviado", "Error", "Finalizado') {
         const reclamoE: Reclamos = {
           id: reclamoIn.id,
           rut: reclamoIn.rut,
@@ -77,15 +89,15 @@ export class TableComponent implements OnInit {
           textoReclamo: reclamoIn.textoReclamo,
           fecha: reclamoIn.fecha,
           estado: this.estado
-        }
+        };
         this.services.editarReclamo(reclamoE).subscribe(ReclamoServidor => {
-          alert("Reclamo Editado");
+          alert('Reclamo Editado');
           document.defaultView.location.reload();
         });
         return true;
       }
     }
-    alert("Indique nuevo estado valido: (En Progreso, Enviado, Error, Finalizado)");
+    alert('Indique nuevo estado valido: (En Progreso, Enviado, Error, Finalizado)');
     return false;
 
   }
