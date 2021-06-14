@@ -77,7 +77,7 @@
       "asunto": "test1@mail.com",
       "textoReclamo": "reclamo de un profesor que no hace clase",
       "fecha": "02/08/21",
-      "estado": "En Progreso"
+      "estado": "Finalizado"
     },
     {
       "id": 2,

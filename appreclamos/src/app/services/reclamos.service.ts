@@ -36,11 +36,11 @@ export class ReclamosService {
   agregarReclamoDeUsuario(reclamo: Reclamos) {
     return this.http.post<Reclamos>('http://localhost:3000/reclamos', reclamo);
   }
-
+// tslint:disable-next-line:typedef
   editarReclamo(reclamo: Reclamos) {
     return this.http.put('http://localhost:3000/reclamos/' + reclamo.id, reclamo);
   }
-
+// tslint:disable-next-line:typedef
   obtenerReclamo(id: Reclamos) {
     return this.http.get('http://localhost:3000/reclamos' + id);
   }
