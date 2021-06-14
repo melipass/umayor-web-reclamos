@@ -68,6 +68,24 @@
       "numero_telefono": "+04 11111112",
       "password": "4reich",
       "id": 7
+    },
+    {
+      "nombre": "Melissa",
+      "apellidos": "aaa",
+      "rut": "123222222",
+      "email": "melipass",
+      "numero_telefono": "21342345",
+      "password": "123",
+      "id": 8
+    },
+    {
+      "nombre": "Werner",
+      "apellidos": "Faust",
+      "rut": "9999999",
+      "email": "werner@werner.com",
+      "numero_telefono": "1234",
+      "password": "werner",
+      "id": 9
     }
   ],
   "reclamos": [

@@ -41,14 +41,14 @@ h1{
 p{
     text-align: center;
 }
-/*h2{
+h2{
     text-align: center;
     font-size: 30px;
     font-weight: 600;
     text-transform: uppercase;
-    margin: 40px 8px 10px 8px; 
+    margin: 40px 8px 10px 8px !important; 
     color:black;
-}*/
+}
 input{
     background-color:#FEDA3F;    
     border: none;
