@@ -4,9 +4,9 @@
   <div id="formContent">
     <form>
         <h2> Ingreso de Administrador</h2>
-      <input type="text" id="login"placeholder="example@gmail.com" name="login">
-      <input type="password" id="password" placeholder="Contraseña" name="login">
-      <input type="submit" value="Ingresar" routerLink="/admin">
+      <input type="text" [(ngModel)]="email" placeholder="example@gmail.com" name="login">
+      <input type="password" [(ngModel)]="password" placeholder="Contraseña" name="login">
+      <input type="submit" value="Ingresar" (click)="login()">
     </form>
 
     

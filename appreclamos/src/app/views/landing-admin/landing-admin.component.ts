@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-landing-admin',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingAdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
   }
+  list(){
+    //this.router.navigate(['list'], {relativeTo:this.route});
+    this.router.navigate(['/list']);
+  }
+
 
 }

@@ -9,15 +9,17 @@ import { LoginAdminComponent } from './views/login-admin/login-admin.component';
 import { LoginUserComponent } from './views/login-user/login-user.component';
 import { RegisterUserComponent } from './views/register-user/register-user.component';
 import { AuthenticatorGuard } from './guard/authenticator.guard'
+import { AdminAuthGuard } from './guard/admin-auth.guard'
 import { JwtModule, JwtModuleOptions } from '@auth0/angular-jwt';
 import { HttpClientModule } from "@angular/common/http";
+
 
 const routes: Routes = [
   {path: '', component: LandingUserComponent},
   {path: 'admin-login', component: LoginAdminComponent},
-  {path: 'admin', component: LandingAdminComponent},
-  {path: 'list', component: ComplainlistAdminComponent},
-  {path: 'report', component: ComplainreportAdminComponent},
+  {path: 'admin', component: LandingAdminComponent, canActivate:[AdminAuthGuard]},
+  {path: 'list', component: ComplainlistAdminComponent, canActivate:[AdminAuthGuard]},
+  {path: 'report', component: ComplainreportAdminComponent, canActivate:[AdminAuthGuard]},
   {path: 'user-login', component: LoginUserComponent},
   {path: 'user-register', component: RegisterUserComponent},//  {path: 'user-home/:id', component: HomeUserComponent, canActivate:[AuthenticatorGuard]}
   {path: 'user-home', component: HomeUserComponent, canActivate:[AuthenticatorGuard]}

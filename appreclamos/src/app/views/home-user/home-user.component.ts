@@ -73,10 +73,11 @@ export class HomeUserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('rut de test', this.rutUsuarioReclamo);
+    //console.log('rut de test', this.rutUsuarioReclamo);
     this.activatedRoute.params.subscribe( params => {
         let id;
-        id = params.id;
+        //id = params.id;
+        id = localStorage.getItem('id');
         this.cargarUsuario(id);
     });
 

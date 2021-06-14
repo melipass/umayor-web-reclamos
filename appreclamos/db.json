@@ -1,4 +1,8 @@
 {
+  "admins": [
+    {"email":"admin@admin.com", "password":"admin"}
+  ],
+
   "usuarios": [
     {
       "id": 1,
@@ -46,13 +50,13 @@
       "id": 5
     },
     {
-      "nombre": "Volver Al",
-      "apellidos": "Login Funciona",
+      "id": 6,
+      "nombre": "Maestro",
+      "apellidos": "de las marionetas",
       "rut": "12345678-9",
-      "email": "NoMeLo@Creo.com",
-      "numero_telefono": "13456789",
-      "password": "123",
-      "id": 6
+      "email": "NoMeLo@Creo.cl",
+      "numero_telefono": "134567890",
+      "password": "1234"
     },
     {
       "nombre": "Tomas",
@@ -243,6 +247,16 @@
       "textoReclamo": "10101010101010 ",
       "fecha": "02/12/21",
       "estado": "En Progreso"
+    },
+    {
+      "rut": "12345678-9",
+      "nombre": "Volver Al",
+      "apellido": "Login Funciona",
+      "asunto": "Esto no funciona",
+      "textoReclamo": "Voy a llorar",
+      "fecha": "2021/6/6",
+      "estado": "Enviado",
+      "id": 20
     }
   ]
 }
