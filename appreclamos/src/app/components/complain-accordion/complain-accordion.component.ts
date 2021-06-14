@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Pipe, PipeTransform } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Reclamos } from 'src/app/clases/reclamos';
 import { ReclamosService } from 'src/app/services/reclamos.service';
 
@@ -7,8 +7,6 @@ import { ReclamosService } from 'src/app/services/reclamos.service';
   templateUrl: './complain-accordion.component.html',
   styleUrls: ['./complain-accordion.component.css']
 })
-
-
 
 export class ComplainAccordionComponent implements OnInit {
 
@@ -19,22 +17,22 @@ export class ComplainAccordionComponent implements OnInit {
   constructor(private services: ReclamosService) { }
 
   // tslint:disable-next-line:typedef
-  filterStatusEnProgreso(reclamos: any){
+  filterStatusEnProgreso(reclamos: any) {
     return reclamos.estado == "En Progreso";
   }
 
   // tslint:disable-next-line:typedef
-  filterStatusEnviado(reclamos: any){
+  filterStatusEnviado(reclamos: any) {
     return reclamos.estado == "Enviado"
   }
 
   // tslint:disable-next-line:typedef
-  filterStatusFinalizado(reclamos: any){
+  filterStatusFinalizado(reclamos: any) {
     return reclamos.estado == "Finalizado"
   }
 
   // tslint:disable-next-line:typedef
-  filterStatusError(reclamos: any){
+  filterStatusError(reclamos: any) {
     return reclamos.estado == "Error"
   }
 
@@ -46,14 +44,14 @@ export class ComplainAccordionComponent implements OnInit {
       }
     );
   }
- // tslint:disable-next-line:typedef
-  cargarReclamos(){
+  // tslint:disable-next-line:typedef
+  cargarReclamos() {
     this.services.cargarReclamos().subscribe(ReclamosServices => {
       this.reclamos = ReclamosServices;
     });
   }
- // tslint:disable-next-line:typedef
-    async cargarReclamosAsc(){
-      this.reclamos = await this.services.cargarReclamos().toPromise();
-    }
+  // tslint:disable-next-line:typedef
+  async cargarReclamosAsc() {
+    this.reclamos = await this.services.cargarReclamos().toPromise();
+  }
 }

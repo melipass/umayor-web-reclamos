@@ -8,9 +8,9 @@ describe('ComplainCard4Component', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ComplainCard4Component ]
+      declarations: [ComplainCard4Component]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

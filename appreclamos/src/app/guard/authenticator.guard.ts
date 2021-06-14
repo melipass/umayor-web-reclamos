@@ -8,18 +8,18 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class AuthenticatorGuard implements CanActivate {
 
-  constructor ( private router:Router, private service:AuthService ){}
+  constructor(private router: Router, private service: AuthService) { }
 
   canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    
-      if (this.service.isAuthenticated()) {
-        return true;
-      } else {
-        this.router.navigate ( ['/', 'user-login']);
-        return false;
-      }
+
+    if (this.service.isAuthenticated()) {
+      return true;
+    } else {
+      this.router.navigate(['/', 'user-login']);
+      return false;
+    }
   }
 
   /*adminActivate(
@@ -32,5 +32,5 @@ export class AuthenticatorGuard implements CanActivate {
         return false;
       }
     }*/
-  
+
 }

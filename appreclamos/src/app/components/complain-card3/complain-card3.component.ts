@@ -10,24 +10,24 @@ import { ReclamosService } from 'src/app/services/reclamos.service';
 export class ComplainCard3Component implements OnInit {
 
   reclamos: Reclamos[] = [];
-  reclamosF: Reclamos[]=[];
+  reclamosF: Reclamos[] = [];
   private dato: string;
-  
+
   constructor(private services: ReclamosService) { }
 
   ngOnInit(): void {
     this.cargarReclamos();
   }
 
-  cargarReclamos(){
+  cargarReclamos() {
     this.services.cargarReclamos().subscribe(ReclamosServices => {
       this.reclamos = ReclamosServices;
-      for(const a of this.reclamos){
+      for (const a of this.reclamos) {
 
         this.dato = a.estado;
-        if (this.dato=="Finalizado"){
+        if (this.dato == "Finalizado") {
           this.reclamosF.push(a)
-          }        
+        }
       }
     });
   }

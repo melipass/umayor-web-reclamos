@@ -9,14 +9,14 @@ import { ReclamosService } from 'src/app/services/reclamos.service';
 })
 export class ComplainCardComponent implements OnInit {
   reclamos: Reclamos[] = [];
-  
+
   constructor(private services: ReclamosService) { }
 
   ngOnInit(): void {
     this.cargarReclamos();
   }
 
-  cargarReclamos(){
+  cargarReclamos() {
     this.services.cargarReclamos().subscribe(ReclamosServices => {
       this.reclamos = ReclamosServices;
     });

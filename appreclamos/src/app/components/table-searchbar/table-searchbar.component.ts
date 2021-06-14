@@ -11,5 +11,4 @@ export class TableSearchbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

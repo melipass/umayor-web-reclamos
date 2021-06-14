@@ -8,12 +8,12 @@ import { Router } from '@angular/router';
 })
 export class NavbarUserComponent implements OnInit {
 
-  constructor( private router:Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  logout(){
+  logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('id');
     this.router.navigate(['/']);

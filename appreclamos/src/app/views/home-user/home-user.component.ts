@@ -69,7 +69,7 @@ export class HomeUserComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router:Router
     ) {
-      this.stringDate = this.myDate.getFullYear() + '/' + (this.myDate.getMonth() + 1) + '/' + this.myDate.getDay();
+      this.stringDate = this.myDate.getDay() + '/' + (this.myDate.getMonth() + 1) + '/' + this.myDate.getFullYear();
   }
 
   ngOnInit(): void {

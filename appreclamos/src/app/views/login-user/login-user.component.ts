@@ -9,29 +9,29 @@ import { Router } from '@angular/router';
 })
 export class LoginUserComponent implements OnInit {
 
-  error:boolean = false;
-  email:string = '';
-  password:string = '';
+  error: boolean = false;
+  email: string = '';
+  password: string = '';
 
   constructor(
-    private servicioUsuario:UsuariosService,
+    private servicioUsuario: UsuariosService,
     private router: Router
-  ) {  }
+  ) { }
 
   ngOnInit(): void {
   }
 
-  login(){
-    this.servicioUsuario.login( this.email, this.password ).subscribe( response =>{
-      if (response){
+  login() {
+    this.servicioUsuario.login(this.email, this.password).subscribe(response => {
+      if (response) {
         this.error = false;
         let token = response['token'];
-        localStorage.setItem('token',token);
+        localStorage.setItem('token', token);
         let id = response['id'];
-        localStorage.setItem('id',id);
+        localStorage.setItem('id', id);
         this.router.navigate(['/user-home'])
       }
-      else{
+      else {
         this.error = true;
       }
     });
