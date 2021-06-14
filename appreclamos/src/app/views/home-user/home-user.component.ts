@@ -15,19 +15,6 @@ import { DatePipe } from '@angular/common';
 })
 export class HomeUserComponent implements OnInit {
 
-   // tslint:disable-next-line:no-inferrable-types
-  nombre: string = '';
-   // tslint:disable-next-line:no-inferrable-types
-  apellidos: string = '';
-   // tslint:disable-next-line:no-inferrable-types
-  rut: string = '';
-   // tslint:disable-next-line:no-inferrable-types
-  email: string = '';
-   // tslint:disable-next-line:no-inferrable-types
-  numero_telefono: number = 0;
-   // tslint:disable-next-line:no-inferrable-types
-  password: string = '';
-
   isReadOnly = true;
   usuarios: Usuarios[] = [];
   reclamos: Reclamos[] = [];
@@ -42,8 +29,19 @@ export class HomeUserComponent implements OnInit {
     password: ''
   };
 
+   // tslint:disable-next-line:no-inferrable-types
+  nombre: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  apellidos: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  rut: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  email: string = '';
+   // tslint:disable-next-line:no-inferrable-types
+  numero_telefono: number = 0;
+   // tslint:disable-next-line:no-inferrable-types
+  password: string = '';
   // Campos para poder agregar un nuevo reclamo
-
     // tslint:disable-next-line:no-inferrable-types
     rutUsuarioReclamo: string;
     // tslint:disable-next-line:no-inferrable-types
@@ -73,10 +71,9 @@ export class HomeUserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    //console.log('rut de test', this.rutUsuarioReclamo);
     this.activatedRoute.params.subscribe( params => {
         let id;
-        //id = params.id;
+        // id = params.id;
         id = localStorage.getItem('id');
         this.cargarUsuario(id);
     });
@@ -97,7 +94,6 @@ export class HomeUserComponent implements OnInit {
       estado: 'Enviado'
 
     };
-    console.log(newReclamo);
 
     this.servicio2.agregarReclamoDeUsuario(newReclamo).subscribe(
       reclamoService => {
@@ -124,22 +120,18 @@ export class HomeUserComponent implements OnInit {
   cargarUsuario(id: number) {
     this.servicio.obtenerUsuario(id).subscribe(UsuariosServidor => {
       this.usuario = UsuariosServidor;
-      console.log(this.usuario.rut);
       const rutBuscado = this.usuario.rut;
       this.rutUsuarioReclamo = this.usuario.rut;
       this.nombreUsuarioReclamo = this.usuario.nombre;
       this.apellidoUsuarioReclamo = this.usuario.apellidos;
       this.cargarReclamos(rutBuscado);
-      // console.log(this.cargarReclamos(rutBuscado));
     });
   }
 
   // tslint:disable-next-line:typedef
   cargarReclamos(rut: string){
-    console.log(rut);
     this.servicio2.cargarReclamosDeUnUsuario(rut).subscribe(ReclamosServidor => {
       this.reclamos = ReclamosServidor;
-      console.log(this.reclamos);
     });
   }
 // tslint:disable-next-line:typedef
