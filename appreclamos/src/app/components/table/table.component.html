@@ -49,7 +49,7 @@
         <td>{{reclamo.fecha}}</td>
         <td>
           {{reclamo.estado}}
-          <select name="Estado" class="form-control" [(ngModel)]="estado" id="texto_{{reclamo.id}}"
+          <select name="Estado" class="form-select" [(ngModel)]="estado" id="texto_{{reclamo.id}}"
             style="display: none;">
             <option value="En Progreso">En Progreso</option>
             <option value="Finalizado">Finalizado</option>
