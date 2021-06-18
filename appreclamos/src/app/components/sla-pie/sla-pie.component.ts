@@ -12,8 +12,6 @@ import { ReclamosService } from 'src/app/services/reclamos.service';
 export class SlaPieComponent implements OnInit {
 
   reclamos: Reclamos[] = [];
-  private datos = [];
-  private dato: string;
   public numeroError: number = 0;
   public numeroOK: number = 0;
 
@@ -34,13 +32,8 @@ export class SlaPieComponent implements OnInit {
     this.services.cargarReclamos().subscribe(ReclamosServices => {
       this.reclamos = ReclamosServices;
       for (const a of this.reclamos) {
-        this.dato = a.estado;
-        if (this.dato == "Error") {
-          this.numeroError++;
-        }
-        if (this.dato != "Error") {
-          this.numeroOK++;
-        }
+        if (a.estado == "Error") this.numeroError++;
+        else this.numeroOK++;
         this.pieChartData = [this.numeroError, this.numeroOK];
       }
     });

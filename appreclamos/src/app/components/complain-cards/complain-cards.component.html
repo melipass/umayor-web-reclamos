@@ -1,0 +1,41 @@
+<div class="row" id="reportcards">
+    <div class="col-lg-3">
+        <div class="card mb-3" style="margin-left:15%; margin-right:15%;">
+            <div class="card-header" id="header-totales">Totales</div>
+            <div class="card-body">
+                <h5 class="card-title">Resumen de reclamos totales</h5>
+                <p class="card-text">Cantidad: {{reclamos.length}} </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="card mb-3" style="margin-left:15%; margin-right:15%;">
+            <div class="card-header" id="header-progreso">En Progreso</div>
+            <div class="card-body">
+                <h5 class="card-title">Reclamos en progreso</h5>
+                <p class="card-text">Cantidad: {{reclamosProgreso.length}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="card mb-3" style="margin-left:15%; margin-right:15%;">
+            <div class="card-header" id="header-finalizado">Finalizado</div>
+            <div class="card-body">
+                <h5 class="card-title">Reclamos finalizados</h5>
+                <p class="card-text">Cantidad: {{reclamosFinalizado.length}} </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="card mb-3" style="margin-left:15%; margin-right:15%;">
+            <div class="card-header" id="header-error">Error</div>
+            <div class="card-body">
+                <h5 class="card-title">Reclamos atrasados</h5>
+                <p class="card-text">Cantidad: {{reclamosError.length}} </p>
+            </div>
+        </div>
+    </div>
+</div>

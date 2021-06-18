@@ -1,0 +1,15 @@
+#header-totales{
+    background-color: #FFD083;
+}
+
+#header-progreso{
+    background-color: #85c4f3;
+}
+
+#header-finalizado{
+    background-color: #fbe49b;
+}
+
+#header-error{
+    background-color: #faa4b4;
+}

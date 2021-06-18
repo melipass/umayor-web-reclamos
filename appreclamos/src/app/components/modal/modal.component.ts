@@ -11,4 +11,8 @@ export class ModalComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  passwordRecovery(){
+    alert('Contraseña enviada a su correo.');
+  }
 }

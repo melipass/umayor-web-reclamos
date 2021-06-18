@@ -1,20 +1,20 @@
 <div class="row" id="search-t">
   <nav class="navbar navbar-light bg-light justify-content-between">
-    <a class="navbar-brand">Ver reclamos </a>
+    <a class="navbar-brand">Ver reclamos</a>
     <form class="form-inline">
       <div class="row">
         <div class="col-4">
           <div class="dropdown">
             <select class="form-select" aria-label="Default select example">
               <option selected>Filtros</option>
-              <option value="1">Id-Reclamo</option>
-              <option value="2">Rut</option>
-              <option value="3">Estado</option>
+              <option value="1">ID reclamo</option>
+              <option value="2">RUT usuario</option>
+              <option value="3">Estado reclamo</option>
             </select>
           </div>
         </div>
         <div class="col-4">
-          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
+          <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
         </div>
         <div class="col-4">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
@@ -26,16 +26,16 @@
 
 <div id='htmlData'>
   <table class="table table-bordered table-striped table-responsive-xl">
-    <thead class="thead-dark">
+    <thead>
       <tr>
         <th class="col-lg-1" scope="col-lg-1">Reclamo ID</th>
-        <th class="col-lg-1" scope="col-lg-1">Rut</th>
-        <th class="col-lg-2" scope="col-lg-3">Nombre Usuario</th>
+        <th class="col-lg-1" scope="col-lg-1">RUT</th>
+        <th class="col-lg-2" scope="col-lg-3">Nombre</th>
         <th class="col-lg-2" scope="col-lg-1">Asunto</th>
         <th class="col-lg-3" scope="col-lg-2">Contenido</th>
         <th class="col-lg-1" scope="col-lg-3">Fecha</th>
         <th class="col-lg-1" scope="col-lg-1">Estado</th>
-        <th class="col-lg-2" scope="col-lg-2">Opciones</th>
+        <th class="col-lg-2" scope="col-lg-2">Documento PDF</th>
       </tr>
     </thead>
 
@@ -43,28 +43,32 @@
       <tr *ngFor="let reclamo of reclamos">
         <th scope="row">{{reclamo.id}}</th>
         <td>{{reclamo.rut}}</td>
-        <td>{{reclamo.nombre}}</td>
+        <td>{{reclamo.nombre}} {{reclamo.apellido}}</td>
         <td>{{reclamo.asunto}}</td>
-        <td>{{reclamo.textoReclamo}}</td>
+        <td><p>{{reclamo.textoReclamo}}</p>
+        <app-table-answer-modal></app-table-answer-modal></td>
         <td>{{reclamo.fecha}}</td>
         <td>
-          {{reclamo.estado}}
-          <select name="Estado" class="form-control" [(ngModel)]="estado" id="texto_{{reclamo.id}}"
+          <p id="label_{{reclamo.id}}">{{reclamo.estado}}</p>
+          <select name="Estado" class="form-control nuevo-estado" [(ngModel)]="estado" id="texto_{{reclamo.id}}"
             style="display: none;">
             <option value="En Progreso">En Progreso</option>
             <option value="Finalizado">Finalizado</option>
             <option value="Error">Error</option>
           </select>
-          <button id="mostrar_{{reclamo.id}}" type="button" class="btn btn-secondary btn-sm"
-            (click)="mostrarEdicion(reclamo)" style="display: inline;">Cambiar Estado</button>
-          <button id="cambiar_{{reclamo.id}}" type="button" class="btn btn-secondary btn-sm"
-            (click)="enviarEstado(reclamo)" style="display: none;">Guardar Estado</button>
+          <button id="mostrar_{{reclamo.id}}" type="button" class="btn boton-editar-1"
+            (click)="mostrarEdicion(reclamo)" style="display: inline;"><span class="iconify edit-icon" data-icon="mdi:square-edit-outline" data-inline="false"></span> Editar</button>
+          <button id="cambiar_{{reclamo.id}}" type="button" class="btn boton-editar"
+            (click)="enviarEstado(reclamo)"  style="display: none;"><span class="iconify edit-icon" data-icon="mdi:content-save" data-inline="false"></span></button>
+          <button id="cancelar_{{reclamo.id}}" type="button" class="btn boton-cancelar"
+            (click)="cancelarEdicion(reclamo)"  style="display: none;"><span class="iconify edit-icon" data-icon="mdi:close" data-inline="false"></span></button>
+            
         </td>
         <td>
           <div class="row">
-            <div class="col">
-              <button class="btn btn-danger btn-sm" (click)="downloadPDF(reclamo)">Descargar PDF</button>
-              <button type="button" class="btn btn-secondary btn-sm" (click)="mostrarPDF(reclamo)">Visualizar</button>
+            <div class="col pdf">
+              <p><button class="btn" (click)="downloadPDF(reclamo)"><span class="iconify" data-icon="mdi:file-download-outline" data-inline="false"></span></button>
+              <button type="button" class="btn" (click)="mostrarPDF(reclamo)"><span class="iconify" data-icon="mdi:file-pdf-outline" data-inline="false"></span></button></p>
             </div>
           </div>
         </td>

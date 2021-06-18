@@ -1,8 +1,15 @@
 body {  
-    background: #1D1F20;
-    padding: 16px;
-  }
+  background: #1D1F20;
+  padding: 16px;
+}
 canvas {
-    border: 1px;
-  }
-  
+  border: 1px;
+}
+
+h3 {
+text-align: center;
+}
+
+.row{
+  --bs-gutter-x: 0 !important;
+}

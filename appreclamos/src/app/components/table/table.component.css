@@ -1,12 +1,10 @@
-.thead-dark{
-  background-color: rgb(141, 141, 141);
-
+thead{
+  background-color: #feda3f;
 }
 
 .table{
   margin-left: 40px;
   width: 95%;
-
 }
 
 #search-t{
@@ -18,4 +16,34 @@
 
 .btn-sm{
   margin-bottom: 3px;
+  background-color: #dadada;
+  color: #000000;
+  
+}
+
+.iconify{
+  font-size: 30px;
+}
+
+.edit-icon {
+  font-size: 20px !important;
+}
+
+.pdf{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.boton-editar{
+  float:left;
+  
+}
+
+.boton-cancelar{
+  float:right;
+}
+
+.boton-editar-1{
+  border-color: #3c3c3b;
+  border-width: 1px;
 }

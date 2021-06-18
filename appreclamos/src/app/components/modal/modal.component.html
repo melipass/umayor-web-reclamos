@@ -1,22 +1,24 @@
-<button type="button" id="botoninicio" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Olvidaste tu contraseña?
+<button type="button" id="botoninicio" data-bs-toggle="modal" data-bs-target="#password-recovery">
+  Recupera tu contraseña
 </button>
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="password-recovery" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Recupera tu contraseña</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
       <div class="modal-body">
         <p>Ingrese su correo electronico:</p>
-        <input type="text" placeholder="example@gmail.com">
-        <p>Se le enviara una nueva contraseña por correo.</p>
+        <span class="material-icons">
+          mail_outline
+          </span> <input type="text" class="input-correo" placeholder="nombre.apellido@mayor.cl">
+        <p>Le enviaremos una nueva contraseña a su correo.</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
-        <button type="button" class="btn btn-primary">Enviar</button>
+        <button type="button" class="btn btn-primary" id="botonEnviar" data-bs-dismiss="modal" (click)="passwordRecovery()">Enviar</button>
       </div>
     </div>
   </div>

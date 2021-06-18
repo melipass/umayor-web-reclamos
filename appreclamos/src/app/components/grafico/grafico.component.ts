@@ -12,8 +12,6 @@ import { ReclamosService } from 'src/app/services/reclamos.service';
 export class GraficoComponent implements OnInit {
 
   reclamos: Reclamos[] = [];
-  private datos = [];
-  private dato: string;
   public numeroError: number = 0;
   public numeroenProgreso: number = 0;
   public numeroFinalizado: number = 0;
@@ -36,16 +34,9 @@ export class GraficoComponent implements OnInit {
     this.services.cargarReclamos().subscribe(ReclamosServices => {
       this.reclamos = ReclamosServices;
       for (const a of this.reclamos) {
-        this.dato = a.estado;
-        if (this.dato == "Error") {
-          this.numeroError++;
-        }
-        if (this.dato == "En Progreso") {
-          this.numeroenProgreso++;
-        }
-        if (this.dato == "Finalizado") {
-          this.numeroFinalizado++;
-        }
+        if (a.estado == "Finalizado") this.numeroFinalizado++;
+        else if (a.estado == "En Progreso") this.numeroenProgreso++;
+        else if (a.estado == "Error") this.numeroError++;
         this.pieChartData = [this.numeroError, this.numeroenProgreso, this.numeroFinalizado];
       }
     });

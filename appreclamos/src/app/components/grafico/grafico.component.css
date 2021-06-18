@@ -1,8 +1,20 @@
 body {  
     background: #1D1F20;
     padding: 16px;
-  }
+}
+
 canvas {
     border: 1px;
-  }
-  
+}
+
+.chart-container {
+  display: block;
+}
+
+h3{
+  text-align: center;
+}
+
+.row{
+  --bs-gutter-x: 0 !important;
+}
