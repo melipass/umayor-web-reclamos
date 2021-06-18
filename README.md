@@ -16,7 +16,7 @@ Para la realización de este proyecto, desarrollado durante la asignatura *Arqui
 
 
 ## Pasos para inicializar el proyecto
-Dentro de la carpeta appreclamos, ejecutar el siguiente comando la primera vez:
+Dentro de la carpeta ```appreclamos```, ejecutar el siguiente comando la primera vez:
 ```
 npm install
 ```
@@ -24,7 +24,7 @@ Después, y para todas las ocasiones siguientes, ejecutar cada uno de los siguie
 ```
 json-server --watch db.json
 ng serve --open
-node server.js
+nodemon server.js
 ```
 
 <p align="center">
