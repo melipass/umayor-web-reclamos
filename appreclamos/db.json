@@ -8,34 +8,34 @@
   "usuarios": [
     {
       "id": 1,
-      "nombre": "Nicolássss",
-      "apellidos": "testing234",
+      "nombre": "Sarah",
+      "apellidos": "Galenos",
       "rut": "19581239",
-      "email": "a@a.a",
-      "numero_telefono": "56912345678",
+      "email": "Sarah@galenos.com",
+      "numero_telefono": "56998765432",
       "password": "123"
     },
     {
       "id": 2,
-      "nombre": "",
-      "apellidos": "",
-      "rut": "",
-      "email": "",
+      "nombre": "Nebrod",
+      "apellidos": "Linnéa",
+      "rut": "19.987.654-3",
+      "email": "Nebrod@linnea.com",
       "numero_telefono": "987654323",
-      "password": "987654322"
+      "password": "987654323"
     },
     {
       "id": 3,
-      "nombre": "Nombre1233456",
-      "apellidos": "Apellido223456",
+      "nombre": "Annette",
+      "apellidos": "Vladimir",
       "rut": "2839189238913",
-      "email": "jaksjdkas@sajdksa.cjkksa23456",
-      "numero_telefono": "32423423423456",
+      "email": "Annette@vladimir.com",
+      "numero_telefono": "993355226",
       "password": "fsdfdsfdsf"
     },
     {
-      "nombre": "werner",
-      "apellidos": "faust ",
+      "nombre": "Werner",
+      "apellidos": "Faust ",
       "rut": "1298391239312",
       "email": "123@email.com",
       "numero_telefono": "554546466",
@@ -43,31 +43,31 @@
       "id": 4
     },
     {
-      "nombre": "Prueba Final",
-      "apellidos": "Funciona Gente",
+      "id": 5,
+      "nombre": "Áedán",
+      "apellidos": "Zafar",
       "rut": "12345678-9",
-      "email": "CreoQue@Funciona.com",
+      "email": "CreoQue@funciona.com",
       "numero_telefono": "123456789",
-      "password": "123",
-      "id": 5
+      "password": "123"
     },
     {
       "id": 6,
-      "nombre": "Maestro",
-      "apellidos": "de las marionetas",
+      "nombre": "Kazemieras",
+      "apellidos": "Judit",
       "rut": "12345678-9",
-      "email": "NoMeLo@Creo.cl",
+      "email": "NoMeLo@creo.cl",
       "numero_telefono": "134567890",
       "password": "1234"
     },
     {
+      "id": 7,
       "nombre": "Tomas",
-      "apellidos": "Primer Ministro",
+      "apellidos": "Minnestro",
       "rut": "3333333334",
-      "email": "primer@ministro.4r",
+      "email": "Tomas@minnestro.com",
       "numero_telefono": "+04 11111112",
       "password": "4reich",
-      "id": 7
     },
     {
       "nombre": "Melissa",
@@ -277,6 +277,16 @@
       "fecha": "2021/6/6",
       "estado": "Enviado",
       "id": 20
+    },
+    {
+      "id": 21,
+      "rut": "19581239",
+      "nombre": "Sarah",
+      "apellido": "Galenos",
+      "asunto": "Clases",
+      "textoReclamo": "El profesor de IA no hace clases.",
+      "fecha": "2/6/2021",
+      "estado": "Error"
     }
   ]
 }
