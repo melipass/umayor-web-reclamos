@@ -10,3 +10,18 @@
 #colapsThree{
   background-color: #ffdcdc;
 }
+
+.card-user{
+  padding:10px;
+}
+
+.card-body{
+  height: 650px;
+}
+
+.boton{
+  margin:10px;
+  bottom:0px;
+  right:0px;
+  position:absolute;
+}

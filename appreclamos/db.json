@@ -8,34 +8,34 @@
   "usuarios": [
     {
       "id": 1,
-      "nombre": "Sarah",
-      "apellidos": "Galenos",
+      "nombre": "Nicolás",
+      "apellidos": "testing234",
       "rut": "19581239",
-      "email": "Sarah@galenos.com",
-      "numero_telefono": "56998765432",
+      "email": "a@a.a",
+      "numero_telefono": "56912345678",
       "password": "123"
     },
     {
       "id": 2,
-      "nombre": "Nebrod",
-      "apellidos": "Linnéa",
-      "rut": "19.987.654-3",
-      "email": "Nebrod@linnea.com",
+      "nombre": "",
+      "apellidos": "",
+      "rut": "",
+      "email": "",
       "numero_telefono": "987654323",
-      "password": "987654323"
+      "password": "987654322"
     },
     {
       "id": 3,
-      "nombre": "Annette",
-      "apellidos": "Vladimir",
+      "nombre": "Nombre1233456",
+      "apellidos": "Apellido223456",
       "rut": "2839189238913",
-      "email": "Annette@vladimir.com",
-      "numero_telefono": "993355226",
+      "email": "jaksjdkas@sajdksa.cjkksa23456",
+      "numero_telefono": "32423423423456",
       "password": "fsdfdsfdsf"
     },
     {
-      "nombre": "Werner",
-      "apellidos": "Faust ",
+      "nombre": "werner",
+      "apellidos": "faust ",
       "rut": "1298391239312",
       "email": "123@email.com",
       "numero_telefono": "554546466",
@@ -43,31 +43,31 @@
       "id": 4
     },
     {
-      "id": 5,
-      "nombre": "Áedán",
-      "apellidos": "Zafar",
+      "nombre": "Prueba Final",
+      "apellidos": "Funciona Gente",
       "rut": "12345678-9",
-      "email": "CreoQue@funciona.com",
+      "email": "CreoQue@Funciona.com",
       "numero_telefono": "123456789",
-      "password": "123"
+      "password": "123",
+      "id": 5
     },
     {
       "id": 6,
-      "nombre": "Kazemieras",
-      "apellidos": "Judit",
+      "nombre": "Maestro",
+      "apellidos": "de las marionetas",
       "rut": "12345678-9",
-      "email": "NoMeLo@creo.cl",
+      "email": "NoMeLo@Creo.cl",
       "numero_telefono": "134567890",
       "password": "1234"
     },
     {
-      "id": 7,
       "nombre": "Tomas",
-      "apellidos": "Minnestro",
+      "apellidos": "Primer Ministro",
       "rut": "3333333334",
-      "email": "Tomas@minnestro.com",
+      "email": "primer@ministro.4r",
       "numero_telefono": "+04 11111112",
       "password": "4reich",
+      "id": 7
     },
     {
       "nombre": "Melissa",
@@ -86,6 +86,15 @@
       "numero_telefono": "1234",
       "password": "werner",
       "id": 9
+    },
+    {
+      "nombre": "Bob",
+      "apellidos": "Esponja",
+      "rut": "99.999.999-9",
+      "email": "bob.esponja@mayor.cl",
+      "numero_telefono": "56901020304",
+      "password": "patricio",
+      "id": 10
     }
   ],
   "reclamos": [
@@ -96,7 +105,7 @@
       "apellido": "testing2",
       "asunto": "test1@mail.com",
       "textoReclamo": "reclamo de un profesor que no hace clase",
-      "fecha": "02/08/21",
+      "fecha": "02/08/2021",
       "estado": "Finalizado"
     },
     {
@@ -106,7 +115,7 @@
       "apellido": "dfdfsfd",
       "asunto": "test2@mail.com",
       "textoReclamo": "reclamo de un profesor que no hace clase",
-      "fecha": "03/08/21",
+      "fecha": "03/08/2021",
       "estado": "En Progreso"
     },
     {
@@ -116,7 +125,7 @@
       "apellido": "hero",
       "asunto": "test3@mail.com",
       "textoReclamo": "reclamo de un profesor que no hace clase",
-      "fecha": "02/08/21",
+      "fecha": "02/08/2021",
       "estado": "En Progreso"
     },
     {
@@ -126,7 +135,7 @@
       "apellido": "testing23213",
       "asunto": "test3@mail.com",
       "textoReclamo": "reclamo de un profesor que no hace clase",
-      "fecha": "02/08/21",
+      "fecha": "02/08/2021",
       "estado": "Finalizado"
     },
     {
@@ -135,7 +144,7 @@
       "nombre": "nuevo reclamos tres ",
       "apellido": "bla bla bla ",
       "asunto": "testtest@mail.com",
-      "fecha": "02/12/21",
+      "fecha": "02/12/2021",
       "estado": "Finalizado"
     },
     {
@@ -145,7 +154,7 @@
       "apellido": "testing2",
       "asunto": "test1@mail.com",
       "textoReclamo": "Este es el segundo reclamo del rut 19581239",
-      "fecha": "02/08/21",
+      "fecha": "02/08/2021",
       "estado": "En Progreso"
     },
     {
@@ -155,7 +164,7 @@
       "apellido": "",
       "asunto": "reclamo ingresado test1 ",
       "textoReclamo": "testeo de put ",
-      "fecha": "02/10/21",
+      "fecha": "02/10/2021",
       "estado": "Finalizado"
     },
     {
@@ -165,8 +174,8 @@
       "apellido": "adsadadasd",
       "asunto": "sauduasdhsd",
       "textoReclamo": "jbvfggrhihdihfdihf",
-      "fecha": "02/10/21",
-      "estado": "Finalizado"
+      "fecha": "02/10/2021",
+      "estado": "En Progreso"
     },
     {
       "id": 9,
@@ -175,7 +184,7 @@
       "apellido": "Primer Ministro",
       "asunto": "hshshshsh",
       "textoReclamo": "kkksksksksksksksksksksksksksk",
-      "fecha": "02/10/21",
+      "fecha": "02/10/2021",
       "estado": "Finalizado"
     },
     {
@@ -185,7 +194,7 @@
       "apellido": "Primer Ministro",
       "asunto": "der di das",
       "textoReclamo": " jndfgugbuwgrqiugrwrqj\nasendifijhsfdidf kjdjkfdkd\n",
-      "fecha": "02/10/21",
+      "fecha": "02/10/2021",
       "estado": "Finalizado"
     },
     {
@@ -195,7 +204,7 @@
       "apellido": "testing2",
       "asunto": "Der ",
       "textoReclamo": "hnfgwrghwrghwerghwegrhgrhwehgrhurgurgurghrguurhgr",
-      "fecha": "02/12/21",
+      "fecha": "02/12/2021",
       "estado": "Error"
     },
     {
@@ -205,7 +214,7 @@
       "apellido": "testing2",
       "asunto": "1dfuwyefgw",
       "textoReclamo": "asdfasdhasudihasduidhdsaidhiusa",
-      "fecha": "02/12/21",
+      "fecha": "02/12/2021",
       "estado": "Finalizado"
     },
     {
@@ -215,7 +224,7 @@
       "apellido": "testing2",
       "asunto": "der die das ",
       "textoReclamo": "sfdgsdfjdfsjfjsd sdlfldsflsdflsd s\ndfsdfksfdskdfkdfksdf\n",
-      "fecha": "02/12/21",
+      "fecha": "02/12/2021",
       "estado": "Finalizado"
     },
     {
@@ -224,7 +233,7 @@
       "apellido": "testing2",
       "asunto": "hdhdhdhd",
       "textoReclamo": "asdasdsdaadads",
-      "fecha": "02/12/21",
+      "fecha": "02/12/2021",
       "estado": "Finalizado",
       "id": 15
     },
@@ -235,7 +244,7 @@
       "apellido": "testing2",
       "asunto": "2",
       "textoReclamo": "s",
-      "fecha": "02/12/21",
+      "fecha": "02/12/2021",
       "estado": "Finalizado"
     },
     {
@@ -245,8 +254,12 @@
       "apellido": "Contraseña",
       "asunto": "La pizza del casino estaba muy fria",
       "textoReclamo": "También tenía hongos",
-      "fecha": "02/12/21",
-      "estado": "Finalizado"
+      "fecha": "02/12/2021",
+      "estado": "Finalizado",
+      "respuestas": [
+        "Repondremos la pizza.",
+        "Podrá ir a retirar una pizza de su elección desde mañana en el casino."
+      ]
     },
     {
       "rut": "123456879",
@@ -254,7 +267,7 @@
       "apellido": "Contraseña",
       "asunto": "Testing pizza 2",
       "textoReclamo": "Muy mala pizza",
-      "fecha": "02/12/21",
+      "fecha": "02/12/2021",
       "estado": "Finalizado",
       "id": 18
     },
@@ -265,28 +278,34 @@
       "apellido": "Apellido2",
       "asunto": "Reclamo 101001101010",
       "textoReclamo": "10101010101010 ",
-      "fecha": "02/12/21",
+      "fecha": "02/12/2021",
       "estado": "En Progreso"
     },
     {
-      "rut": "12345678-9",
-      "nombre": "Volver Al",
-      "apellido": "Login Funciona",
-      "asunto": "Esto no funciona",
-      "textoReclamo": "Voy a llorar",
-      "fecha": "2021/6/6",
-      "estado": "Enviado",
-      "id": 20
+      "id": 20,
+      "rut": "19581239",
+      "nombre": "Nicolássss",
+      "apellido": "testing234",
+      "asunto": "Se cayó blackboard",
+      "textoReclamo": "Se me cayó blackboard y justo estaba dando examen.",
+      "fecha": "5/6/2021",
+      "estado": "En Progreso",
+      "respuestas": [
+        "Podrá dar la prueba recuperativa la próxima semana."
+      ]
     },
     {
       "id": 21,
-      "rut": "19581239",
-      "nombre": "Sarah",
-      "apellido": "Galenos",
-      "asunto": "Clases",
-      "textoReclamo": "El profesor de IA no hace clases.",
-      "fecha": "2/6/2021",
-      "estado": "Error"
+      "rut": "99.999.999-9",
+      "nombre": "Bob",
+      "apellido": "Esponja",
+      "asunto": "Probando",
+      "textoReclamo": "Reclamo de prueba",
+      "fecha": "5/6/2021",
+      "estado": "En Progreso",
+      "respuestas": [
+        "Don Cangrejo"
+      ]
     }
   ]
 }

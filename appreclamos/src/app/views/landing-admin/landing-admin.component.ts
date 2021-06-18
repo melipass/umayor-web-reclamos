@@ -12,7 +12,4 @@ export class LandingAdminComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  list() {
-    this.router.navigate(['/list']);
-  }
 }

@@ -15,6 +15,8 @@
           data-bs-parent="#accordion-reclamos">
           <div class="accordion-body">
             {{reclamo.textoReclamo}}
+            <div *ngIf="reclamo.respuestas"><hr><p><b>Respuestas:</b></p></div>
+            <div class="alert alert-secondary" *ngFor="let respuesta of reclamo.respuestas"><p>{{respuesta}}</p></div>
           </div>
         </div>
       </div>
@@ -30,6 +32,8 @@
           data-bs-parent="#accordion-reclamos">
           <div class="accordion-body">
             {{reclamo.textoReclamo}}
+            <div *ngIf="reclamo.respuestas"><hr><p><b>Respuestas:</b></p></div>
+            <div class="alert alert-secondary" *ngFor="let respuesta of reclamo.respuestas"><p>{{respuesta}}</p></div>
           </div>
         </div>
       </div>
@@ -45,6 +49,8 @@
           data-bs-parent="#accordion-reclamos">
           <div class="accordion-body">
             {{reclamo.textoReclamo}}
+            <div *ngIf="reclamo.respuestas"><hr><p><b>Respuestas:</b></p></div>
+            <div class="alert alert-secondary" *ngFor="let respuesta of reclamo.respuestas"><p>{{respuesta}}</p></div>
           </div>
         </div>
       </div>

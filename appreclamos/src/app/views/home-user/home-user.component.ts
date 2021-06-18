@@ -14,17 +14,11 @@ import { DatePipe } from '@angular/common';
 })
 export class HomeUserComponent implements OnInit {
 
-   // tslint:disable-next-line:no-inferrable-types
   nombre: string = '';
-   // tslint:disable-next-line:no-inferrable-types
   apellidos: string = '';
-   // tslint:disable-next-line:no-inferrable-types
   rut: string = '';
-   // tslint:disable-next-line:no-inferrable-types
   email: string = '';
-   // tslint:disable-next-line:no-inferrable-types
   numero_telefono: number = 0;
-   // tslint:disable-next-line:no-inferrable-types
   password: string = '';
 
   isReadOnly = true;
@@ -37,36 +31,29 @@ export class HomeUserComponent implements OnInit {
     apellidos: '',
     rut: '',
     email: '',
-    numero_telefono: 123134214,
+    numero_telefono: 0,
     password: ''
   };
 
   // Campos para poder agregar un nuevo reclamo
+  rutUsuarioReclamo: string;
+  nombreUsuarioReclamo: string;
+  apellidoUsuarioReclamo: string;
+  asuntoReclamo: string;
+  textoReclamo: string;
+  fechaUsuarioReclamo: string;
+  estadoUsuarioReclamo: string;
+  respuestas: string[];
 
-    // tslint:disable-next-line:no-inferrable-types
-    rutUsuarioReclamo: string;
-    // tslint:disable-next-line:no-inferrable-types
-    nombreUsuarioReclamo: string;
-    // tslint:disable-next-line:no-inferrable-types
-    apellidoUsuarioReclamo: string ;
-    // tslint:disable-next-line:no-inferrable-types
-    asuntoReclamo: string ;
-    // tslint:disable-next-line:no-inferrable-types
-    textoReclamo: string ;
-    // tslint:disable-next-line:no-inferrable-types
-    fechaUsuarioReclamo: string ;
-    // tslint:disable-next-line:no-inferrable-types
-    estadoUsuarioReclamo: string ;
-
-    myDate: Date = new Date();
-    stringDate: string;
+  myDate: Date = new Date();
+  stringDate: string;
 
   constructor(
     private servicio: UsuariosService,
     private servicio2: ReclamosService,
     private datePipe: DatePipe,
     private activatedRoute: ActivatedRoute,
-    private router:Router
+    private router: Router
     ) {
       this.stringDate = this.myDate.getDay() + '/' + (this.myDate.getMonth() + 1) + '/' + this.myDate.getFullYear();
   }
@@ -79,7 +66,6 @@ export class HomeUserComponent implements OnInit {
     });
   }
 
-  // tslint:disable-next-line:typedef
   agregarReclamo()
   {
     const newReclamo: Reclamos = {
@@ -89,19 +75,19 @@ export class HomeUserComponent implements OnInit {
       asunto: this.asuntoReclamo,
       textoReclamo: this.textoReclamo,
       fecha: this.stringDate,
-      estado: 'Enviado'
-
+      estado: 'En Progreso',
+      respuestas: this.respuestas
     };
 
     this.servicio2.agregarReclamoDeUsuario(newReclamo).subscribe(
       reclamoService => {
-        alert('El reclamo ha sido enviado.');
+        alert('Su reclamo ha sido enviado.');
         this.cargarReclamos(this.rutUsuarioReclamo);
       }
     );
     this.clearFields();
   }
-// tslint:disable-next-line:typedef
+
   clearFields()
   {
     this.asuntoReclamo = '';
@@ -109,14 +95,12 @@ export class HomeUserComponent implements OnInit {
   }
 
 
-  // tslint:disable-next-line:typedef
   cargarUsuarios() {
     this.servicio.obtenerUsuarios().subscribe(UsuariosServidor => {
       this.usuarios = UsuariosServidor;
     });
   }
 
-  // tslint:disable-next-line:typedef
   cargarUsuario(id: number) {
     this.servicio.obtenerUsuario(id).subscribe(UsuariosServidor => {
       this.usuario = UsuariosServidor;
@@ -128,13 +112,12 @@ export class HomeUserComponent implements OnInit {
     });
   }
 
-  // tslint:disable-next-line:typedef
   cargarReclamos(rut: string){
     this.servicio2.cargarReclamosDeUnUsuario(rut).subscribe(ReclamosServidor => {
       this.reclamos = ReclamosServidor;
     });
   }
-// tslint:disable-next-line:typedef
+
   editarDatos() {
     const nombres = document.getElementById('input-nombres') as HTMLInputElement;
     const apellidos = document.getElementById('input-apellidos') as HTMLInputElement;
@@ -194,7 +177,7 @@ export class HomeUserComponent implements OnInit {
     contraseña.style.display="none";
   }
 
-  validarCampos() {
+  validarCamposUsuario() {
     var inputs = document.getElementsByTagName("input");
     for (var i = 0; i < inputs.length; i++) {
       if (inputs[i].hasAttribute("required")) {

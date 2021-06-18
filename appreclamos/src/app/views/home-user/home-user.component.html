@@ -1,8 +1,8 @@
 <app-navbar-user></app-navbar-user>
 <div class="container">
     <div class="row p-3">
-        <div class="col-6">
-            <div class="card h-100">
+        <div class="col-6 card-user">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Mis Datos</h5>
                     <hr>
@@ -37,17 +37,17 @@
                             [(ngModel)]="password" required style="display: none;" type="password">
                     </div>
                     <hr>
-                    <button type="submit" style="display:inline;" id="editar" class="btn btn-primary"
+                    <button type="submit" style="display:inline;" id="editar" class="btn btn-primary boton"
                         (click)="editarDatos()">Editar Datos</button>
                     <button type="submit" style="display:none;" id="enviar" class="btn btn-primary"
-                        (click)="validarCampos()">Enviar Datos</button>
+                        (click)="validarCamposUsuario()">Enviar Datos</button>
                     <button type="submit" style="display:none;margin-left:5px;" id="cancelar" class="btn btn-warning"
                         (click)="cancelarEdicion()">Cancelar</button>
                 </div>
             </div>
         </div>
-        <div class="col-6">
-            <div class="card h-100">
+        <div class="col-6 card-user">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Nuevo Reclamo</h5>
                     <hr>
@@ -60,7 +60,7 @@
                         <textarea [(ngModel)]="textoReclamo" class="form-control" rows="12" cols="50"></textarea>
                     </div>
                     <hr>
-                    <button type="submit" class="btn btn-primary" (click)="agregarReclamo()">Ingresar Reclamo</button>
+                    <button type="submit" class="btn btn-primary boton" (click)="agregarReclamo()">Ingresar Reclamo</button>
                 </div>
             </div>
         </div>

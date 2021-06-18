@@ -46,7 +46,11 @@
         <td>{{reclamo.nombre}} {{reclamo.apellido}}</td>
         <td>{{reclamo.asunto}}</td>
         <td><p>{{reclamo.textoReclamo}}</p>
-        <app-table-answer-modal></app-table-answer-modal></td>
+          <div *ngIf="reclamo.respuestas"><hr><p><b>Respuestas:</b></p></div>
+          <div class="alert alert-secondary" *ngFor="let respuesta of reclamo.respuestas"><p>{{respuesta}}</p></div>
+        <div  class="set-reclamo">
+        <app-table-answer-modal (click)="setReclamo(reclamo.id)" [reclamos]="reclamos"></app-table-answer-modal>
+        </div></td>
         <td>{{reclamo.fecha}}</td>
         <td>
           <p id="label_{{reclamo.id}}">{{reclamo.estado}}</p>
@@ -62,7 +66,6 @@
             (click)="enviarEstado(reclamo)"  style="display: none;"><span class="iconify edit-icon" data-icon="mdi:content-save" data-inline="false"></span></button>
           <button id="cancelar_{{reclamo.id}}" type="button" class="btn boton-cancelar"
             (click)="cancelarEdicion(reclamo)"  style="display: none;"><span class="iconify edit-icon" data-icon="mdi:close" data-inline="false"></span></button>
-            
         </td>
         <td>
           <div class="row">

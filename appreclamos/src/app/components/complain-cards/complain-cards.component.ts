@@ -23,7 +23,6 @@ export class ComplainCardsComponent implements OnInit {
   cargarReclamos() {
     this.services.cargarReclamos().subscribe(ReclamosService => {
       this.reclamos = ReclamosService;
-      console.log(this.reclamos);
       for (const a of this.reclamos) {
         if (a.estado == "En Progreso") this.reclamosProgreso.push(a);
         else if (a.estado == "Finalizado") this.reclamosFinalizado.push(a);

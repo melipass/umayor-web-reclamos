@@ -21,6 +21,7 @@ export class TableComponent implements OnInit {
   estado: string = '';
   abierto: number = 0;
   reclamos: Reclamos[] = [];
+  primer_click: boolean = true;
 
   constructor( private services: ReclamosService, private pdfservices: PdfserviceService ) { }
 
@@ -86,11 +87,24 @@ export class TableComponent implements OnInit {
       asunto: reclamoIn.asunto,
       textoReclamo: reclamoIn.textoReclamo,
       fecha: reclamoIn.fecha,
-      estado: this.estado
+      estado: this.estado,
+      respuestas: reclamoIn.respuestas
     };
     this.services.editarReclamo(reclamoE).subscribe(ReclamoServidor => {
       alert('Reclamo Editado');
       document.defaultView.location.reload();
     });
+  }
+
+  setReclamo(id: number){
+    if (this.primer_click == true) {
+      localStorage.setItem('idReclamo',id.toString());
+      this.primer_click = false;
+    }
+    else this.primer_click = true;
+  }
+
+  botonEnviar(reclamoIn: Reclamos){
+    
   }
 }

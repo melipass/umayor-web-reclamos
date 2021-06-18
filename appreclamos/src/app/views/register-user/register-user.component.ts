@@ -18,7 +18,7 @@ export class RegisterUserComponent implements OnInit {
   // tslint:disable-next-line:no-inferrable-types
   email: string = '';
   // tslint:disable-next-line:no-inferrable-types
-  numero_telefono: number = 0;
+  numero_telefono: number;
   // tslint:disable-next-line:no-inferrable-types
   password: string = '';
 

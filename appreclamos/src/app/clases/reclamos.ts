@@ -7,4 +7,5 @@ export interface Reclamos {
   textoReclamo: string;
   fecha: string;
   estado: string;
+  respuestas: string[];
 }

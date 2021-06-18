@@ -3,7 +3,8 @@
   <div id="formContent">
     <form>
       <h2> Ingreso de usuario</h2>
-      <input type="text" [(ngModel)]="email" placeholder="example@gmail.com" name="login">
+      <p>Usuario de prueba: a@a.a | Contraseña: 123</p>
+      <input type="text" [(ngModel)]="email" placeholder="nombre.apellido@mayor.cl" name="login">
       <input type="password" [(ngModel)]="password" placeholder="Contraseña" name="login">
       <input type="submit" value="Ingresar" (click)="login()">
     </form>
