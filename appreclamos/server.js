@@ -1,5 +1,5 @@
 const dbFile = 'db.json'
-const keyJWT = "BX]e_,r)g8$w'nMn"
+const keyJWT = 
 const jsonServer = require('json-server')
 const jwt = require('jsonwebtoken')
 const server = jsonServer.create()
